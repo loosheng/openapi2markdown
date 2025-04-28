@@ -1,5 +1,5 @@
 import { en } from './langs/en'
-import { zhCN } from './langs/zhCN'
+import { zhCN } from './langs/zh-cn'
 
 interface I18nTexts {
   [key: string]: Record<string, string>

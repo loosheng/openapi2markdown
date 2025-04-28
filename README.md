@@ -17,7 +17,7 @@ import { openapi2markdown } from 'openapi2markdown'
 const markdown = await openapi2markdown(openapi)
 
 // With internationalization (i18n) support
-const markdownZh = await openapi2markdown(openapi, { lang: 'zh' })
+const markdownZh = await openapi2markdown(openapi, { lang: 'zhCN' })
 
 console.log(markdown)
 ```

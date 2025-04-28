@@ -1,4 +1,4 @@
-import tempo from '@joggr/tempo'
+import tempo, { type TempoDocument } from '@joggr/tempo'
 import { dereference, validate } from '@readme/openapi-parser'
 import i18nTexts from './i18n'
 
@@ -126,7 +126,7 @@ export interface OpenAPI2MarkdownOptions {
 export async function openapi2markdown(
   openapiString: Parameters<typeof dereference>[0],
   options: OpenAPI2MarkdownOptions = {},
-): Promise<string> {
+): Promise<TempoDocument> {
   try {
     // Get language texts
     const lang = options.lang || 'en'
@@ -320,7 +320,7 @@ export async function openapi2markdown(
       }
     }
 
-    return md.toString()
+    return md
   } catch (error) {
     throw new Error(error as string)
   }

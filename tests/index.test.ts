@@ -52,7 +52,7 @@ describe.each([
         ])
         .map((file) => [path.basename(file), file]),
     )('should convert `%s` to markdown', async (filename, file) => {
-      const result = await openapi2markdown(file)
+      const result = (await openapi2markdown(file)).toString()
       const snapshotPath = path.join(
         __dirname,
         '__snapshots__',
@@ -75,7 +75,7 @@ describe.each([
         ])
         .map((file) => [path.basename(file), file]),
     )('should convert `%s` to markdown', async (filename, file) => {
-      const result = await openapi2markdown(file)
+      const result = (await openapi2markdown(file)).toString()
       const snapshotPath = path.join(
         __dirname,
         '__snapshots__',
@@ -96,7 +96,7 @@ describe('Internationalization', () => {
   )
 
   it('should use English by default', async () => {
-    const result = await openapi2markdown(petStoreFile)
+    const result = (await openapi2markdown(petStoreFile)).toString()
     const snapshotPath = path.join(
       __dirname,
       '__snapshots__',
@@ -107,7 +107,9 @@ describe('Internationalization', () => {
   })
 
   it('should use Chinese when lang=zh', async () => {
-    const result = await openapi2markdown(petStoreFile, { lang: 'zhCN' })
+    const result = (
+      await openapi2markdown(petStoreFile, { lang: 'zhCN' })
+    ).toString()
     const snapshotPath = path.join(
       __dirname,
       '__snapshots__',
@@ -118,7 +120,9 @@ describe('Internationalization', () => {
   })
 
   it('should fallback to English for unsupported languages', async () => {
-    const result = await openapi2markdown(petStoreFile, { lang: 'fr' })
+    const result = (
+      await openapi2markdown(petStoreFile, { lang: 'fr' })
+    ).toString()
     const snapshotPath = path.join(
       __dirname,
       '__snapshots__',

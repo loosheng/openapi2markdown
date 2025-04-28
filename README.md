@@ -15,7 +15,11 @@ const markdown = await openapi2markdown(openapi)
 // With internationalization (i18n) support
 const markdownZh = await openapi2markdown(openapi, { lang: 'zhCN' })
 
-console.log(markdown)
+// output markdown string
+console.log(markdown.toString())
+
+// output markdown json
+console.log(markdown.toJSON())
 ```
 
 <!-- Remove aboves -->

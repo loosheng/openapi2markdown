@@ -4,10 +4,6 @@
 
 Convert OpenAPI to Markdown
 
-<!-- Remove belows -->
-
-Forked from [egoist/openapi2markdown](https://github.com/egoist/openapi2markdown)
-
 ## How to use
 
 ```ts

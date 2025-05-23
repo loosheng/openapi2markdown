@@ -25,7 +25,7 @@ describe.each([
 ])('%s', (specName, _specification, version) => {
   // Ensure version directory exists
   beforeAll(() => {
-    const versionDir = path.join(__dirname, '__snapshots__', specName)
+    const versionDir = path.join(import.meta.dirname, '__snapshots__', specName)
     if (!fs.existsSync(versionDir)) {
       fs.mkdirSync(versionDir, { recursive: true })
     }
@@ -69,7 +69,7 @@ describe.each([
       fg
         .sync([
           path.join(
-            __dirname,
+            import.meta.dirname,
             `../node_modules/@readme/oas-examples/${version}/yaml/*.yaml`,
           ),
         ])
@@ -90,9 +90,12 @@ describe.each([
 
 // Test internationalization
 describe('Internationalization', () => {
-  const petStoreFile = path.join(
-    __dirname,
-    '../node_modules/@readme/oas-examples/3.0/json/petstore.json',
+  const petStoreFile = fs.readFileSync(
+    path.join(
+      import.meta.dirname,
+      '../node_modules/@readme/oas-examples/3.0/json/petstore.json',
+    ),
+    'utf-8',
   )
 
   it('should use English by default', async () => {
@@ -128,6 +131,39 @@ describe('Internationalization', () => {
       '__snapshots__',
       'i18n',
       'petstore-fallback.md',
+    )
+    await expect(result).toMatchFileSnapshot(snapshotPath)
+  })
+})
+
+// describe('Knife4j Example', () => {
+//   const knife4jFile = fs.readFileSync(
+//     path.join(import.meta.dirname, './case/knife4j-example.json'),
+//     'utf-8',
+//   )
+
+//   it('should convert Knife4j example to markdown', async () => {
+//     const result = (await openapi2markdown(knife4jFile)).toString()
+//     const snapshotPath = path.join(
+//       __dirname,
+//       '__snapshots__',
+//       'knife4j-example.md',
+//     )
+//     await expect(result).toMatchFileSnapshot(snapshotPath)
+//   })
+// })
+
+describe('Case 1', () => {
+  const case1File = fs.readFileSync(
+    path.join(import.meta.dirname, './case/special-symbols-ref-path-case.json'),
+    'utf-8',
+  )
+  it('should convert case 1 to markdown', async () => {
+    const result = (await openapi2markdown(case1File)).toString()
+    const snapshotPath = path.join(
+      __dirname,
+      '__snapshots__',
+      'special-symbols-ref-path-case.md',
     )
     await expect(result).toMatchFileSnapshot(snapshotPath)
   })

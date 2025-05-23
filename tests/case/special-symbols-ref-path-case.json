@@ -1,0 +1,138 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "xx-api-doc",
+    "description": "xxxx接口文档",
+    "version": "3.0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8080",
+      "description": "Inferred Url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "互动服务",
+      "description": "Care Interaction App Facade"
+    }
+  ],
+  "paths": {
+    "/app/careInteraction/getInteractionUserList": {
+      "post": {
+        "tags": ["互动服务"],
+        "summary": "获取user列表",
+        "operationId": "getUserListUsingPOST",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "用户/管理员列表查询DTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/AjaxResult«用户列表vo»"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AjaxResult«用户列表vo»": {
+        "title": "AjaxResult«用户列表vo»",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/用户列表vo"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "用户vo": {
+        "title": "用户vo",
+        "type": "object",
+        "properties": {
+          "avatar": {
+            "type": "string",
+            "description": "用户头像"
+          },
+          "userId": {
+            "type": "string",
+            "description": "用户id"
+          },
+          "userName": {
+            "type": "string",
+            "description": "用户姓名"
+          }
+        }
+      },
+      "用户列表vo": {
+        "title": "用户列表vo",
+        "type": "object",
+        "properties": {
+          "normalList": {
+            "type": "array",
+            "description": "普通用户列表",
+            "items": {
+              "$ref": "#/components/schemas/用户vo"
+            }
+          },
+          "adminList": {
+            "type": "array",
+            "description": "管理员列表",
+            "items": {
+              "$ref": "#/components/schemas/用户vo"
+            }
+          }
+        }
+      },
+      "用户/管理员列表查询DTO": {
+        "title": "用户/管理员列表查询DTO",
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "查询关键字"
+          },
+          "userName": {
+            "type": "string",
+            "description": "用户姓名"
+          },
+          "userType": {
+            "type": "integer",
+            "description": "用户类型",
+            "format": "int32"
+          }
+        }
+      }
+    }
+  }
+}

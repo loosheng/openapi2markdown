@@ -1,7 +1,12 @@
 import tempo, { type TempoDocument } from '@joggr/tempo'
 import { dereference, validate } from '@readme/openapi-parser'
 import i18nTexts from './i18n'
+import type { OpenAPIV2, OpenAPIV3, OpenAPIV3_1 } from 'openapi-types'
 
+type APIDocument<T extends object = NonNullable<unknown>> =
+  | OpenAPIV2.Document<T>
+  | OpenAPIV3_1.Document<T>
+  | OpenAPIV3.Document<T>
 type Method =
   | 'get'
   | 'post'
@@ -26,6 +31,52 @@ function getPathMethods(path: any): Method[] {
       'trace',
     ].includes(key),
   ) as Method[]
+}
+
+function parseOpenAPIToJSON(openapiString: string): APIDocument | null {
+  try {
+    const openapiJSON = JSON.parse(openapiString)
+    return openapiJSON
+  } catch {
+    return null
+  }
+}
+
+function isOpenAPIV3(
+  openapiJSON: APIDocument,
+): openapiJSON is OpenAPIV3.Document | OpenAPIV3_1.Document {
+  return Reflect.has(openapiJSON, 'components')
+}
+
+// 预处理 OpenAPI JSON，将 components.schemas 中key 包含 / 的转换为 _
+function preprocessOpenAPIJSON(openapiString: string): string {
+  const openapiJSON = parseOpenAPIToJSON(openapiString)
+
+  if (!openapiJSON) {
+    throw new Error('Invalid JSON')
+  }
+
+  const schemas = isOpenAPIV3(openapiJSON)
+    ? openapiJSON?.components?.schemas
+    : openapiJSON?.definitions
+
+  if (schemas) {
+    const replaceMap = new Map<string, string>()
+    Object.keys(schemas).forEach((key) => {
+      if (key.includes('/')) {
+        const sourceKey = key
+        const newKey = key.replace('/', '_')
+        replaceMap.set(sourceKey, newKey)
+      }
+    })
+
+    for (const [sourceKey, newKey] of replaceMap) {
+      openapiString = openapiString.replaceAll(sourceKey, newKey)
+    }
+    return openapiString
+  }
+
+  return openapiString
 }
 
 // Helper function: Get friendly name for parameter type
@@ -114,6 +165,9 @@ function formatSchema(schema: any, texts: any): string {
   return texts.unknownType
 }
 
+// Match $ref that do not contain the prefix
+const MissingPrefixRefRegex = /("\$ref":\s*)"(?!#)(.*?)"/g
+
 // Options for openapi2markdown function
 export interface OpenAPI2MarkdownOptions {
   /**
@@ -131,8 +185,26 @@ export async function openapi2markdown(
     // Get language texts
     const lang = options.lang || 'en'
     const texts = i18nTexts[lang] || i18nTexts.en
-    await validate(openapiString)
-    const parsed = await dereference(openapiString)
+
+    let sourceJSON: APIDocument | string | null = null
+
+    if (typeof openapiString === 'string' && openapiString.startsWith('{')) {
+      const replacedText = openapiString.replaceAll(
+        MissingPrefixRefRegex,
+        '$1"#/components/schemas/$2"',
+      )
+
+      sourceJSON = JSON.parse(preprocessOpenAPIJSON(replacedText))
+    } else {
+      sourceJSON = openapiString
+    }
+
+    if (!sourceJSON) {
+      throw new Error('Invalid Input')
+    }
+
+    await validate(sourceJSON)
+    const parsed = await dereference(sourceJSON)
     const md = tempo()
 
     // Add document title and description

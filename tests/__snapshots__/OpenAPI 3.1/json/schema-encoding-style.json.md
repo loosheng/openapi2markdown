@@ -7,3 +7,27 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#encodin
 ## Servers
 
 - **URL:** https://httpbin.org
+
+## Default
+
+### Form style serialization
+
+Form style serialization
+
+```http
+PUT /form/primitive
+```
+
+**Operation ID:** `encoding_form`
+
+#### Request Body
+
+**Content Type:** `multipart/form-data`
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | string | No | No description |
+| array | array | No | No description |
+| object | object | No | No description |

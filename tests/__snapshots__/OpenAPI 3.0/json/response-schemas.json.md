@@ -7,3 +7,225 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schem
 ## Servers
 
 - **URL:** https://httpbin.org
+
+## Default
+
+### Array of primitives
+
+Array of primitives
+
+```http
+GET /anything/array-of-primitives
+```
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+Array, item type: string
+
+### Object (also demonstrates readonly/writeonly)
+
+Object (also demonstrates readonly/writeonly)
+
+```http
+GET /anything/object
+```
+
+#### Request Body
+
+**Content Type:** `application/json`
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | string | No | No description |
+| read-only | string | No | No description |
+| write-only | string | No | No description |
+| object | object | No | No description |
+| array | array | No | No description |
+| pets | array | No | No description |
+
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | string | No | No description |
+| read-only | string | No | No description |
+| write-only | string | No | No description |
+| object | object | No | No description |
+| array | array | No | No description |
+| pets | array | No | No description |
+
+
+### Markdown
+
+Markdown
+
+```http
+GET /anything/markdown
+```
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** Test
+ - Bullet one
+ - Bullet two
+ *italics*
+
+**Content Type:** `application/json`
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | string | No | No description |
+| read-only | string | No | No description |
+| write-only | string | No | No description |
+| object | object | No | No description |
+| array | array | No | No description |
+| pets | array | No | No description |
+
+
+**Status Code:** 400
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | string | No | No description |
+| read-only | string | No | No description |
+| write-only | string | No | No description |
+| object | object | No | No description |
+| array | array | No | No description |
+| pets | array | No | No description |
+
+
+### Array of objects
+
+Array of objects
+
+```http
+GET /anything/array-of-objects
+```
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+Array, item type: object
+
+### Polymorphism
+
+Polymorphism
+
+```http
+GET /anything/polymorphism
+```
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+Unknown type
+
+### Recursive $ref lookup
+
+Recursive $ref lookup
+
+```http
+GET /anything/recursive
+```
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+Array, item type: object
+
+### This example is to ensure that we don't hard fail out on attempting to parse a non-JSON string as JSON, and instead fallback to the standard syntax highlighter.
+
+This example is to ensure that we don't hard fail out on attempting to parse a non-JSON string as JSON, and instead fallback to the standard syntax highlighter.
+
+```http
+GET /anything/returns-as-json-but-is-actually-string
+```
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+string
+
+### Object
+
+Object
+
+```http
+GET /multiple-responses/object
+```
+
+#### Responses
+
+**Status Code:** 200
+
+**Description:** OK
+
+**Content Type:** `application/json`
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| hello | string | No | No description |
+| there | string | No | No description |
+
+
+**Status Code:** 400
+
+**Description:** A 400 error response
+
+**Content Type:** `application/json`
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| obi | string | No | No description |
+| wan | string | No | No description |

@@ -136,22 +136,22 @@ describe('Internationalization', () => {
   })
 })
 
-// describe('Knife4j Example', () => {
-//   const knife4jFile = fs.readFileSync(
-//     path.join(import.meta.dirname, './case/knife4j-example.json'),
-//     'utf-8',
-//   )
+describe('Knife4j Example', () => {
+  const knife4jFile = fs.readFileSync(
+    path.join(import.meta.dirname, './case/knife4j-example.json'),
+    'utf-8',
+  )
 
-//   it('should convert Knife4j example to markdown', async () => {
-//     const result = (await openapi2markdown(knife4jFile)).toString()
-//     const snapshotPath = path.join(
-//       __dirname,
-//       '__snapshots__',
-//       'knife4j-example.md',
-//     )
-//     await expect(result).toMatchFileSnapshot(snapshotPath)
-//   })
-// })
+  it('should convert Knife4j example to markdown', async () => {
+    const result = (await openapi2markdown(knife4jFile)).toString()
+    const snapshotPath = path.join(
+      __dirname,
+      '__snapshots__',
+      'knife4j-example.md',
+    )
+    await expect(result).toMatchFileSnapshot(snapshotPath)
+  })
+})
 
 describe('Case 1', () => {
   const case1File = fs.readFileSync(

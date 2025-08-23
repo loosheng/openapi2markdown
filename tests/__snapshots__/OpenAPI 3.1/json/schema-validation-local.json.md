@@ -7,3 +7,55 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specify
 ## Servers
 
 - **URL:** https://httpbin.org
+
+## Default
+
+### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+```http
+GET /anything/numbers
+```
+
+#### Responses
+
+### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+```http
+GET /anything/strings
+```
+
+#### Responses
+
+### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+```http
+GET /anything/jsonschema-formats
+```
+
+#### Responses
+
+### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+```http
+GET /anything/oas-formats
+```
+
+#### Responses
+
+### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+
+```http
+GET /anything/booleans
+```
+
+#### Responses

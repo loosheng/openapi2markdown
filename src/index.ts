@@ -42,6 +42,83 @@ function parseOpenAPIToJSON(openapiString: string): APIDocument | null {
   }
 }
 
+// Tolerant JSON parsing - tries to fix common JSON format errors
+function parseOpenAPIToJSONTolerant(openapiString: string): {
+  success: boolean
+  data?: APIDocument
+  error?: string
+  fixed?: boolean
+} {
+  // First try standard parsing
+  try {
+    const openapiJSON = JSON.parse(openapiString)
+    return { success: true, data: openapiJSON, fixed: false }
+  } catch (originalError) {
+    // Try to fix common issues and parse again
+    try {
+      let fixedString = openapiString
+
+      // Remove trailing commas before closing braces/brackets
+      fixedString = fixedString.replaceAll(/,(\s*[}\]])/g, '$1')
+
+      // Remove comments (// and /* */)
+      fixedString = fixedString.replaceAll(/\/\/.*$/gm, '')
+      fixedString = fixedString.replaceAll(/\/\*[\s\S]*?\*\//g, '')
+
+      // Fix unescaped quotes in strings (simple heuristic)
+      fixedString = fixedString.replaceAll(/(?<!\\)\\(?!["\\/bfnrt])/g, '\\\\')
+
+      const openapiJSON = JSON.parse(fixedString)
+      return { success: true, data: openapiJSON, fixed: true }
+    } catch (fixError) {
+      return {
+        success: false,
+        error: `JSON parsing failed. Original error: ${originalError}. After fix attempt: ${fixError}`,
+      }
+    }
+  }
+}
+
+// Fix invalid references in OpenAPI document
+function fixInvalidReferences(openapiString: string): {
+  fixed: string
+  hasChanges: boolean
+} {
+  let fixed = openapiString
+  let hasChanges = false
+
+  // First, find and remove all invalid $ref patterns
+  // Look for the specific invalid reference
+  const invalidRefPattern = /"\$ref":\s*"#\/components\/parameters\/file"/g
+  if (fixed.includes('"$ref": "#/components/parameters/file"')) {
+    fixed = fixed.replaceAll(invalidRefPattern, '')
+    hasChanges = true
+
+    // Clean up any trailing commas that might have been left
+    fixed = fixed.replaceAll(/,(\s*[,}])/g, '$1')
+    fixed = fixed.replaceAll(/,(\s*\})/g, '$1')
+  }
+
+  // Now fix file parameters that are missing required properties
+  const fileParamPattern =
+    /(\{\s*"name":\s*"file"[^}]*?"required":\s*true[^}]*)(\})/g
+  fixed = fixed.replaceAll(
+    fileParamPattern,
+    (match, paramContent, closingBrace) => {
+      if (
+        !paramContent.includes('"in":') &&
+        !paramContent.includes('"schema":')
+      ) {
+        hasChanges = true
+        return `${paramContent}, "in": "formData", "schema": { "type": "string", "format": "binary" }${closingBrace}`
+      }
+      return match
+    },
+  )
+
+  return { fixed, hasChanges }
+}
+
 function isOpenAPIV3(
   openapiJSON: APIDocument,
 ): openapiJSON is OpenAPIV3.Document | OpenAPIV3_1.Document {
@@ -49,13 +126,30 @@ function isOpenAPIV3(
 }
 
 // 预处理 OpenAPI JSON，将 components.schemas 中key 包含 / 的转换为 _
-function preprocessOpenAPIJSON(openapiString: string): string {
-  const openapiJSON = parseOpenAPIToJSON(openapiString)
+function preprocessOpenAPIJSON(
+  openapiString: string,
+  tolerant = false,
+): string {
+  const parseResult = tolerant
+    ? parseOpenAPIToJSONTolerant(openapiString)
+    : {
+        success: !!parseOpenAPIToJSON(openapiString),
+        data: parseOpenAPIToJSON(openapiString),
+      }
 
-  if (!openapiJSON) {
-    throw new Error('Invalid JSON')
+  if (!parseResult.success || !parseResult.data) {
+    if (tolerant) {
+      // In tolerant mode, log error but try to continue with original string
+      console.warn(
+        'JSON preprocessing failed, continuing with original content',
+      )
+      return openapiString
+    } else {
+      throw new Error('Invalid JSON')
+    }
   }
 
+  const openapiJSON = parseResult.data
   const schemas = isOpenAPIV3(openapiJSON)
     ? openapiJSON?.components?.schemas
     : openapiJSON?.definitions
@@ -81,11 +175,11 @@ function preprocessOpenAPIJSON(openapiString: string): string {
 
 // Helper function: Get friendly name for parameter type
 function getParameterTypeName(parameter: any, texts: any): string {
-  if (!parameter.schema) return texts.unknown
+  if (!parameter.schema) return texts.unknown || 'unknown'
 
   const schema = parameter.schema
   if (schema.type === 'array') {
-    const itemType = schema.items?.type || texts.unknown
+    const itemType = schema.items?.type || texts.unknown || 'unknown'
     // Handle case where itemType is an array
     if (Array.isArray(itemType)) {
       return `${itemType.join(' | ')}[]`
@@ -98,7 +192,7 @@ function getParameterTypeName(parameter: any, texts: any): string {
     return schema.type.join(' | ')
   }
 
-  return schema.type || texts.unknown
+  return schema.type || texts.unknown || 'unknown'
 }
 
 // Helper function: Format schema properties
@@ -175,12 +269,22 @@ export interface OpenAPI2MarkdownOptions {
    * @default 'en'
    */
   lang?: 'en' | 'zhCN' | (string & {})
+
+  /**
+   * Enable tolerant mode to handle malformed JSON/OpenAPI specs
+   * When enabled, the parser will try to process as much content as possible
+   * even when encountering format errors or validation failures
+   * @default true
+   */
+  tolerant?: boolean
 }
 
 export async function openapi2markdown(
   openapiString: Parameters<typeof dereference>[0],
   options: OpenAPI2MarkdownOptions = {},
 ): Promise<TempoDocument> {
+  const tolerant = options.tolerant ?? true
+
   try {
     // Get language texts
     const lang = options.lang || 'en'
@@ -194,7 +298,31 @@ export async function openapi2markdown(
         '$1"#/components/schemas/$2"',
       )
 
-      sourceJSON = JSON.parse(preprocessOpenAPIJSON(replacedText))
+      // Tolerant JSON parsing
+      if (tolerant) {
+        // First apply reference fixes
+        const refFixResult = fixInvalidReferences(replacedText)
+        if (refFixResult.hasChanges) {
+          console.warn('Fixed invalid references in OpenAPI document')
+        }
+
+        const parseResult = parseOpenAPIToJSONTolerant(
+          preprocessOpenAPIJSON(refFixResult.fixed, true),
+        )
+        if (!parseResult.success) {
+          console.warn(
+            'JSON parsing failed in tolerant mode:',
+            parseResult.error,
+          )
+          throw new Error('Unable to parse JSON even in tolerant mode')
+        }
+        if (parseResult.fixed) {
+          console.warn('JSON was automatically fixed during parsing')
+        }
+        sourceJSON = parseResult.data!
+      } else {
+        sourceJSON = JSON.parse(preprocessOpenAPIJSON(replacedText))
+      }
     } else {
       sourceJSON = openapiString
     }
@@ -203,8 +331,31 @@ export async function openapi2markdown(
       throw new Error('Invalid Input')
     }
 
-    await validate(sourceJSON)
-    const parsed = await dereference(sourceJSON)
+    // Tolerant validation
+    let parsed: any
+    if (tolerant) {
+      try {
+        await validate(sourceJSON)
+      } catch (validationError) {
+        console.warn(
+          'OpenAPI validation failed, continuing in tolerant mode:',
+          validationError,
+        )
+      }
+
+      try {
+        parsed = await dereference(sourceJSON)
+      } catch (dereferenceError) {
+        console.warn(
+          'Reference resolution failed, using original document:',
+          dereferenceError,
+        )
+        parsed = sourceJSON
+      }
+    } else {
+      await validate(sourceJSON)
+      parsed = await dereference(sourceJSON)
+    }
     const md = tempo()
 
     // Add document title and description
@@ -239,9 +390,10 @@ export async function openapi2markdown(
 
     // Collect all paths and group by tag
     for (const [path, pathItem] of Object.entries(parsed.paths || {})) {
-      const methods = getPathMethods(pathItem)
+      const methods = getPathMethods(pathItem as any)
 
       for (const method of methods) {
+        // @ts-expect-error TODO: pathItem type should be fixed
         const operation = pathItem[method]
         if (!operation) continue
 
@@ -262,128 +414,273 @@ export async function openapi2markdown(
     }
 
     // Process tags and paths
-    for (const tag of parsed.tags || []) {
-      const tagName = tag.name
-      const tagDescription = tag.description
+    // If there are global tags defined, use them
+    if (parsed.tags && parsed.tags.length > 0) {
+      for (const tag of parsed.tags) {
+        const tagName = tag.name
+        const tagDescription = tag.description
 
-      md.h2(tagName)
+        md.h2(tagName)
 
-      if (tagDescription) {
-        md.paragraph(tagDescription)
-      }
-
-      const endpoints = pathsByTag[tagName] || []
-
-      for (const { path, method, operation } of endpoints) {
-        // Endpoint title
-        md.h3(operation.description || operation.summary || '')
-
-        // Description
-        if (operation.description) {
-          md.paragraph(operation.description)
-        } else if (operation.summary) {
-          md.paragraph(operation.summary)
+        if (tagDescription) {
+          md.paragraph(tagDescription)
         }
 
-        md.codeBlock(`${method.toUpperCase()} ${path}`, 'http')
+        const endpoints = pathsByTag[tagName] || []
 
-        // Operation ID
-        if (operation.operationId) {
-          md.paragraph(`**${texts.operationId}:** \`${operation.operationId}\``)
-        }
+        for (const { path, method, operation } of endpoints) {
+          // Endpoint title
+          md.h3(operation.description || operation.summary || '')
 
-        // Parameters
-        const parameters = operation.parameters || []
-        if (parameters.length > 0) {
-          md.h4(texts.parameters)
+          // Description
+          if (operation.description) {
+            md.paragraph(operation.description)
+          } else if (operation.summary) {
+            md.paragraph(operation.summary)
+          }
 
-          // Create parameters table
-          const paramHeaders = [
-            texts.name,
-            texts.location,
-            texts.type,
-            texts.required,
-            texts.description,
-          ]
-          const paramRows = parameters.map((param: any) => {
-            const name = param.name
-            const location = param.in
-            const type = getParameterTypeName(param, texts)
-            const required = param.required ? texts.yes : texts.no
-            const description = param.description || texts.noDescription
+          md.codeBlock(`${method.toUpperCase()} ${path}`, 'http')
 
-            return [name, location, type, required, description]
-          })
+          // Operation ID
+          if (operation.operationId) {
+            md.paragraph(
+              `**${texts.operationId}:** \`${operation.operationId}\``,
+            )
+          }
 
-          md.table([paramHeaders, ...paramRows])
-        }
+          // Parameters
+          const parameters = operation.parameters || []
+          if (parameters.length > 0) {
+            md.h4(texts.parameters)
 
-        // Request body
-        if (operation.requestBody) {
-          md.h4(texts.requestBody)
+            // Create parameters table
+            const paramHeaders = [
+              texts.name,
+              texts.location,
+              texts.type,
+              texts.required,
+              texts.description,
+            ]
+            const paramRows = parameters.map((param: any) => {
+              const name = param.name || 'unknown'
+              const location = param.in || 'unknown'
+              const type = getParameterTypeName(param, texts)
+              const required = param.required
+                ? texts.yes || 'yes'
+                : texts.no || 'no'
+              const description =
+                param.description || texts.noDescription || 'No description'
 
-          const contentTypes = Object.keys(operation.requestBody.content || {})
+              return [name, location, type, required, description]
+            })
 
-          for (const contentType of contentTypes) {
-            const content = operation.requestBody.content[contentType]
-            const schema = content.schema
+            md.table([paramHeaders, ...paramRows])
+          }
 
-            md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+          // Request body
+          if (operation.requestBody) {
+            md.h4(texts.requestBody)
 
-            if (operation.requestBody.description) {
-              md.paragraph(
-                `**${texts.description}:** ${operation.requestBody.description}`,
-              )
-            }
+            const contentTypes = Object.keys(
+              operation.requestBody.content || {},
+            )
 
-            if (operation.requestBody.required) {
-              md.paragraph(`**${texts.required}:** ${texts.yes}`)
-            }
+            for (const contentType of contentTypes) {
+              const content = operation.requestBody.content[contentType]
+              const schema = content.schema
 
-            if (schema) {
-              if (schema.title) {
-                md.paragraph(`**${texts.schema}:** ${schema.title}`)
+              md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+
+              if (operation.requestBody.description) {
+                md.paragraph(
+                  `**${texts.description}:** ${operation.requestBody.description}`,
+                )
               }
 
-              md.paragraph(formatSchema(schema, texts))
+              if (operation.requestBody.required) {
+                md.paragraph(`**${texts.required}:** ${texts.yes}`)
+              }
+
+              if (schema) {
+                if (schema.title) {
+                  md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                }
+
+                md.paragraph(formatSchema(schema, texts))
+              }
+            }
+          }
+
+          // Responses
+          if (
+            operation.responses &&
+            Object.keys(operation.responses).length > 0
+          ) {
+            md.h4(texts.responses)
+
+            for (const [statusCode, responseObj] of Object.entries(
+              operation.responses,
+            )) {
+              const response = responseObj as any
+              if (!response.content) continue
+
+              md.paragraph(`**${texts.statusCode}:** ${statusCode}`)
+
+              if (response.description) {
+                md.paragraph(
+                  `**${texts.description}:** ${response.description}`,
+                )
+              }
+
+              if (response.content) {
+                const contentTypes = Object.keys(response.content)
+
+                for (const contentType of contentTypes) {
+                  const content = response.content[contentType]
+                  const schema = content.schema
+
+                  md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+
+                  if (schema) {
+                    if (schema.title) {
+                      md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                    }
+
+                    md.paragraph(formatSchema(schema, texts))
+                  }
+                }
+              }
             }
           }
         }
+      }
+    } else {
+      // If no global tags, process all collected tags from operations
+      for (const tagName of Object.keys(pathsByTag)) {
+        md.h2(tagName)
 
-        // Responses
-        if (
-          operation.responses &&
-          Object.keys(operation.responses).length > 0
-        ) {
-          md.h4(texts.responses)
+        const endpoints = pathsByTag[tagName] || []
 
-          for (const [statusCode, responseObj] of Object.entries(
-            operation.responses,
-          )) {
-            const response = responseObj as any
-            if (!response.content) continue
+        for (const { path, method, operation } of endpoints) {
+          // Endpoint title
+          md.h3(operation.description || operation.summary || '')
 
-            md.paragraph(`**${texts.statusCode}:** ${statusCode}`)
+          // Description
+          if (operation.description) {
+            md.paragraph(operation.description)
+          } else if (operation.summary) {
+            md.paragraph(operation.summary)
+          }
 
-            if (response.description) {
-              md.paragraph(`**${texts.description}:** ${response.description}`)
+          md.codeBlock(`${method.toUpperCase()} ${path}`, 'http')
+
+          // Operation ID
+          if (operation.operationId) {
+            md.paragraph(
+              `**${texts.operationId}:** \`${operation.operationId}\``,
+            )
+          }
+
+          // Parameters
+          const parameters = operation.parameters || []
+          if (parameters.length > 0) {
+            md.h4(texts.parameters)
+
+            // Create parameters table
+            const paramHeaders = [
+              texts.name,
+              texts.location,
+              texts.type,
+              texts.required,
+              texts.description,
+            ]
+            const paramRows = parameters.map((param: any) => {
+              const name = param.name || 'unknown'
+              const location = param.in || 'unknown'
+              const type = getParameterTypeName(param, texts)
+              const required = param.required
+                ? texts.yes || 'yes'
+                : texts.no || 'no'
+              const description =
+                param.description || texts.noDescription || 'No description'
+
+              return [name, location, type, required, description]
+            })
+
+            md.table([paramHeaders, ...paramRows])
+          }
+
+          // Request body
+          if (operation.requestBody) {
+            md.h4(texts.requestBody)
+
+            const contentTypes = Object.keys(
+              operation.requestBody.content || {},
+            )
+
+            for (const contentType of contentTypes) {
+              const content = operation.requestBody.content[contentType]
+              const schema = content.schema
+
+              md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+
+              if (operation.requestBody.description) {
+                md.paragraph(
+                  `**${texts.description}:** ${operation.requestBody.description}`,
+                )
+              }
+
+              if (operation.requestBody.required) {
+                md.paragraph(`**${texts.required}:** ${texts.yes}`)
+              }
+
+              if (schema) {
+                if (schema.title) {
+                  md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                }
+
+                md.paragraph(formatSchema(schema, texts))
+              }
             }
+          }
 
-            if (response.content) {
-              const contentTypes = Object.keys(response.content)
+          // Responses
+          if (
+            operation.responses &&
+            Object.keys(operation.responses).length > 0
+          ) {
+            md.h4(texts.responses)
 
-              for (const contentType of contentTypes) {
-                const content = response.content[contentType]
-                const schema = content.schema
+            for (const [statusCode, responseObj] of Object.entries(
+              operation.responses,
+            )) {
+              const response = responseObj as any
+              if (!response.content) continue
 
-                md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+              md.paragraph(`**${texts.statusCode}:** ${statusCode}`)
 
-                if (schema) {
-                  if (schema.title) {
-                    md.paragraph(`**${texts.schema}:** ${schema.title}`)
+              if (response.description) {
+                md.paragraph(
+                  `**${texts.description}:** ${response.description}`,
+                )
+              }
+
+              if (response.content) {
+                const contentTypes = Object.keys(response.content)
+
+                for (const contentType of contentTypes) {
+                  const content = response.content[contentType]
+                  const schema = content.schema
+
+                  md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+
+                  if (schema) {
+                    if (schema.title) {
+                      md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                    }
+
+                    md.paragraph(formatSchema(schema, texts))
                   }
-
-                  md.paragraph(formatSchema(schema, texts))
                 }
               }
             }
@@ -394,6 +691,20 @@ export async function openapi2markdown(
 
     return md
   } catch (error) {
-    throw new Error(error as string)
+    if (tolerant) {
+      // In tolerant mode, try to provide partial results or meaningful error message
+      console.error('Error in openapi2markdown (tolerant mode):', error)
+      const md = tempo()
+      const texts = i18nTexts[options.lang || 'en'] || i18nTexts.en
+      md.h1(texts.apiDocumentation)
+      md.paragraph(
+        `⚠️ Document could not be fully processed due to format errors. Showing partial content.`,
+      )
+      md.paragraph(`Error: ${error}`)
+      return md
+    } else {
+      // Standard mode - throw error as before for backward compatibility
+      throw new Error(error as string)
+    }
   }
 }

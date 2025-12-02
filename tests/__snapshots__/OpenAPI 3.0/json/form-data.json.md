@@ -18,8 +18,6 @@ Demo handling of formData
 POST /anything
 ```
 
-**Operation ID:** `demoFormData`
-
 #### Request Body
 
 **Content Type:** `application/x-www-form-urlencoded`
@@ -50,3 +48,8 @@ POST /anything
 | access_token | integer | Yes | No description |
 | token_type | string | Yes | No description |
 | expires_in | integer | Yes | No description |
+
+
+**Status Code:** 401
+
+**Description:** Unauthorized

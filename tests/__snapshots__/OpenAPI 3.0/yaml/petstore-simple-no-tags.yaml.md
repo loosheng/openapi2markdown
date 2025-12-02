@@ -20,6 +20,10 @@ PUT /pet/{id}
 
 #### Responses
 
+**Status Code:** 400
+
+**Description:** Invalid id value
+
 ### This operation will find a pet in the database.
 
 This operation will find a pet in the database.
@@ -29,3 +33,7 @@ GET /pet/{id}
 ```
 
 #### Responses
+
+**Status Code:** 400
+
+**Description:** Invalid status value

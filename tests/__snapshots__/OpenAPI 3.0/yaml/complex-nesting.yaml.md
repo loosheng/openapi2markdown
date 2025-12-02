@@ -79,6 +79,33 @@ POST /anything/top-level-object/simple
 | nestedObject_3 | object | No | No description |
 
 
+**nestedObject_1 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**nestedObject_2 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**nestedObject_3 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
 #### Responses
 
 **Status Code:** 200
@@ -92,6 +119,15 @@ POST /anything/top-level-object/simple
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | nestedObject | object | No | No description |
+
+
+**nestedObject 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
 
 
 ### Object of Everything
@@ -111,9 +147,65 @@ POST /top-level-object/of-everything
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | objectOfObjectsAndArrays | object | No | Object containing objects and arrays |
-| arrayOfObjectsOfObjectsAndArrays | array | No | Array of objects (containing objects and arrays) |
+| arrayOfObjectsOfObjectsAndArrays | object[] | No | Array of objects (containing objects and arrays) |
 | objectOfAdditionalProperties | object | No | Object containing an `additionalProperties` declaration that's comprised of a polymorphic `oneOf`. |
 | string | string | No | No description |
+
+
+**objectOfObjectsAndArrays 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| singleObject | object | No | Simple flat object |
+| arrayOfPrimitives | string[] | No | Array of primitives |
+| arrayOfObjects | object[] | No | Array of objects |
+| primitive | string | No | No description |
+
+
+**singleObject 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**arrayOfObjects 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**arrayOfObjectsOfObjectsAndArrays 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| singleObject | object | No | Simple flat object |
+| arrayOfPrimitives | string[] | No | Array of primitives |
+| arrayOfObjects | object[] | No | Array of objects |
+| primitive | string | No | No description |
+
+
+**singleObject 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**arrayOfObjects 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
 
 
 #### Responses
@@ -129,9 +221,65 @@ POST /top-level-object/of-everything
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | objectOfObjectsAndArrays | object | No | Object containing objects and arrays |
-| arrayOfObjectsOfObjectsAndArrays | array | No | Array of objects (containing objects and arrays) |
+| arrayOfObjectsOfObjectsAndArrays | object[] | No | Array of objects (containing objects and arrays) |
 | objectOfAdditionalProperties | object | No | Object containing an `additionalProperties` declaration that's comprised of a polymorphic `oneOf`. |
 | string | string | No | No description |
+
+
+**objectOfObjectsAndArrays 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| singleObject | object | No | Simple flat object |
+| arrayOfPrimitives | string[] | No | Array of primitives |
+| arrayOfObjects | object[] | No | Array of objects |
+| primitive | string | No | No description |
+
+
+**singleObject 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**arrayOfObjects 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**arrayOfObjectsOfObjectsAndArrays 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| singleObject | object | No | Simple flat object |
+| arrayOfPrimitives | string[] | No | Array of primitives |
+| arrayOfObjects | object[] | No | Array of objects |
+| primitive | string | No | No description |
+
+
+**singleObject 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
+
+
+**arrayOfObjects 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| boolean | boolean | No | No description |
+| number | number | No | No description |
 
 
 ### Multischema of Everything

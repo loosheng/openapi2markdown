@@ -24,3 +24,7 @@ POST /post
 | bar | cookie | string | No | No description |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

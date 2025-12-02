@@ -15,3 +15,9 @@ GET /pets
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** A list of pets.
+
+Array, item type: object

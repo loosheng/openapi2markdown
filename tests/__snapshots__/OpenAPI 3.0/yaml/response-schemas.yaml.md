@@ -48,8 +48,50 @@ GET /anything/object
 | read-only | string | No | No description |
 | write-only | string | No | No description |
 | object | object | No | No description |
-| array | array | No | No description |
-| pets | array | No | No description |
+| array | object[] | No | No description |
+| pets | object[] | No | No description |
+
+
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**array 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**pets 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| name | string | Yes | No description |
+| name2 | string | No | No description |
+| name3 | string | No | No description |
+| name4 | string | No | No description |
+| name5 | string | No | No description |
+| name6 | string | No | No description |
+| name7 | string | No | No description |
+| name8 | string | No | No description |
+| name9 | string | No | No description |
+| name10 | string | No | No description |
+| name11 | string | No | No description |
+| name12 | string | No | No description |
+| name13 | string | No | No description |
+| name14 | string | No | No description |
+| name15 | string | No | No description |
+| name16 | string | No | No description |
+| name17 | string | No | No description |
+| name18 | string | No | No description |
+| name19 | string | No | No description |
+| photoUrls | string[] | Yes | No description |
+| status | string | No | pet status in the store |
 
 
 #### Responses
@@ -68,8 +110,50 @@ GET /anything/object
 | read-only | string | No | No description |
 | write-only | string | No | No description |
 | object | object | No | No description |
-| array | array | No | No description |
-| pets | array | No | No description |
+| array | object[] | No | No description |
+| pets | object[] | No | No description |
+
+
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**array 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**pets 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| name | string | Yes | No description |
+| name2 | string | No | No description |
+| name3 | string | No | No description |
+| name4 | string | No | No description |
+| name5 | string | No | No description |
+| name6 | string | No | No description |
+| name7 | string | No | No description |
+| name8 | string | No | No description |
+| name9 | string | No | No description |
+| name10 | string | No | No description |
+| name11 | string | No | No description |
+| name12 | string | No | No description |
+| name13 | string | No | No description |
+| name14 | string | No | No description |
+| name15 | string | No | No description |
+| name16 | string | No | No description |
+| name17 | string | No | No description |
+| name18 | string | No | No description |
+| name19 | string | No | No description |
+| photoUrls | string[] | Yes | No description |
+| status | string | No | pet status in the store |
 
 
 ### Markdown
@@ -99,8 +183,50 @@ GET /anything/markdown
 | read-only | string | No | No description |
 | write-only | string | No | No description |
 | object | object | No | No description |
-| array | array | No | No description |
-| pets | array | No | No description |
+| array | object[] | No | No description |
+| pets | object[] | No | No description |
+
+
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**array 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**pets 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| name | string | Yes | No description |
+| name2 | string | No | No description |
+| name3 | string | No | No description |
+| name4 | string | No | No description |
+| name5 | string | No | No description |
+| name6 | string | No | No description |
+| name7 | string | No | No description |
+| name8 | string | No | No description |
+| name9 | string | No | No description |
+| name10 | string | No | No description |
+| name11 | string | No | No description |
+| name12 | string | No | No description |
+| name13 | string | No | No description |
+| name14 | string | No | No description |
+| name15 | string | No | No description |
+| name16 | string | No | No description |
+| name17 | string | No | No description |
+| name18 | string | No | No description |
+| name19 | string | No | No description |
+| photoUrls | string[] | Yes | No description |
+| status | string | No | pet status in the store |
 
 
 **Status Code:** 400
@@ -117,8 +243,50 @@ GET /anything/markdown
 | read-only | string | No | No description |
 | write-only | string | No | No description |
 | object | object | No | No description |
-| array | array | No | No description |
-| pets | array | No | No description |
+| array | object[] | No | No description |
+| pets | object[] | No | No description |
+
+
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**array 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| primitive | boolean | No | No description |
+
+
+**pets 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| name | string | Yes | No description |
+| name2 | string | No | No description |
+| name3 | string | No | No description |
+| name4 | string | No | No description |
+| name5 | string | No | No description |
+| name6 | string | No | No description |
+| name7 | string | No | No description |
+| name8 | string | No | No description |
+| name9 | string | No | No description |
+| name10 | string | No | No description |
+| name11 | string | No | No description |
+| name12 | string | No | No description |
+| name13 | string | No | No description |
+| name14 | string | No | No description |
+| name15 | string | No | No description |
+| name16 | string | No | No description |
+| name17 | string | No | No description |
+| name18 | string | No | No description |
+| name19 | string | No | No description |
+| photoUrls | string[] | Yes | No description |
+| status | string | No | pet status in the store |
 
 
 ### Array of objects

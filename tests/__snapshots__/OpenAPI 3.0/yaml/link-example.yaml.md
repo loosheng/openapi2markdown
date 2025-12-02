@@ -10,8 +10,6 @@
 GET /2.0/users/{username}
 ```
 
-**Operation ID:** `getUserByName`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -40,8 +38,6 @@ GET /2.0/users/{username}
 GET /2.0/repositories/{username}
 ```
 
-**Operation ID:** `getRepositoriesByOwner`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -63,8 +59,6 @@ Array, item type: object
 ```http
 GET /2.0/repositories/{username}/{slug}
 ```
-
-**Operation ID:** `getRepository`
 
 #### Parameters
 
@@ -89,13 +83,19 @@ GET /2.0/repositories/{username}/{slug}
 | owner | object | No | No description |
 
 
+**owner 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| username | string | No | No description |
+| uuid | string | No | No description |
+
+
 ### 
 
 ```http
 GET /2.0/repositories/{username}/{slug}/pullrequests
 ```
-
-**Operation ID:** `getPullRequestsByRepository`
 
 #### Parameters
 
@@ -120,8 +120,6 @@ Array, item type: object
 ```http
 GET /2.0/repositories/{username}/{slug}/pullrequests/{pid}
 ```
-
-**Operation ID:** `getPullRequestsById`
 
 #### Parameters
 
@@ -149,13 +147,35 @@ GET /2.0/repositories/{username}/{slug}/pullrequests/{pid}
 | author | object | No | No description |
 
 
+**repository 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| slug | string | No | No description |
+| owner | object | No | No description |
+
+
+**owner 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| username | string | No | No description |
+| uuid | string | No | No description |
+
+
+**author 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| username | string | No | No description |
+| uuid | string | No | No description |
+
+
 ### 
 
 ```http
 POST /2.0/repositories/{username}/{slug}/pullrequests/{pid}/merge
 ```
-
-**Operation ID:** `mergePullRequest`
 
 #### Parameters
 
@@ -166,3 +186,7 @@ POST /2.0/repositories/{username}/{slug}/pullrequests/{pid}/merge
 | pid | path | string | Yes | No description |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** the PR was successfully merged

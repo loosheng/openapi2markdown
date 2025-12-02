@@ -22,8 +22,6 @@ Returns a list of all train stations in the system.
 GET /stations
 ```
 
-**Operation ID:** `get-stations`
-
 #### Responses
 
 **Status Code:** 200
@@ -109,8 +107,6 @@ Returns a list of available train trips between the specified origin and destina
 ```http
 GET /trips
 ```
-
-**Operation ID:** `get-trips`
 
 #### Parameters
 
@@ -208,8 +204,6 @@ Returns a list of all trips booking by the authenticated user.
 GET /bookings
 ```
 
-**Operation ID:** `get-bookings`
-
 #### Responses
 
 **Status Code:** 200
@@ -291,8 +285,6 @@ A booking is a temporary hold on a trip. It is not confirmed until the payment i
 ```http
 POST /bookings
 ```
-
-**Operation ID:** `create-booking`
 
 #### Request Body
 
@@ -420,8 +412,6 @@ Returns the details of a specific booking.
 GET /bookings/{bookingId}
 ```
 
-**Operation ID:** `get-booking`
-
 #### Responses
 
 **Status Code:** 200
@@ -516,9 +506,11 @@ Deletes a booking, cancelling the hold on the trip.
 DELETE /bookings/{bookingId}
 ```
 
-**Operation ID:** `delete-booking`
-
 #### Responses
+
+**Status Code:** 204
+
+**Description:** Booking deleted
 
 **Status Code:** 400
 
@@ -608,8 +600,6 @@ A payment is an attempt to pay for the booking, which will confirm the booking f
 ```http
 POST /bookings/{bookingId}/payment
 ```
-
-**Operation ID:** `create-booking-payment`
 
 #### Request Body
 

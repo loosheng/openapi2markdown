@@ -30,6 +30,10 @@ string
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ## multipart/form-data
 
 ### Support for a `requestBody` with a `multipart/form-data` media type.
@@ -59,6 +63,10 @@ POST /anything/multipart-formdata
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Support for a `requestBody` with a `multipart/form-data` containing multiple files.
 
 https://swagger.io/docs/specification/describing-request-body/file-upload/
@@ -79,7 +87,11 @@ PUT /anything/multipart-formdata
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| filename | array | No | No description |
+| filename | string[] | No | No description |
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

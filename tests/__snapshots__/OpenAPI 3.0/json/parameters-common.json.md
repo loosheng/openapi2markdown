@@ -20,6 +20,10 @@ GET /anything/{id}
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### [post] Description
 
 [post] Description
@@ -36,6 +40,10 @@ POST /anything/{id}
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### [get] Description
 
 [get] Description
@@ -46,6 +54,10 @@ GET /anything/{id}/{action}
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### [get] Description
 
 [get] Description
@@ -55,6 +67,10 @@ GET /anything/{id}/{action}/{id}
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### 
 
@@ -69,3 +85,7 @@ GET /anything/{id}/override
 | id | path | string | Yes | A comma-separated list of IDs |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

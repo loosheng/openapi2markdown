@@ -18,8 +18,6 @@ Form style serialization
 PUT /form/primitive
 ```
 
-**Operation ID:** `encoding_form`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -29,8 +27,20 @@ PUT /form/primitive
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | primitive | string | No | No description |
-| array | array | No | No description |
+| array | string[] | No | No description |
 | object | object | No | No description |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| foo | string | No | No description |
+| bar | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

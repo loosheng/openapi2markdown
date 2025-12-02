@@ -20,6 +20,10 @@ GET /anything/numbers
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### String validation
 
 String validation
@@ -29,6 +33,10 @@ GET /anything/strings
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Formats defined by JSON Schema
 
@@ -40,6 +48,10 @@ GET /anything/jsonschema-formats
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Formats defined by OpenAPI
 
 Formats defined by OpenAPI
@@ -50,6 +62,10 @@ GET /anything/oas-formats
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Booleans
 
 Booleans
@@ -59,3 +75,7 @@ GET /anything/booleans
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

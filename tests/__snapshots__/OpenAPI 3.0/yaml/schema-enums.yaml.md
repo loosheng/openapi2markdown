@@ -32,8 +32,6 @@ Support and handling of enums on `type: string` schemas.
 POST /anything/strings
 ```
 
-**Operation ID:** `string_enumSupport`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -57,6 +55,10 @@ POST /anything/strings
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Support and handling of enums on `type: number` schemas.
 
 📚 OpenAPI specification references:
@@ -76,8 +78,6 @@ Support and handling of enums on `type: number` schemas.
 ```http
 GET /anything/strings
 ```
-
-**Operation ID:** `number_enumSupport`
 
 #### Request Body
 
@@ -99,6 +99,10 @@ GET /anything/strings
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Support and handling of enums on `type: boolean` schemas.
 
 📚 OpenAPI specification references:
@@ -119,8 +123,6 @@ Support and handling of enums on `type: boolean` schemas.
 PUT /anything/strings
 ```
 
-**Operation ID:** `boolean_enumSupport`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -136,3 +138,7 @@ PUT /anything/strings
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

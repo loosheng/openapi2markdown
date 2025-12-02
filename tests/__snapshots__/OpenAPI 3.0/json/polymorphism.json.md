@@ -26,6 +26,10 @@ Unknown type
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** Updated
+
 ### allOf with listed objects
 
 allOf with listed objects
@@ -41,6 +45,10 @@ POST /anything/all-of-object
 object
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### anyOf object
 
@@ -58,6 +66,10 @@ Unknown type
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### anyOf primitive
 
 anyOf primitive
@@ -73,6 +85,10 @@ POST /anything/any-of-primitive
 Unknown type
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### AnyOf's with a top level type parameter should not render that type outside of their options
 
@@ -95,6 +111,10 @@ POST /any-of-with-type
 
 #### Responses
 
+**Status Code:** 204
+
+**Description:** Provides no response body
+
 ### oneOf object
 
 oneOf object
@@ -110,6 +130,10 @@ POST /anything/one-of-object
 Unknown type
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### oneOf primitive
 
@@ -127,6 +151,10 @@ Unknown type
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### oneOf object with $ref pointers
 
 oneOf object with $ref pointers
@@ -142,6 +170,10 @@ POST /anything/one-of-object-ref
 Unknown type
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### oneOf object with a complex schema
 
@@ -160,6 +192,10 @@ POST /one-of-complex
 object
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### nested oneOf object with $ref pointers
 
@@ -182,6 +218,10 @@ POST /anything/nested-one-of-object-ref
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### 
 
 ```http
@@ -203,6 +243,10 @@ POST /anything/nested-one-of-ref
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### 
 
 ```http
@@ -221,6 +265,10 @@ POST /anything/nested-one-of-object-with-nested-one-of
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### OneOf's with a top level type parameter should not render that type outside of their options
 
@@ -242,3 +290,7 @@ POST /one-of-with-type
 
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** Provides no response body

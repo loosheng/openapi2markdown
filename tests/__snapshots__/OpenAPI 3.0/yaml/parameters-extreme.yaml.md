@@ -49,3 +49,7 @@ POST /anything/all-param-types/{id}/{id2}
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

@@ -16,16 +16,32 @@ Returns all pets from the system that the user has access to
 GET /pets
 ```
 
-**Operation ID:** `findPets`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| tags | query | unknown | No | tags to filter by |
-| limit | query | unknown | No | maximum number of results to return |
+| tags | query | string[] | No | tags to filter by |
+| limit | query | integer | No | maximum number of results to return |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** pet response
+
+Array, item type: unknown
+
+**Status Code:** default
+
+**Description:** unexpected error
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | integer | Yes | No description |
+| message | string | Yes | No description |
+
 
 ### Creates a new pet in the store.  Duplicates are allowed
 
@@ -35,8 +51,6 @@ Creates a new pet in the store.  Duplicates are allowed
 POST /pets
 ```
 
-**Operation ID:** `addPet`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -44,6 +58,24 @@ POST /pets
 | pet | body | object | Yes | Pet to add to the store |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** pet response
+
+Unknown type
+
+**Status Code:** default
+
+**Description:** unexpected error
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | integer | Yes | No description |
+| message | string | Yes | No description |
+
 
 ### Returns a user based on a single ID, if the user does not have access to the pet
 
@@ -53,15 +85,31 @@ Returns a user based on a single ID, if the user does not have access to the pet
 GET /pets/{id}
 ```
 
-**Operation ID:** `find pet by id`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| id | path | unknown | Yes | ID of pet to fetch |
+| id | path | integer | Yes | ID of pet to fetch |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** pet response
+
+Unknown type
+
+**Status Code:** default
+
+**Description:** unexpected error
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | integer | Yes | No description |
+| message | string | Yes | No description |
+
 
 ### deletes a single pet based on the ID supplied
 
@@ -71,12 +119,25 @@ deletes a single pet based on the ID supplied
 DELETE /pets/{id}
 ```
 
-**Operation ID:** `deletePet`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| id | path | unknown | Yes | ID of pet to delete |
+| id | path | integer | Yes | ID of pet to delete |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** pet deleted
+
+**Status Code:** default
+
+**Description:** unexpected error
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | integer | Yes | No description |
+| message | string | Yes | No description |

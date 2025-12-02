@@ -25,11 +25,11 @@ export const en = {
   contentType: 'Content Type',
   schema: 'Schema',
   statusCode: 'Status Code',
-  operationId: 'Operation ID',
 
   // Types
   unknown: 'unknown',
   array: 'Array',
+  object: 'object',
   itemType: 'item type',
   none: 'None',
   unknownType: 'Unknown type',

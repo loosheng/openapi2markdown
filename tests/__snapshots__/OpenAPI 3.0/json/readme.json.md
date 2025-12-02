@@ -18,8 +18,6 @@ Get an API definition file that's been uploaded to ReadMe.
 GET /api-registry/{uuid}
 ```
 
-**Operation ID:** `getAPIRegistry`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -54,8 +52,6 @@ Get API specification metadata.
 GET /api-specification
 ```
 
-**Operation ID:** `getAPISpecification`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -65,6 +61,10 @@ GET /api-specification
 | x-readme-version | header | string | No | Version number of your docs project, for example, v3.0. By default the main project version is used. To see all valid versions for your docs project call https://docs.readme.com/main/reference/version#getversions. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** Successfully retrieved API specification metadata.
 
 **Status Code:** 400
 
@@ -106,8 +106,6 @@ Upload an API specification to ReadMe. Or, to use a newer solution see https://d
 POST /api-specification
 ```
 
-**Operation ID:** `uploadAPISpecification`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -129,6 +127,10 @@ POST /api-specification
 
 
 #### Responses
+
+**Status Code:** 201
+
+**Description:** The API specification was successfully uploaded.
 
 **Status Code:** 400
 
@@ -170,8 +172,6 @@ Update an API specification in ReadMe.
 PUT /api-specification/{id}
 ```
 
-**Operation ID:** `updateAPISpecification`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -193,6 +193,10 @@ PUT /api-specification/{id}
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The API specification was updated.
 
 **Status Code:** 400
 
@@ -218,6 +222,10 @@ Unknown type
 
 Unknown type
 
+**Status Code:** 404
+
+**Description:** There is no API specification with that ID.
+
 **Status Code:** 408
 
 **Description:** The spec upload timed out.
@@ -234,8 +242,6 @@ Delete an API specification in ReadMe.
 DELETE /api-specification/{id}
 ```
 
-**Operation ID:** `deleteAPISpecification`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -243,6 +249,10 @@ DELETE /api-specification/{id}
 | id | path | string | Yes | ID of the API specification. The unique ID for each API can be found by navigating to your **API Definitions** page. |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** The API specification was deleted.
 
 **Status Code:** 400
 
@@ -284,8 +294,6 @@ Validate an API specification.
 POST /api-validation
 ```
 
-**Operation ID:** `validateAPISpecification`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -301,6 +309,10 @@ POST /api-validation
 
 
 #### Responses
+
+**Status Code:** 201
+
+**Description:** The API specification is valid.
 
 **Status Code:** 400
 
@@ -326,8 +338,6 @@ Returns a copy of our OpenAPI Definition.
 GET /schema
 ```
 
-**Operation ID:** `getAPISchema`
-
 #### Responses
 
 **Status Code:** 200
@@ -348,8 +358,6 @@ Returns all the roles we're hiring for at ReadMe!
 GET /apply
 ```
 
-**Operation ID:** `getOpenRoles`
-
 #### Responses
 
 **Status Code:** 200
@@ -367,8 +375,6 @@ This endpoint will let you apply to a job at ReadMe programatically, without hav
 ```http
 POST /apply
 ```
-
-**Operation ID:** `applyToReadMe`
 
 #### Request Body
 
@@ -392,6 +398,10 @@ POST /apply
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** You did it!
+
 ## Categories
 
 ### Returns all the categories for a specified version.
@@ -401,8 +411,6 @@ Returns all the categories for a specified version.
 ```http
 GET /categories
 ```
-
-**Operation ID:** `getCategories`
 
 #### Parameters
 
@@ -414,6 +422,10 @@ GET /categories
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** The list of categories.
+
 ### Create a new category inside of this project.
 
 Create a new category inside of this project.
@@ -421,8 +433,6 @@ Create a new category inside of this project.
 ```http
 POST /categories
 ```
-
-**Operation ID:** `createCategory`
 
 #### Parameters
 
@@ -440,6 +450,10 @@ Unknown type
 
 #### Responses
 
+**Status Code:** 201
+
+**Description:** The category has successfully been created.
+
 **Status Code:** 400
 
 **Description:** The category couldn't be saved.
@@ -456,8 +470,6 @@ Returns the category with this slug.
 GET /categories/{slug}
 ```
 
-**Operation ID:** `getCategory`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -466,6 +478,10 @@ GET /categories/{slug}
 | x-readme-version | header | string | No | Version number of your docs project, for example, v3.0. By default the main project version is used. To see all valid versions for your docs project call https://docs.readme.com/main/reference/version#getversions. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The category exists and has been returned.
 
 **Status Code:** 404
 
@@ -482,8 +498,6 @@ Change the properties of a category.
 ```http
 PUT /categories/{slug}
 ```
-
-**Operation ID:** `updateCategory`
 
 #### Parameters
 
@@ -507,6 +521,10 @@ PUT /categories/{slug}
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The category was successfully updated.
 
 **Status Code:** 400
 
@@ -532,8 +550,6 @@ Delete the category with this slug.
 DELETE /categories/{slug}
 ```
 
-**Operation ID:** `deleteCategory`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -542,6 +558,10 @@ DELETE /categories/{slug}
 | x-readme-version | header | string | No | Version number of your docs project, for example, v3.0. By default the main project version is used. To see all valid versions for your docs project call https://docs.readme.com/main/reference/version#getversions. |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** The category was deleted.
 
 **Status Code:** 404
 
@@ -559,8 +579,6 @@ Returns the docs and children docs within this category.
 GET /categories/{slug}/docs
 ```
 
-**Operation ID:** `getCategoryDocs`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -569,6 +587,10 @@ GET /categories/{slug}/docs
 | x-readme-version | header | string | No | Version number of your docs project, for example, v3.0. By default the main project version is used. To see all valid versions for your docs project call https://docs.readme.com/main/reference/version#getversions. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The category exists and all of the docs have been returned.
 
 **Status Code:** 404
 
@@ -588,8 +610,6 @@ Returns a list of changelogs.
 GET /changelogs
 ```
 
-**Operation ID:** `getChangelogs`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -599,6 +619,10 @@ GET /changelogs
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** The list of changelogs.
+
 ### Create a new changelog entry.
 
 Create a new changelog entry.
@@ -606,8 +630,6 @@ Create a new changelog entry.
 ```http
 POST /changelogs
 ```
-
-**Operation ID:** `createChangelog`
 
 #### Request Body
 
@@ -626,6 +648,14 @@ POST /changelogs
 
 
 #### Responses
+
+**Status Code:** 201
+
+**Description:** The changelog was successfully created.
+
+**Status Code:** 400
+
+**Description:** There was a validation error during creation.
 
 ### Returns the changelog with this slug.
 
@@ -635,8 +665,6 @@ Returns the changelog with this slug.
 GET /changelogs/{slug}
 ```
 
-**Operation ID:** `getChangelog`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -645,6 +673,14 @@ GET /changelogs/{slug}
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** The changelog exists and has been returned.
+
+**Status Code:** 404
+
+**Description:** There is no changelog with that slug.
+
 ### Update a changelog with this slug.
 
 Update a changelog with this slug.
@@ -652,8 +688,6 @@ Update a changelog with this slug.
 ```http
 PUT /changelogs/{slug}
 ```
-
-**Operation ID:** `updateChangelog`
 
 #### Parameters
 
@@ -679,6 +713,18 @@ PUT /changelogs/{slug}
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** The changelog was successfully updated.
+
+**Status Code:** 400
+
+**Description:** There was a validation error during update.
+
+**Status Code:** 404
+
+**Description:** There is no changelog with that slug.
+
 ### Delete the changelog with this slug.
 
 Delete the changelog with this slug.
@@ -687,8 +733,6 @@ Delete the changelog with this slug.
 DELETE /changelogs/{slug}
 ```
 
-**Operation ID:** `deleteChangelog`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -696,6 +740,14 @@ DELETE /changelogs/{slug}
 | slug | path | string | Yes | A URL-safe representation of the changelog title. Slugs must be all lowercase, and replace spaces with hyphens. For example, for the changelog "Owlet Weekly Update", enter the slug "owlet-weekly-update". |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** The changelog was successfully updated.
+
+**Status Code:** 404
+
+**Description:** There is no changelog with that slug.
 
 ## Custom Pages
 
@@ -707,8 +759,6 @@ Returns a list of custom pages.
 GET /custompages
 ```
 
-**Operation ID:** `getCustomPages`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -717,6 +767,10 @@ GET /custompages
 | page | query | integer | No | Used to specify further pages (starts at 1). |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The list of custom pages.
 
 **Status Code:** 401
 
@@ -742,8 +796,6 @@ Create a new custom page inside of this project.
 POST /custompages
 ```
 
-**Operation ID:** `createCustomPage`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -762,6 +814,10 @@ POST /custompages
 
 
 #### Responses
+
+**Status Code:** 201
+
+**Description:** The custom page was successfully created.
 
 **Status Code:** 400
 
@@ -795,8 +851,6 @@ Returns the custom page with this slug.
 GET /custompages/{slug}
 ```
 
-**Operation ID:** `getCustomPage`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -804,6 +858,10 @@ GET /custompages/{slug}
 | slug | path | string | Yes | A URL-safe representation of the page title. Slugs must be all lowercase, and replace spaces with hyphens. For example, for the title "Getting Started", enter the slug "getting-started". |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The custom page exists and has been returned.
 
 **Status Code:** 401
 
@@ -837,8 +895,6 @@ Update a custom page with this slug.
 PUT /custompages/{slug}
 ```
 
-**Operation ID:** `updateCustomPage`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -863,6 +919,10 @@ PUT /custompages/{slug}
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The custom page was successfully updated.
 
 **Status Code:** 400
 
@@ -904,8 +964,6 @@ Delete the custom page with this slug.
 DELETE /custompages/{slug}
 ```
 
-**Operation ID:** `deleteCustomPage`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -913,6 +971,10 @@ DELETE /custompages/{slug}
 | slug | path | string | Yes | A URL-safe representation of the page title. Slugs must be all lowercase, and replace spaces with hyphens. For example, for the title "Getting Started", enter the slug "getting-started". |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** The custom page was successfully updated.
 
 **Status Code:** 401
 
@@ -948,8 +1010,6 @@ Create a new doc inside of this project.
 POST /docs
 ```
 
-**Operation ID:** `createDoc`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -981,6 +1041,13 @@ POST /docs
 | parentDocSlug | string | No | If this page is a subpage, this field will be the slug of the parent document. You can get this through https://docs.readme.com/main/reference/docs#getdoc. This field is an alternative to the `parentDoc` field. |
 
 
+**error 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
+
+
 #### Responses
 
 **Status Code:** 201
@@ -1004,6 +1071,13 @@ POST /docs
 | order | integer | No | The position of the page in your project sidebar. |
 | parentDoc | string | No | The parent doc's ID, if the page is a subpage. |
 | error | object | No | This is used for docs with the `type` set to `error`. The `error` page type and this `error` object have been deprecated. |
+
+
+**error 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
 **Status Code:** 400
@@ -1038,8 +1112,6 @@ Returns all docs that match the search.
 POST /docs/search
 ```
 
-**Operation ID:** `searchDocs`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -1048,6 +1120,10 @@ POST /docs/search
 | x-readme-version | header | string | No | Version number of your docs project, for example, v3.0. By default the main project version is used. To see all valid versions for your docs project call https://docs.readme.com/main/reference/version#getversions. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The search was successful and results were returned.
 
 **Status Code:** 401
 
@@ -1072,8 +1148,6 @@ Returns the doc with this slug.
 ```http
 GET /docs/{slug}
 ```
-
-**Operation ID:** `getDoc`
 
 #### Parameters
 
@@ -1105,6 +1179,13 @@ GET /docs/{slug}
 | order | integer | No | The position of the page in your project sidebar. |
 | parentDoc | string | No | The parent doc's ID, if the page is a subpage. |
 | error | object | No | This is used for docs with the `type` set to `error`. The `error` page type and this `error` object have been deprecated. |
+
+
+**error 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
 **Status Code:** 401
@@ -1139,8 +1220,6 @@ Update a doc with this slug.
 PUT /docs/{slug}
 ```
 
-**Operation ID:** `updateDoc`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -1173,6 +1252,13 @@ PUT /docs/{slug}
 | parentDocSlug | string | No | If this page is a subpage, this field will be the slug of the parent document. You can get this through https://docs.readme.com/main/reference/docs#getdoc. This field is an alternative to the `parentDoc` field. |
 
 
+**error 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
+
+
 #### Responses
 
 **Status Code:** 200
@@ -1196,6 +1282,13 @@ PUT /docs/{slug}
 | order | integer | No | The position of the page in your project sidebar. |
 | parentDoc | string | No | The parent doc's ID, if the page is a subpage. |
 | error | object | No | This is used for docs with the `type` set to `error`. The `error` page type and this `error` object have been deprecated. |
+
+
+**error 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
 **Status Code:** 400
@@ -1238,8 +1331,6 @@ Delete the doc with this slug.
 DELETE /docs/{slug}
 ```
 
-**Operation ID:** `deleteDoc`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -1248,6 +1339,10 @@ DELETE /docs/{slug}
 | x-readme-version | header | string | No | Version number of your docs project, for example, v3.0. By default the main project version is used. To see all valid versions for your docs project call https://docs.readme.com/main/reference/version#getversions. |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** The doc was successfully updated.
 
 **Status Code:** 401
 
@@ -1281,8 +1376,6 @@ This is intended for use by enterprise users with staging enabled. This endpoint
 GET /docs/{slug}/production
 ```
 
-**Operation ID:** `getProductionDoc`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -1313,6 +1406,13 @@ GET /docs/{slug}/production
 | order | integer | No | The position of the page in your project sidebar. |
 | parentDoc | string | No | The parent doc's ID, if the page is a subpage. |
 | error | object | No | This is used for docs with the `type` set to `error`. The `error` page type and this `error` object have been deprecated. |
+
+
+**error 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
 **Status Code:** 401
@@ -1357,8 +1457,6 @@ Although ReadMe’s outbound IP addresses may change, the IPs in this API respon
 GET /outbound-ips
 ```
 
-**Operation ID:** `getOutboundIPs`
-
 #### Responses
 
 **Status Code:** 200
@@ -1378,8 +1476,6 @@ Returns project data for the API key.
 ```http
 GET /
 ```
-
-**Operation ID:** `getProject`
 
 #### Responses
 
@@ -1426,9 +1522,11 @@ Retrieve a list of versions associated with a project API key.
 GET /version
 ```
 
-**Operation ID:** `getVersions`
-
 #### Responses
+
+**Status Code:** 200
+
+**Description:** A list of versions.
 
 **Status Code:** 401
 
@@ -1454,8 +1552,6 @@ Create a new version.
 POST /version
 ```
 
-**Operation ID:** `createVersion`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -1477,6 +1573,10 @@ POST /version
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The version was successfully created.
 
 **Status Code:** 400
 
@@ -1518,8 +1618,6 @@ Returns the version with this version ID.
 GET /version/{versionId}
 ```
 
-**Operation ID:** `getVersion`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -1527,6 +1625,10 @@ GET /version/{versionId}
 | versionId | path | string | Yes | Semver identifier for the project version. For best results, use the formatted `version_clean` value listed in the response from the [Get Versions endpoint](/reference/getversions). |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The version exists and has been returned.
 
 **Status Code:** 401
 
@@ -1560,8 +1662,6 @@ Update an existing version.
 PUT /version/{versionId}
 ```
 
-**Operation ID:** `updateVersion`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -1589,6 +1689,10 @@ PUT /version/{versionId}
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The version was successfully updated.
 
 **Status Code:** 400
 
@@ -1630,8 +1734,6 @@ Delete a version
 DELETE /version/{versionId}
 ```
 
-**Operation ID:** `deleteVersion`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -1639,6 +1741,10 @@ DELETE /version/{versionId}
 | versionId | path | string | Yes | Semver identifier for the project version. For best results, use the formatted `version_clean` value listed in the response from the [Get Versions endpoint](/reference/getversions). |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** The version was successfully deleted.
 
 **Status Code:** 400
 
@@ -1682,8 +1788,6 @@ Ask Owlbot a question about the content of your docs.
 POST /owlbot/ask
 ```
 
-**Operation ID:** `askOwlbot`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -1713,4 +1817,12 @@ POST /owlbot/ask
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | answer | string | No | No description |
-| sources | array | No | No description |
+| sources | object[] | No | No description |
+
+
+**sources 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| title | string | No | The page title for the given source. |
+| url | string | No | A link to the source. |

@@ -20,8 +20,6 @@ Knife4j-Desktop OpenAPI3 Demo
 PUT /body/bodyPut
 ```
 
-**Operation ID:** `bodyPut`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -64,8 +62,6 @@ PUT /body/bodyPut
 POST /body/body
 ```
 
-**Operation ID:** `body_1`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -107,8 +103,6 @@ POST /body/body
 ```http
 POST /body/bodyParam
 ```
-
-**Operation ID:** `bodyParam`
 
 #### Parameters
 
@@ -158,8 +152,6 @@ POST /body/bodyParam
 POST /body/bodyParamHeader
 ```
 
-**Operation ID:** `bodyParamHeader`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -208,8 +200,6 @@ POST /body/bodyParamHeader
 ```http
 POST /body/bodyParamHeaderPath/{id}
 ```
-
-**Operation ID:** `bodyParamHeaderPath`
 
 #### Parameters
 
@@ -263,8 +253,6 @@ body请求
 POST /user/{deviceId}/body
 ```
 
-**Operation ID:** `bodyRequest`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -296,6 +284,14 @@ object
 | partSchema | object | No | Part信息 |
 
 
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
+
+
 ### body请求1
 
 body请求1
@@ -303,8 +299,6 @@ body请求1
 ```http
 POST /user/{deviceId}/body1
 ```
-
-**Operation ID:** `bodyRequest1`
 
 #### Parameters
 
@@ -327,6 +321,14 @@ POST /user/{deviceId}/body1
 | partSchema | object | No | Part信息 |
 
 
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
+
+
 #### Responses
 
 **Status Code:** 200
@@ -344,6 +346,14 @@ POST /user/{deviceId}/body1
 | partSchema | object | No | Part信息 |
 
 
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
+
+
 ### json参数查询1
 
 json参数查询1
@@ -351,8 +361,6 @@ json参数查询1
 ```http
 POST /user/getRequest1
 ```
-
-**Operation ID:** `getRequest1`
 
 #### Parameters
 
@@ -375,6 +383,14 @@ POST /user/getRequest1
 | partSchema | object | No | Part信息 |
 
 
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
+
+
 #### Responses
 
 **Status Code:** 200
@@ -392,6 +408,14 @@ POST /user/getRequest1
 | partSchema | object | No | Part信息 |
 
 
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
+
+
 ### 根据姓名创建用户1
 
 根据姓名创建用户1
@@ -399,8 +423,6 @@ POST /user/getRequest1
 ```http
 POST /user/createOne
 ```
-
-**Operation ID:** `createOne`
 
 #### Request Body
 
@@ -440,8 +462,6 @@ POST /user/createOne
 POST /user/createOneSchema
 ```
 
-**Operation ID:** `createOneSchema`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -455,6 +475,14 @@ POST /user/createOneSchema
 | id | string | No | 主键id |
 | name | string | No | 名称 |
 | partSchema | object | No | Part信息 |
+
+
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
 
 
 #### Responses
@@ -474,6 +502,14 @@ POST /user/createOneSchema
 | partSchema | object | No | Part信息 |
 
 
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
+
+
 ### 根据姓名创建用户1
 
 根据姓名创建用户1
@@ -481,8 +517,6 @@ POST /user/createOneSchema
 ```http
 POST /user/createOne1
 ```
-
-**Operation ID:** `createOne1`
 
 #### Parameters
 
@@ -515,8 +549,6 @@ json参数查询
 GET /user/getRequest
 ```
 
-**Operation ID:** `getRequest`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -541,6 +573,14 @@ GET /user/getRequest
 | partSchema | object | No | Part信息 |
 
 
+**partSchema 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | part部分id |
+| name | string | No | part部分名称 |
+
+
 ### 根据姓名创建用户
 
 根据姓名创建用户
@@ -548,8 +588,6 @@ GET /user/getRequest
 ```http
 GET /user/create
 ```
-
-**Operation ID:** `create_1`
 
 #### Parameters
 
@@ -576,8 +614,6 @@ string
 ```http
 POST /file/upload
 ```
-
-**Operation ID:** `upload`
 
 #### Request Body
 
@@ -615,8 +651,6 @@ POST /file/upload
 ```http
 POST /file/uploadParam
 ```
-
-**Operation ID:** `uploadParam`
 
 #### Parameters
 
@@ -661,8 +695,6 @@ POST /file/uploadParam
 ```http
 POST /file/uploadParamHeader
 ```
-
-**Operation ID:** `uploadParamHeader`
 
 #### Parameters
 
@@ -709,8 +741,6 @@ POST /file/uploadParamHeader
 POST /file/uploadParam/{id}
 ```
 
-**Operation ID:** `uploadParamPath`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -756,8 +786,6 @@ POST /file/uploadParam/{id}
 POST /file/uploadBatch
 ```
 
-**Operation ID:** `uploadBatch`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -772,7 +800,7 @@ POST /file/uploadBatch
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| files | array | Yes | No description |
+| files | string[] | Yes | No description |
 
 
 #### Responses

@@ -18,8 +18,6 @@ This operation has a `discriminator` that's in reference to a property a level a
 PATCH /improper-discriminator-placement
 ```
 
-**Operation ID:** `oneOfWithImproperlyPlacedDiscriminator`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -34,6 +32,10 @@ PATCH /improper-discriminator-placement
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Redocly allows users to define [a discriminator mapping without an `anyOf` or `oneOf` that contains the discriminated objects](https://redocly.com/docs/resources/discriminator#allof-for-inheritance). This endpoint demonstrates that.
 
 Redocly allows users to define [a discriminator mapping without an `anyOf` or `oneOf` that contains the discriminated objects](https://redocly.com/docs/resources/discriminator#allof-for-inheritance). This endpoint demonstrates that.
@@ -41,8 +43,6 @@ Redocly allows users to define [a discriminator mapping without an `anyOf` or `o
 ```http
 PATCH /redocly-flavored-discriminator
 ```
-
-**Operation ID:** `redoclyQuirk`
 
 #### Request Body
 
@@ -56,7 +56,22 @@ PATCH /redocly-flavored-discriminator
 | some_other_property | string | No | Some other property that should render alongside the discriminated property |
 
 
+**vehicle 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| vehicleType | string | No | The type of vehicle. |
+| idealTerrain | string | No | A road, river, air... Where does this vehicle thrive? |
+| powerSource | string | No | How is the vehicle powered. |
+| topSpeed | integer | No | The top speed in kilometers per hour rounded to the nearest integer. |
+| range | integer | No | The 95th percentile range of a trip in kilometers. |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### This operation contains a schema that at one point produced an edgecase within the form system where `formData` was `undefined`.
 
@@ -75,3 +90,7 @@ POST /potentially-undefined-formData
 Unknown type
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

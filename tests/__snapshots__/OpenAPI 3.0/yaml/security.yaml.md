@@ -20,6 +20,10 @@ GET /anything/apiKey
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### `apiKey` auth will be supplied within an `api_key` cookie.
 
 `apiKey` auth will be supplied within an `api_key` cookie.
@@ -30,6 +34,10 @@ POST /anything/apiKey
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### `apiKey` auth will be supplied within an `X-API-KEY` header.
 
 `apiKey` auth will be supplied within an `X-API-KEY` header.
@@ -39,6 +47,10 @@ PUT /anything/apiKey
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## HTTP
 
@@ -56,6 +68,10 @@ POST /anything/basic
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Authentication credentials will be supplied within a `Bearer` `Authorization` header.
 
 https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#basic-authentication-sample
@@ -69,6 +85,10 @@ POST /anything/bearer
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Authentication credentials will be supplied within a `Bearer` `Authorization` header, but its data should be controlled as a JWT.
 
@@ -90,6 +110,10 @@ PUT /anything/bearer
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ## OAuth 2
 
 ### > ℹ️
@@ -108,6 +132,10 @@ POST /anything/oauth2
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
 
@@ -123,6 +151,10 @@ GET /anything/oauth2
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -140,6 +172,10 @@ PUT /anything/oauth2
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
 
@@ -155,6 +191,10 @@ PATCH /anything/oauth2
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -172,6 +212,10 @@ DELETE /anything/oauth2
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ## OpenID Connect
 
 ### 🚧 This is not supported.
@@ -184,6 +228,10 @@ POST /anything/openIdConnect
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ## Other
 
 ### This operation does not have any authentication requirements.
@@ -195,6 +243,10 @@ POST /anything/no-auth
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### The `apiKey` query parameter auth on this operation is optional.
 
@@ -210,6 +262,10 @@ GET /anything/optional-auth
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### This endpoint requires an authentication header but making any request to it will forcefully return a 401 status code for invalid auth.
 
 This endpoint requires an authentication header but making any request to it will forcefully return a 401 status code for invalid auth.
@@ -219,3 +275,7 @@ POST /status/401
 ```
 
 #### Responses
+
+**Status Code:** 401
+
+**Description:** Unauthorized

@@ -32,8 +32,6 @@ Support and handling of cookie parameters without `style` serialization.
 GET /cookies
 ```
 
-**Operation ID:** `cookies_standard`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -43,6 +41,10 @@ GET /cookies
 | object | cookie | object | No | A standard object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of cookie parameters with `style: form` and `explode: false` serialization.
 
@@ -64,8 +66,6 @@ Support and handling of cookie parameters with `style: form` and `explode: false
 GET /cookies#formNonExploded
 ```
 
-**Operation ID:** `cookies_form_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -79,6 +79,10 @@ GET /cookies#formNonExploded
 > On ReadMe we encode this kind of parameter within [@readme/httpsnippet](https://npm.im/@readme/httpsnippet) but it's unclear whether this encoding is the correct behavior because the `Cookie` header deviates from all other headers. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of cookie parameters with `style: form` and `explode: true` serialization.
 
@@ -100,8 +104,6 @@ Support and handling of cookie parameters with `style: form` and `explode: true`
 GET /cookies#formExploded
 ```
 
-**Operation ID:** `cookies_form_exploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -115,6 +117,10 @@ GET /cookies#formExploded
 > On ReadMe we encode this kind of parameter within [@readme/httpsnippet](https://npm.im/@readme/httpsnippet) but it's unclear whether this encoding is the correct behavior because the `Cookie` header deviates from all other headers. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Header
 
@@ -136,8 +142,6 @@ Support and handling of header parameters without `style` serialization.
 GET /anything/headers
 ```
 
-**Operation ID:** `headers_standard`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -149,6 +153,10 @@ GET /anything/headers
 | object | header | object | No | A standard object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of header parameters with `style: simple` and `explode: false` serialization.
 
@@ -166,8 +174,6 @@ Support and handling of header parameters with `style: simple` and `explode: fal
 GET /anything/headers/simple
 ```
 
-**Operation ID:** `headers_simple_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -177,6 +183,10 @@ GET /anything/headers/simple
 | object | header | object | No | A `simple` style, non-exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of header parameters with `style: simple` and `explode: true` serialization.
 
@@ -194,8 +204,6 @@ Support and handling of header parameters with `style: simple` and `explode: tru
 POST /anything/headers/simple
 ```
 
-**Operation ID:** `headers_simple_exploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -205,6 +213,10 @@ POST /anything/headers/simple
 | object | header | object | No | A `simple` style, exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Path
 
@@ -226,8 +238,6 @@ Support and handling of path parameters without `style` serialization.
 GET /anything/path/{primitive}/{array}/{object}
 ```
 
-**Operation ID:** `paths_standard`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -237,6 +247,10 @@ GET /anything/path/{primitive}/{array}/{object}
 | object | path | object | Yes | A standard object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of path parameters with `style: matrix` and `explode: false` serialization.
 
@@ -254,8 +268,6 @@ Support and handling of path parameters with `style: matrix` and `explode: false
 GET /anything/path/matrix/{primitive}/{array}/{object}
 ```
 
-**Operation ID:** `paths_matrix_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -265,6 +277,10 @@ GET /anything/path/matrix/{primitive}/{array}/{object}
 | object | path | object | Yes | A `matrix` style, non-exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of path parameters with `style: matrix` and `explode: true` serialization.
 
@@ -282,8 +298,6 @@ Support and handling of path parameters with `style: matrix` and `explode: true`
 POST /anything/path/matrix/{primitive}/{array}/{object}
 ```
 
-**Operation ID:** `paths_matrix_exploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -293,6 +307,10 @@ POST /anything/path/matrix/{primitive}/{array}/{object}
 | object | path | object | Yes | A `matrix` style, exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of path parameters with `style: label` and `explode: false` serialization.
 
@@ -310,8 +328,6 @@ Support and handling of path parameters with `style: label` and `explode: false`
 GET /anything/path/label/{primitive}/{array}/{object}
 ```
 
-**Operation ID:** `paths_label_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -321,6 +337,10 @@ GET /anything/path/label/{primitive}/{array}/{object}
 | object | path | object | Yes | A `label` style, non-exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of cookie parameters with `style: label` and `explode: true` serialization.
 
@@ -338,8 +358,6 @@ Support and handling of cookie parameters with `style: label` and `explode: true
 POST /anything/path/label/{primitive}/{array}/{object}
 ```
 
-**Operation ID:** `paths_label_exploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -349,6 +367,10 @@ POST /anything/path/label/{primitive}/{array}/{object}
 | object | path | object | Yes | A `label` style, exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of path parameters with `style: simple` and `explode: false` serialization.
 
@@ -366,8 +388,6 @@ Support and handling of path parameters with `style: simple` and `explode: false
 GET /anything/path/simple/{primitive}/{array}/{object}
 ```
 
-**Operation ID:** `paths_simple_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -377,6 +397,10 @@ GET /anything/path/simple/{primitive}/{array}/{object}
 | object | path | object | Yes | A `simple` style, non-exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of path parameters with `style: simple` and `explode: true` serialization.
 
@@ -394,8 +418,6 @@ Support and handling of path parameters with `style: simple` and `explode: true`
 POST /anything/path/simple/{primitive}/{array}/{object}
 ```
 
-**Operation ID:** `paths_simple_exploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -405,6 +427,10 @@ POST /anything/path/simple/{primitive}/{array}/{object}
 | object | path | object | Yes | A `simple` style, exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Query
 
@@ -426,8 +452,6 @@ Support and handling of query parameters without `style` serialization.
 GET /anything/query
 ```
 
-**Operation ID:** `query_standard`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -437,6 +461,10 @@ GET /anything/query
 | object | query | object | No | A standard object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of query parameters with `style: form` and `explode: false` serialization.
 
@@ -454,8 +482,6 @@ Support and handling of query parameters with `style: form` and `explode: false`
 GET /anything/query/form
 ```
 
-**Operation ID:** `query_form_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -465,6 +491,10 @@ GET /anything/query/form
 | object | query | object | No | A `form` style, non-exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of cookie parameters with `style: form` and `explode: true` serialization.
 
@@ -482,8 +512,6 @@ Support and handling of cookie parameters with `style: form` and `explode: true`
 POST /anything/query/form
 ```
 
-**Operation ID:** `query_form_exploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -493,6 +521,10 @@ POST /anything/query/form
 | object | query | object | No | A `form` style, exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of cookie parameters with `style: spaceDelimited` and `explode: false` serialization.
 
@@ -510,8 +542,6 @@ Support and handling of cookie parameters with `style: spaceDelimited` and `expl
 GET /anything/query/spaceDelimited
 ```
 
-**Operation ID:** `query_spaceDelimited_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -522,6 +552,10 @@ GET /anything/query/spaceDelimited
 >⚠️ This is currently unsupported. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of cookie parameters with `style: pipeDelimited` and `explode: false` serialization.
 
@@ -539,8 +573,6 @@ Support and handling of cookie parameters with `style: pipeDelimited` and `explo
 GET /anything/query/pipeDelimited
 ```
 
-**Operation ID:** `query_pipeDelimited_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -551,6 +583,10 @@ GET /anything/query/pipeDelimited
 >⚠️ This is currently unsupported. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of cookie parameters with `style: deepObject` and `explode: true` serialization.
 
@@ -568,8 +604,6 @@ Support and handling of cookie parameters with `style: deepObject` and `explode:
 GET /anything/query/deepObject
 ```
 
-**Operation ID:** `query_deepObject_nonExploded`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -577,6 +611,10 @@ GET /anything/query/deepObject
 | object | query | object | No | A `deepObject` style, exploded object. |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## multipart/form-data Encoding
 
@@ -598,8 +636,6 @@ Support and handling of a `multipart/form-data` request body without `encoding` 
 POST /anything/form-data
 ```
 
-**Operation ID:** `formData_standard`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -609,11 +645,23 @@ POST /anything/form-data
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | primitive | string | No | A standard primitive. |
-| array | array | No | A standard array. |
+| array | string[] | No | A standard array. |
 | object | object | No | A standard object. |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| foo | string | No | No description |
+| bar | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: form` and `explode: false`.
 
@@ -631,8 +679,6 @@ Support and handling of a `multipart/form-data` request body with `encoding` ser
 POST /anything/form-data/form
 ```
 
-**Operation ID:** `formData_form_nonExploded`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -642,11 +688,23 @@ POST /anything/form-data/form
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | primitive | string | No | A `form` style, non-exploded primitive. |
-| array | array | No | A `form` style, non-exploded array. |
+| array | string[] | No | A `form` style, non-exploded array. |
 | object | object | No | A `form` style, non-exploded object. |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| foo | string | No | No description |
+| bar | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: form` and `explode: true`.
 
@@ -664,8 +722,6 @@ Support and handling of a `multipart/form-data` request body with `encoding` ser
 PUT /anything/form-data/form
 ```
 
-**Operation ID:** `form_data_form_exploded`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -675,11 +731,23 @@ PUT /anything/form-data/form
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | primitive | string | No | A `form` style, exploded primitive. |
-| array | array | No | A `form` style, exploded array. |
+| array | string[] | No | A `form` style, exploded array. |
 | object | object | No | A `form` style, exploded object. |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| foo | string | No | No description |
+| bar | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: spaceDelimited` and `explode: false`.
 
@@ -697,8 +765,6 @@ Support and handling of a `multipart/form-data` request body with `encoding` ser
 POST /anything/form-data/spaceDelimited
 ```
 
-**Operation ID:** `formData_spaceDelimited_nonExploded`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -707,13 +773,25 @@ POST /anything/form-data/spaceDelimited
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| array | array | No | A `spaceDelimited` style, non-exploded array. |
+| array | string[] | No | A `spaceDelimited` style, non-exploded array. |
 | object | object | No | A `spaceDelimited` style, non-exploded object.
 
 >⚠️ This is currently unsupported. |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| foo | string | No | No description |
+| bar | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: pipeDelimited` and `explode: false`.
 
@@ -731,8 +809,6 @@ Support and handling of a `multipart/form-data` request body with `encoding` ser
 POST /anything/form-data/pipeDelimited
 ```
 
-**Operation ID:** `form_data_pipeDelimited_nonExploded`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -741,13 +817,25 @@ POST /anything/form-data/pipeDelimited
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| array | array | No | A `pipeDelimited` style, non-exploded array. |
+| array | string[] | No | A `pipeDelimited` style, non-exploded array. |
 | object | object | No | A `pipeDelimited` style, non-exploded object.
 
 >⚠️ This is currently unsupported. |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| foo | string | No | No description |
+| bar | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: deepObject` and `explode: false`.
 
@@ -765,8 +853,6 @@ Support and handling of a `multipart/form-data` request body with `encoding` ser
 POST /anything/form-data/deepObject
 ```
 
-**Operation ID:** `form_data_deepObject_exploded`
-
 #### Request Body
 
 **Content Type:** `multipart/form-data`
@@ -776,8 +862,20 @@ POST /anything/form-data/deepObject
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | primitive | string | No | A `deepObject` style, non-exploded primitive. |
-| array | array | No | A `deepObject` style, non-exploded array. |
+| array | string[] | No | A `deepObject` style, non-exploded array. |
 | object | object | No | A `deepObject` style, non-exploded object. |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| foo | string | No | No description |
+| bar | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

@@ -16,8 +16,6 @@ Add a new pet to the store
 POST /pet
 ```
 
-**Operation ID:** `addPet`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -25,6 +23,10 @@ POST /pet
 | body | body | object | Yes | Pet object that needs to be added to the store |
 
 #### Responses
+
+**Status Code:** 405
+
+**Description:** Invalid input
 
 ### Update an existing pet
 
@@ -34,8 +36,6 @@ Update an existing pet
 PUT /pet
 ```
 
-**Operation ID:** `updatePet`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -43,6 +43,18 @@ PUT /pet
 | body | body | object | Yes | Pet object that needs to be added to the store |
 
 #### Responses
+
+**Status Code:** 400
+
+**Description:** Invalid ID supplied
+
+**Status Code:** 404
+
+**Description:** Pet not found
+
+**Status Code:** 405
+
+**Description:** Validation exception
 
 ### Multiple status values can be provided with comma separated strings
 
@@ -52,15 +64,23 @@ Multiple status values can be provided with comma separated strings
 GET /pet/findByStatus
 ```
 
-**Operation ID:** `findPetsByStatus`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| status | query | unknown | Yes | Status values that need to be considered for filter |
+| status | query | string[] | Yes | Status values that need to be considered for filter |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+Array, item type: object
+
+**Status Code:** 400
+
+**Description:** Invalid status value
 
 ### Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
 
@@ -70,15 +90,23 @@ Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 
 GET /pet/findByTags
 ```
 
-**Operation ID:** `findPetsByTags`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| tags | query | unknown | Yes | Tags to filter by |
+| tags | query | string[] | Yes | Tags to filter by |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+Array, item type: object
+
+**Status Code:** 400
+
+**Description:** Invalid tag value
 
 ### Returns a single pet
 
@@ -88,15 +116,53 @@ Returns a single pet
 GET /pet/{petId}
 ```
 
-**Operation ID:** `getPetById`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| petId | path | unknown | Yes | ID of pet to return |
+| petId | path | integer | Yes | ID of pet to return |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| category | object | No | No description |
+| name | string | Yes | No description |
+| photoUrls | string[] | Yes | No description |
+| tags | object[] | No | No description |
+| status | string | No | pet status in the store |
+
+
+**category 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| name | string | No | No description |
+
+
+**tags 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| name | string | No | No description |
+
+
+**Status Code:** 400
+
+**Description:** Invalid ID supplied
+
+**Status Code:** 404
+
+**Description:** Pet not found
 
 ### Updates a pet in the store with form data
 
@@ -106,17 +172,19 @@ Updates a pet in the store with form data
 POST /pet/{petId}
 ```
 
-**Operation ID:** `updatePetWithForm`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| petId | path | unknown | Yes | ID of pet that needs to be updated |
-| name | formData | unknown | No | Updated name of the pet |
-| status | formData | unknown | No | Updated status of the pet |
+| petId | path | integer | Yes | ID of pet that needs to be updated |
+| name | formData | string | No | Updated name of the pet |
+| status | formData | string | No | Updated status of the pet |
 
 #### Responses
+
+**Status Code:** 405
+
+**Description:** Invalid input
 
 ### Deletes a pet
 
@@ -126,16 +194,22 @@ Deletes a pet
 DELETE /pet/{petId}
 ```
 
-**Operation ID:** `deletePet`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| api_key | header | unknown | No | No description |
-| petId | path | unknown | Yes | Pet id to delete |
+| api_key | header | string | No | No description |
+| petId | path | integer | Yes | Pet id to delete |
 
 #### Responses
+
+**Status Code:** 400
+
+**Description:** Invalid ID supplied
+
+**Status Code:** 404
+
+**Description:** Pet not found
 
 ### uploads an image
 
@@ -145,17 +219,28 @@ uploads an image
 POST /pet/{petId}/uploadImage
 ```
 
-**Operation ID:** `uploadFile`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| petId | path | unknown | Yes | ID of pet to update |
-| additionalMetadata | formData | unknown | No | Additional data to pass to server |
-| file | formData | unknown | No | file to upload |
+| petId | path | integer | Yes | ID of pet to update |
+| additionalMetadata | formData | string | No | Additional data to pass to server |
+| file | formData | file | No | file to upload |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| code | integer | No | No description |
+| type | string | No | No description |
+| message | string | No | No description |
+
 
 ## store
 
@@ -169,9 +254,13 @@ Returns a map of status codes to quantities
 GET /store/inventory
 ```
 
-**Operation ID:** `getInventory`
-
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+object
 
 ### Place an order for a pet
 
@@ -181,8 +270,6 @@ Place an order for a pet
 POST /store/order
 ```
 
-**Operation ID:** `placeOrder`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -190,6 +277,26 @@ POST /store/order
 | body | body | object | Yes | order placed for purchasing the pet |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| petId | integer | No | No description |
+| quantity | integer | No | No description |
+| shipDate | string | No | No description |
+| status | string | No | Order Status |
+| complete | boolean | No | No description |
+
+
+**Status Code:** 400
+
+**Description:** Invalid Order
 
 ### For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
 
@@ -199,15 +306,37 @@ For valid response try integer IDs with value >= 1 and <= 10. Other values will 
 GET /store/order/{orderId}
 ```
 
-**Operation ID:** `getOrderById`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| orderId | path | unknown | Yes | ID of pet that needs to be fetched |
+| orderId | path | integer | Yes | ID of pet that needs to be fetched |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| petId | integer | No | No description |
+| quantity | integer | No | No description |
+| shipDate | string | No | No description |
+| status | string | No | Order Status |
+| complete | boolean | No | No description |
+
+
+**Status Code:** 400
+
+**Description:** Invalid ID supplied
+
+**Status Code:** 404
+
+**Description:** Order not found
 
 ### For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
 
@@ -217,15 +346,21 @@ For valid response try integer IDs with positive integer value. Negative or non-
 DELETE /store/order/{orderId}
 ```
 
-**Operation ID:** `deleteOrder`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| orderId | path | unknown | Yes | ID of the order that needs to be deleted |
+| orderId | path | integer | Yes | ID of the order that needs to be deleted |
 
 #### Responses
+
+**Status Code:** 400
+
+**Description:** Invalid ID supplied
+
+**Status Code:** 404
+
+**Description:** Order not found
 
 ## user
 
@@ -239,8 +374,6 @@ This can only be done by the logged in user.
 POST /user
 ```
 
-**Operation ID:** `createUser`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -248,6 +381,10 @@ POST /user
 | body | body | object | Yes | Created user object |
 
 #### Responses
+
+**Status Code:** default
+
+**Description:** successful operation
 
 ### Creates list of users with given input array
 
@@ -257,8 +394,6 @@ Creates list of users with given input array
 POST /user/createWithArray
 ```
 
-**Operation ID:** `createUsersWithArrayInput`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -266,6 +401,10 @@ POST /user/createWithArray
 | body | body | object[] | Yes | List of user object |
 
 #### Responses
+
+**Status Code:** default
+
+**Description:** successful operation
 
 ### Creates list of users with given input array
 
@@ -275,8 +414,6 @@ Creates list of users with given input array
 POST /user/createWithList
 ```
 
-**Operation ID:** `createUsersWithListInput`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -284,6 +421,10 @@ POST /user/createWithList
 | body | body | object[] | Yes | List of user object |
 
 #### Responses
+
+**Status Code:** default
+
+**Description:** successful operation
 
 ### Logs user into the system
 
@@ -293,16 +434,24 @@ Logs user into the system
 GET /user/login
 ```
 
-**Operation ID:** `loginUser`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | query | unknown | Yes | The user name for login |
-| password | query | unknown | Yes | The password for login in clear text |
+| username | query | string | Yes | The user name for login |
+| password | query | string | Yes | The password for login in clear text |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+string
+
+**Status Code:** 400
+
+**Description:** Invalid username/password supplied
 
 ### Logs out current logged in user session
 
@@ -312,9 +461,11 @@ Logs out current logged in user session
 GET /user/logout
 ```
 
-**Operation ID:** `logoutUser`
-
 #### Responses
+
+**Status Code:** default
+
+**Description:** successful operation
 
 ### Get user by user name
 
@@ -324,15 +475,39 @@ Get user by user name
 GET /user/{username}
 ```
 
-**Operation ID:** `getUserByName`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | unknown | Yes | The name that needs to be fetched. Use user1 for testing.  |
+| username | path | string | Yes | The name that needs to be fetched. Use user1 for testing.  |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** successful operation
+
+**Properties:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | integer | No | No description |
+| username | string | No | No description |
+| firstName | string | No | No description |
+| lastName | string | No | No description |
+| email | string | No | No description |
+| password | string | No | No description |
+| phone | string | No | No description |
+| userStatus | integer | No | User Status |
+
+
+**Status Code:** 400
+
+**Description:** Invalid username supplied
+
+**Status Code:** 404
+
+**Description:** User not found
 
 ### This can only be done by the logged in user.
 
@@ -342,16 +517,22 @@ This can only be done by the logged in user.
 PUT /user/{username}
 ```
 
-**Operation ID:** `updateUser`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | unknown | Yes | name that need to be updated |
+| username | path | string | Yes | name that need to be updated |
 | body | body | object | Yes | Updated user object |
 
 #### Responses
+
+**Status Code:** 400
+
+**Description:** Invalid user supplied
+
+**Status Code:** 404
+
+**Description:** User not found
 
 ### This can only be done by the logged in user.
 
@@ -361,12 +542,18 @@ This can only be done by the logged in user.
 DELETE /user/{username}
 ```
 
-**Operation ID:** `deleteUser`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | unknown | Yes | The name that needs to be deleted |
+| username | path | string | Yes | The name that needs to be deleted |
 
 #### Responses
+
+**Status Code:** 400
+
+**Description:** Invalid username supplied
+
+**Status Code:** 404
+
+**Description:** User not found

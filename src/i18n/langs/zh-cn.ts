@@ -25,11 +25,11 @@ export const zhCN = {
   contentType: '内容类型',
   schema: '模式',
   statusCode: '状态码',
-  operationId: '操作 ID',
 
   // Types
   unknown: '未知',
   array: '数组',
+  object: '对象',
   itemType: '项目类型',
   none: '无',
   unknownType: '未知类型',

@@ -175,83 +175,258 @@ function preprocessOpenAPIJSON(
 
 // Helper function: Get friendly name for parameter type
 function getParameterTypeName(parameter: any, texts: any): string {
-  if (!parameter.schema) return texts.unknown || 'unknown'
-
-  const schema = parameter.schema
-  if (schema.type === 'array') {
-    const itemType = schema.items?.type || texts.unknown || 'unknown'
-    // Handle case where itemType is an array
-    if (Array.isArray(itemType)) {
-      return `${itemType.join(' | ')}[]`
+  // OpenAPI 3.x: 使用 parameter.schema
+  if (parameter.schema) {
+    const schema = parameter.schema
+    if (schema.type === 'array') {
+      const itemType = schema.items?.type || texts.unknown || 'unknown'
+      // Handle case where itemType is an array
+      if (Array.isArray(itemType)) {
+        return `${itemType.join(' | ')}[]`
+      }
+      return `${itemType}[]`
     }
-    return `${itemType}[]`
+
+    // Handle case where schema.type is an array
+    if (Array.isArray(schema.type)) {
+      return schema.type.join(' | ')
+    }
+
+    return schema.type || texts.unknown || 'unknown'
   }
 
-  // Handle case where schema.type is an array
-  if (Array.isArray(schema.type)) {
-    return schema.type.join(' | ')
+  // Swagger 2.0: 直接使用 parameter.type
+  if (parameter.type) {
+    if (parameter.type === 'array') {
+      const itemType = parameter.items?.type || texts.unknown || 'unknown'
+      if (Array.isArray(itemType)) {
+        return `${itemType.join(' | ')}[]`
+      }
+      return `${itemType}[]`
+    }
+    if (Array.isArray(parameter.type)) {
+      return parameter.type.join(' | ')
+    }
+    return parameter.type
   }
 
-  return schema.type || texts.unknown || 'unknown'
+  return texts.unknown || 'unknown'
 }
 
-// Helper function: Format schema properties
+// Helper function: Resolve $ref references
+function resolveRef(ref: string, openapiDoc: any): any {
+  if (!ref || !ref.startsWith('#/')) {
+    return null
+  }
+
+  const path = ref.slice(2).split('/')
+  let current = openapiDoc
+
+  for (const key of path) {
+    if (current && typeof current === 'object' && key in current) {
+      current = current[key]
+    } else {
+      return null
+    }
+  }
+
+  return current
+}
+
+interface NestedSection {
+  title: string
+  table: string[][]
+}
+
+// Helper function: Format schema properties with nested structure support
 function formatSchemaProperties(
   properties: any,
   required: string[] = [],
   texts: any,
-): string[][] {
-  if (!properties) return [[texts.noProperties]]
+  openapiDoc: any,
+  depth: number = 0,
+  maxDepth: number = 10,
+  visited: Set<string> = new Set(),
+): { table: string[][]; nested: NestedSection[] } {
+  // Depth limit check
+  if (depth >= maxDepth) {
+    return {
+      table: [[texts.name, texts.type, texts.required, texts.description]],
+      nested: [],
+    }
+  }
 
-  // Table headers
+  if (!properties) {
+    return {
+      table: [[texts.noProperties]],
+      nested: [],
+    }
+  }
+
   const headers = [texts.name, texts.type, texts.required, texts.description]
+  const tableRows: string[][] = [headers]
+  const nestedSections: NestedSection[] = []
 
-  // Table data rows
-  const rows = Object.entries(properties).map(([name, prop]: [string, any]) => {
+  const addNestedSection = (
+    title: string,
+    nestedProperties: any,
+    nestedRequired: string[] = [],
+    visitKey: string,
+  ) => {
+    if (visited.has(visitKey)) return
+    visited.add(visitKey)
+
+    const nested = formatSchemaProperties(
+      nestedProperties,
+      nestedRequired,
+      texts,
+      openapiDoc,
+      depth + 1,
+      maxDepth,
+      visited,
+    )
+
+    if (nested.table.length > 1) {
+      nestedSections.push({ title, table: nested.table })
+    }
+    if (nested.nested.length > 0) {
+      nestedSections.push(...nested.nested)
+    }
+
+    visited.delete(visitKey)
+  }
+
+  Object.entries(properties).forEach(([name, prop]: [string, any]) => {
     const isRequired = required.includes(name) ? texts.yes : texts.no
-
     let type = texts.unknown
-    if (prop.type) {
-      // Handle case where prop.type is an array
-      if (Array.isArray(prop.type)) {
-        type = prop.type.join(' | ')
-      } else {
-        type = prop.type
+    let description = texts.noDescription
+
+    const resolvedProp = prop.$ref ? resolveRef(prop.$ref, openapiDoc) : null
+    const effectiveProp = resolvedProp || prop
+
+    const schemaType = effectiveProp?.type ?? prop.type
+    if (schemaType) {
+      type = Array.isArray(schemaType) ? schemaType.join(' | ') : schemaType
+    }
+    description =
+      effectiveProp?.description ??
+      prop.description ??
+      texts.noDescription
+
+    const visitKeyBase = prop.$ref || `${name}:${depth}`
+
+    if (schemaType === 'array' || effectiveProp?.items || prop.items) {
+      const itemsSchema = effectiveProp?.items || prop.items
+      if (itemsSchema) {
+        const resolvedItems = itemsSchema.$ref
+          ? resolveRef(itemsSchema.$ref, openapiDoc) || itemsSchema
+          : itemsSchema
+
+        let itemType =
+          (Array.isArray(resolvedItems?.type)
+            ? resolvedItems?.type.join(' | ')
+            : resolvedItems?.type) ||
+          resolvedItems?.title ||
+          texts.unknown
+
+        if (!itemType && resolvedItems?.properties) {
+          itemType = texts.object || 'object'
+        }
+
+        type = `${itemType}[]`
+
+        const visitKey = itemsSchema.$ref || `${name}[]:${depth}`
+        if (
+          resolvedItems &&
+          typeof resolvedItems === 'object' &&
+          resolvedItems.properties &&
+          Object.keys(resolvedItems.properties).length > 0
+        ) {
+          addNestedSection(
+            `\n**${name} 数组项结构:**`,
+            resolvedItems.properties || {},
+            resolvedItems.required || [],
+            visitKey,
+          )
+        }
       }
-    } else if (prop.items) {
-      // Handle case where prop.items.type is an array
-      if (Array.isArray(prop.items.type)) {
-        type = `${prop.items.type.join(' | ')}[]`
-      } else {
-        type = `${prop.items.type || texts.unknown}[]`
+    } else if (
+      effectiveProp &&
+      typeof effectiveProp === 'object' &&
+      (effectiveProp.properties || prop.properties)
+    ) {
+      const objectProperties = effectiveProp.properties || prop.properties
+      if (objectProperties && Object.keys(objectProperties).length > 0) {
+        addNestedSection(
+          `\n**${name} 对象结构:**`,
+          objectProperties,
+          effectiveProp.required || prop.required || [],
+          visitKeyBase,
+        )
       }
     }
 
-    const description = prop.description || texts.noDescription
+    tableRows.push([
+      name,
+      type,
+      isRequired,
+      description != null ? String(description) : texts.noDescription,
+    ])
 
-    return [name, type, isRequired, description]
   })
 
-  return [headers, ...rows]
+  return { table: tableRows, nested: nestedSections }
 }
 
-// Helper function: Format schema description
-function formatSchema(schema: any, texts: any): string {
+// Helper function: Format schema description with nested structure support
+function formatSchema(
+  schema: any,
+  texts: any,
+  openapiDoc: any,
+  depth: number = 0,
+): string {
   if (!schema) return texts.none
+
+  // Resolve $ref if present
+  if (schema.$ref) {
+    const resolved = resolveRef(schema.$ref, openapiDoc)
+    if (resolved) {
+      return formatSchema(resolved, texts, openapiDoc, depth)
+    }
+  }
 
   if (schema.type === 'object' && schema.properties) {
     const md = tempo()
-
     md.paragraph(`**${texts.properties}:**`)
-    md.table(formatSchemaProperties(schema.properties, schema.required, texts))
+
+    const { table, nested } = formatSchemaProperties(
+      schema.properties,
+      schema.required || [],
+      texts,
+      openapiDoc,
+      depth,
+    )
+
+    md.table(table)
+
+    // Add nested sections
+    nested.forEach((section) => {
+      md.paragraph(section.title)
+      md.table(section.table)
+    })
 
     return md.toString()
   } else if (schema.type === 'array' && schema.items) {
+    if (schema.items.$ref) {
+      const resolved = resolveRef(schema.items.$ref, openapiDoc)
+      const itemType = resolved?.title || resolved?.type || texts.unknown
+      return `${texts.array}, ${texts.itemType}: ${itemType}`
+    }
     return `${texts.array}, ${texts.itemType}: ${schema.items.type || texts.unknown}`
   } else if (schema.type) {
     // Handle case where schema.type is an array (OpenAPI 3.1)
     if (Array.isArray(schema.type)) {
-      return schema.type.join(' | ') // Return types joined with '|' to indicate union type
+      return schema.type.join(' | ')
     }
     return schema.type
   }
@@ -333,6 +508,7 @@ export async function openapi2markdown(
 
     // Tolerant validation
     let parsed: any
+
     if (tolerant) {
       try {
         await validate(sourceJSON)
@@ -356,6 +532,10 @@ export async function openapi2markdown(
       await validate(sourceJSON)
       parsed = await dereference(sourceJSON)
     }
+
+    const openapiDoc =
+      typeof sourceJSON === 'string' ? parsed : sourceJSON
+
     const md = tempo()
 
     // Add document title and description
@@ -441,13 +621,6 @@ export async function openapi2markdown(
 
           md.codeBlock(`${method.toUpperCase()} ${path}`, 'http')
 
-          // Operation ID
-          if (operation.operationId) {
-            md.paragraph(
-              `**${texts.operationId}:** \`${operation.operationId}\``,
-            )
-          }
-
           // Parameters
           const parameters = operation.parameters || []
           if (parameters.length > 0) {
@@ -506,7 +679,7 @@ export async function openapi2markdown(
                   md.paragraph(`**${texts.schema}:** ${schema.title}`)
                 }
 
-                md.paragraph(formatSchema(schema, texts))
+                md.paragraph(formatSchema(schema, texts, openapiDoc))
               }
             }
           }
@@ -522,7 +695,14 @@ export async function openapi2markdown(
               operation.responses,
             )) {
               const response = responseObj as any
-              if (!response.content) continue
+
+              // 跳过空响应（既没有 content 也没有 schema 也没有 description）
+              if (
+                !response.content &&
+                !response.schema &&
+                !response.description
+              )
+                continue
 
               md.paragraph(`**${texts.statusCode}:** ${statusCode}`)
 
@@ -532,6 +712,7 @@ export async function openapi2markdown(
                 )
               }
 
+              // OpenAPI 3.x: 使用 response.content
               if (response.content) {
                 const contentTypes = Object.keys(response.content)
 
@@ -546,9 +727,16 @@ export async function openapi2markdown(
                       md.paragraph(`**${texts.schema}:** ${schema.title}`)
                     }
 
-                    md.paragraph(formatSchema(schema, texts))
+                    md.paragraph(formatSchema(schema, texts, openapiDoc))
                   }
                 }
+              }
+              // Swagger 2.0: 直接使用 response.schema
+              else if (response.schema) {
+                if (response.schema.title) {
+                  md.paragraph(`**${texts.schema}:** ${response.schema.title}`)
+                }
+                md.paragraph(formatSchema(response.schema, texts, openapiDoc))
               }
             }
           }
@@ -574,13 +762,6 @@ export async function openapi2markdown(
 
           md.codeBlock(`${method.toUpperCase()} ${path}`, 'http')
 
-          // Operation ID
-          if (operation.operationId) {
-            md.paragraph(
-              `**${texts.operationId}:** \`${operation.operationId}\``,
-            )
-          }
-
           // Parameters
           const parameters = operation.parameters || []
           if (parameters.length > 0) {
@@ -639,7 +820,7 @@ export async function openapi2markdown(
                   md.paragraph(`**${texts.schema}:** ${schema.title}`)
                 }
 
-                md.paragraph(formatSchema(schema, texts))
+                md.paragraph(formatSchema(schema, texts, openapiDoc))
               }
             }
           }
@@ -655,7 +836,14 @@ export async function openapi2markdown(
               operation.responses,
             )) {
               const response = responseObj as any
-              if (!response.content) continue
+
+              // 跳过空响应（既没有 content 也没有 schema 也没有 description）
+              if (
+                !response.content &&
+                !response.schema &&
+                !response.description
+              )
+                continue
 
               md.paragraph(`**${texts.statusCode}:** ${statusCode}`)
 
@@ -665,6 +853,7 @@ export async function openapi2markdown(
                 )
               }
 
+              // OpenAPI 3.x: 使用 response.content
               if (response.content) {
                 const contentTypes = Object.keys(response.content)
 
@@ -679,9 +868,16 @@ export async function openapi2markdown(
                       md.paragraph(`**${texts.schema}:** ${schema.title}`)
                     }
 
-                    md.paragraph(formatSchema(schema, texts))
+                    md.paragraph(formatSchema(schema, texts, openapiDoc))
                   }
                 }
+              }
+              // Swagger 2.0: 直接使用 response.schema
+              else if (response.schema) {
+                if (response.schema.title) {
+                  md.paragraph(`**${texts.schema}:** ${response.schema.title}`)
+                }
+                md.paragraph(formatSchema(response.schema, texts, openapiDoc))
               }
             }
           }

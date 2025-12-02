@@ -20,6 +20,10 @@ POST /anything/and
 
 #### Responses
 
+**Status Code:** 401
+
+**Description:** Unauthorized
+
 ### Two forms of auth can be used, only one is required (||)
 
 Two forms of auth can be used, only one is required (||)
@@ -29,6 +33,10 @@ POST /anything/or
 ```
 
 #### Responses
+
+**Status Code:** 401
+
+**Description:** Unauthorized
 
 ### Two security flows are present, one of which has multiple forms of required auth (&& ||)
 
@@ -40,6 +48,10 @@ POST /anything/and-or
 
 #### Responses
 
+**Status Code:** 401
+
+**Description:** Unauthorized
+
 ### Many security flows are present, each with multiple forms of required auth (&& ||)
 
 Many security flows are present, each with multiple forms of required auth (&& ||)
@@ -49,3 +61,7 @@ POST /anything/many-and-or
 ```
 
 #### Responses
+
+**Status Code:** 401
+
+**Description:** Unauthorized

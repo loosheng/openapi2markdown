@@ -34,8 +34,6 @@ Support and handling of `type: string` schemas.
 POST /anything/strings
 ```
 
-**Operation ID:** `string_schemaSupport`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -61,6 +59,10 @@ POST /anything/strings
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Handling of `format` data types on `type: string` schemas.
 
 📚 OpenAPI specification references:
@@ -80,8 +82,6 @@ Handling of `format` data types on `type: string` schemas.
 ```http
 PUT /anything/strings
 ```
-
-**Operation ID:** `string_formatSupport`
 
 #### Request Body
 
@@ -108,6 +108,10 @@ PUT /anything/strings
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Handling of a `requestBody` payload that's a single `type: string`.
 
 📚 OpenAPI specification references:
@@ -128,8 +132,6 @@ Handling of a `requestBody` payload that's a single `type: string`.
 POST /anything/strings/top-level-payloads
 ```
 
-**Operation ID:** `string_topLevel`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -137,6 +139,10 @@ POST /anything/strings/top-level-payloads
 string
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Handling of a `requestBody` payload that's a single `type: string` but `format: json`.
 
@@ -158,8 +164,6 @@ Handling of a `requestBody` payload that's a single `type: string` but `format: 
 PATCH /anything/strings/top-level-payloads
 ```
 
-**Operation ID:** `string_topLevelJSON`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -167,6 +171,10 @@ PATCH /anything/strings/top-level-payloads
 string
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Numbers
 
@@ -191,8 +199,6 @@ Support and handling of `type: integer` and `type: number` schemas.
 ```http
 POST /anything/numbers
 ```
-
-**Operation ID:** `number_schemaSupport`
 
 #### Request Body
 
@@ -223,6 +229,10 @@ POST /anything/numbers
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Handling `format` data types on `type: integer` and `type: number` schemas.
 
 📚 OpenAPI specification references:
@@ -242,8 +252,6 @@ Handling `format` data types on `type: integer` and `type: number` schemas.
 ```http
 PUT /anything/numbers
 ```
-
-**Operation ID:** `number_formatSupport`
 
 #### Request Body
 
@@ -268,6 +276,10 @@ PUT /anything/numbers
 
 #### Responses
 
+**Status Code:** 200
+
+**Description:** OK
+
 ### Handling of a `requestBody` payload that's a single `type: integer`.
 
 📚 OpenAPI specification references:
@@ -288,8 +300,6 @@ Handling of a `requestBody` payload that's a single `type: integer`.
 PATCH /anything/numbers
 ```
 
-**Operation ID:** `number_topLevel`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -297,6 +307,10 @@ PATCH /anything/numbers
 integer
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Booleans
 
@@ -322,8 +336,6 @@ Support and handling of `type: boolean` schemas.
 POST /anything/booleans
 ```
 
-**Operation ID:** `boolean_schemaSupport`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -342,6 +354,10 @@ POST /anything/booleans
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Handling of a `requestBody` payload that's a single `type: boolean`.
 
@@ -363,8 +379,6 @@ Handling of a `requestBody` payload that's a single `type: boolean`.
 PATCH /anything/booleans
 ```
 
-**Operation ID:** `boolean_topLevel`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -372,6 +386,10 @@ PATCH /anything/booleans
 boolean
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Arrays
 
@@ -397,8 +415,6 @@ Support and handling of `type: array` schemas.
 POST /anything/arrays
 ```
 
-**Operation ID:** `array_schemaSupport`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -407,25 +423,39 @@ POST /anything/arrays
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | array | No | No description |
-| with markdown description | array | No | This is an `array` with a **markdown** description: [link](ref:action-object) |
-| with title | array | No | No description |
-| array<any> | array | No | No description |
+| stock | unknown[] | No | No description |
+| with markdown description | unknown[] | No | This is an `array` with a **markdown** description: [link](ref:action-object) |
+| with title | unknown[] | No | No description |
+| array<any> | unknown[] | No | No description |
 | array<any> (but no `items` property) | array | No | Techncally this is a malformed schema, but we support it (for legacy reasons) and repair it to have `items: {}` when we generate JSON Schema for the form.
 
 Though its supported, not all OpenAPI validators allow it though so our support may regress at some point in the future. |
-| array<string> | array | No | No description |
-| array<string> (with overall `null` default) | array | No | No description |
-| array<string> (loaded via a $ref) | array | No | No description |
-| array<integer> | array | No | No description |
-| array<number> | array | No | No description |
-| array<boolean> | array | No | No description |
-| array<object> | array | No | No description |
-| array<object> (additionalProperties) | array | No | No description |
-| array<array<object>> | array | No | No description |
+| array<string> | string[] | No | No description |
+| array<string> (with overall `null` default) | string[] | No | No description |
+| array<string> (loaded via a $ref) | string[] | No | No description |
+| array<integer> | integer[] | No | No description |
+| array<number> | number[] | No | No description |
+| array<boolean> | boolean[] | No | No description |
+| array<object> | object[] | No | No description |
+| array<object> (additionalProperties) | object[] | No | No description |
+| array<array<object>> | array[] | No | No description |
+
+
+**array<object> 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| integer | integer | No | No description |
+| number | number | No | No description |
+| boolean | boolean | No | No description |
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Handling of a `requestBody` payload that's a `type: array` composed of objects.
 
@@ -447,8 +477,6 @@ Handling of a `requestBody` payload that's a `type: array` composed of objects.
 POST /anything/arrays/top-level-payloads
 ```
 
-**Operation ID:** `array_topLevelObjects`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -456,6 +484,10 @@ POST /anything/arrays/top-level-payloads
 Array, item type: object
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Handling of a `requestBody` payload that's a `type: array` composed of primitives.
 
@@ -477,8 +509,6 @@ Handling of a `requestBody` payload that's a `type: array` composed of primitive
 PATCH /anything/arrays/top-level-payloads
 ```
 
-**Operation ID:** `array_topLevelPrimitives`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -486,6 +516,10 @@ PATCH /anything/arrays/top-level-payloads
 Array, item type: string
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Objects
 
@@ -511,8 +545,6 @@ Support and handling of `type: object` schemas.
 POST /anything/objects
 ```
 
-**Operation ID:** `object_schemaSupport`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -528,7 +560,55 @@ POST /anything/objects
 | object (without `properties`) | object | No | Because this object is missing a `properties` declaration we should treat it as if `additionalProperties: true` were present on it so the enduser can still use it with the form. |
 
 
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| integer | integer | No | No description |
+| number | number | No | No description |
+| object | object | No | No description |
+| array | string[] | No | No description |
+
+
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+
+
+**object (with `title`) 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| integer | integer | No | No description |
+| number | number | No | No description |
+| object | object | No | No description |
+| array | string[] | No | No description |
+
+
+**object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+
+
+**object (without an explicit `type`) 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| property1 | integer | No | No description |
+| property2 | integer | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Circular references
 
@@ -554,8 +634,6 @@ Handling of a nested `$ref` that recursively references itself.
 POST /anything/circular
 ```
 
-**Operation ID:** `circular_handling`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -567,7 +645,83 @@ POST /anything/circular
 | circular | object | No | No description |
 
 
+**circular 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Handling of a top-level request body `$ref` that recursively references itself.
 
@@ -589,8 +743,6 @@ Handling of a top-level request body `$ref` that recursively references itself.
 PATCH /anything/circular
 ```
 
-**Operation ID:** `circular_topLevel`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -600,10 +752,86 @@ PATCH /anything/circular
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | string | string | No | No description |
-| children | array | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
+
+
+**children 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| string | string | No | No description |
+| children | object[] | No | No description |
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## ReadMe-flavors
 
@@ -621,8 +849,6 @@ This is a special value on ReadMe to denote a top level property. This can be do
 POST /anything/raw_body/top-level-payloads
 ```
 
-**Operation ID:** `raw_body_topLevel`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -635,6 +861,10 @@ POST /anything/raw_body/top-level-payloads
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### This is a special value on ReadMe to denote a top level property. This can be done better using JSON Schema, but from ReadMe's dash, this is the only way to do it.
 
@@ -648,8 +878,6 @@ This is a special value on ReadMe to denote a top level property. This can be do
 PATCH /anything/raw_body/top-level-payloads
 ```
 
-**Operation ID:** `raw_body_topLevelJSON`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -662,6 +890,10 @@ PATCH /anything/raw_body/top-level-payloads
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ## Quirks
 
@@ -687,8 +919,6 @@ Handling cases for when `type` is missing from a schema.
 POST /anything/quirks
 ```
 
-**Operation ID:** `quirks_missingType`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -703,7 +933,18 @@ POST /anything/quirks
 | implicit object | unknown | No | This object property is missing an explicit `type: object` but since it has an `properties` declaration we're implicitly treating it as an object. |
 
 
+**implicit object 对象结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| name | string | No | No description |
+
+
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Handling cases for when a nested `allOf` cannot be merged together.
 
@@ -725,8 +966,6 @@ Handling cases for when a nested `allOf` cannot be merged together.
 POST /anything/quirks/polymorphism
 ```
 
-**Operation ID:** `quirks_incompatibleNestedAllOf`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -744,6 +983,10 @@ This is obviously less than ideal but it assures that the user can still interac
 
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### When an `allOf` sits at the top of a request body schema and it cannot be merged, we're unable to render out anything for an input because there's no usable schema for us.
 
@@ -765,8 +1008,6 @@ When an `allOf` sits at the top of a request body schema and it cannot be merged
 PUT /anything/quirks/polymorphism
 ```
 
-**Operation ID:** `quirks_entirelyIncompatibleAllOf`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -776,6 +1017,10 @@ PUT /anything/quirks/polymorphism
 Unknown type
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK
 
 ### Like `quirks_entirelyIncompatibleAllOf`, when we're to merge an `allOf` together we eliminate it, however this schema here has additional properties (`description`) alongside that `allOf` so it's not a wholly empty schema and we can use it. Unfortunately since we don't have any of the real data for the request body to use we treat this as a string input with a `format` of `json` so that the user can input a raw JSON input to make their request with.
 
@@ -801,8 +1046,6 @@ Unfortunately in this case we don't support `description` on the root schema so 
 PATCH /anything/quirks/polymorphism
 ```
 
-**Operation ID:** `quirks_partiallyUsableIncompatibleAllOf`
-
 #### Request Body
 
 **Content Type:** `application/json`
@@ -812,3 +1055,7 @@ PATCH /anything/quirks/polymorphism
 Unknown type
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

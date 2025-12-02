@@ -17,3 +17,7 @@ POST /post
 | body | body | object | No | No description |
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** Circular

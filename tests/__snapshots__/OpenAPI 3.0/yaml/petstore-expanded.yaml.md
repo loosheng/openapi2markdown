@@ -26,8 +26,6 @@ Sed tempus felis lobortis leo pulvinar rutrum. Nam mattis velit nisl, eu condime
 GET /pets
 ```
 
-**Operation ID:** `findPets`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -66,8 +64,6 @@ Creates a new pet in the store. Duplicates are allowed
 ```http
 POST /pets
 ```
-
-**Operation ID:** `addPet`
 
 #### Request Body
 
@@ -117,8 +113,6 @@ Returns a user based on a single ID, if the user does not have access to the pet
 GET /pets/{id}
 ```
 
-**Operation ID:** `find pet by id`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -157,8 +151,6 @@ deletes a single pet based on the ID supplied
 DELETE /pets/{id}
 ```
 
-**Operation ID:** `deletePet`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -166,6 +158,10 @@ DELETE /pets/{id}
 | id | path | integer | Yes | ID of pet to delete |
 
 #### Responses
+
+**Status Code:** 204
+
+**Description:** pet deleted
 
 **Status Code:** default
 

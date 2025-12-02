@@ -20,8 +20,6 @@ List available data sets
 GET /
 ```
 
-**Operation ID:** `list-data-sets`
-
 #### Responses
 
 **Status Code:** 200
@@ -35,7 +33,17 @@ GET /
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | total | integer | No | No description |
-| apis | array | No | No description |
+| apis | object[] | No | No description |
+
+
+**apis 数组项结构:**
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| apiKey | string | No | To be used as a dataset parameter value |
+| apiVersionNumber | string | No | To be used as a version parameter value |
+| apiUrl | string | No | The URL describing the dataset's fields |
+| apiDocumentationUrl | string | No | A URL to the API console for each API |
 
 
 ### This GET API returns the list of all the searchable field names that are in the oa_citations. Please see the 'fields' attribute which returns an array of field names. Each field or a combination of fields can be searched using the syntax options shown below.
@@ -45,8 +53,6 @@ This GET API returns the list of all the searchable field names that are in the 
 ```http
 GET /{dataset}/{version}/fields
 ```
-
-**Operation ID:** `list-searchable-fields`
 
 #### Parameters
 
@@ -85,8 +91,6 @@ Search a data set
 POST /{dataset}/{version}/records
 ```
 
-**Operation ID:** `perform-search`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -116,3 +120,7 @@ POST /{dataset}/{version}/records
 **Content Type:** `application/json`
 
 Array, item type: object
+
+**Status Code:** 404
+
+**Description:** No matching record found for the given criteria.

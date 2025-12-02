@@ -19,3 +19,7 @@ GET /anything/numbers
 ```
 
 #### Responses
+
+**Status Code:** 200
+
+**Description:** OK

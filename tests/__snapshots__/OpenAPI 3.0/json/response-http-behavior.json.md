@@ -18,8 +18,6 @@ Making this request without these parameters should make an uncached request. Wh
 GET /cache
 ```
 
-**Operation ID:** `cached`
-
 #### Parameters
 
 | Name | Location | Type | Required | Description |
@@ -29,6 +27,10 @@ GET /cache
 
 #### Responses
 
+**Status Code:** default
+
+**Description:** successful response
+
 ### Returns a `302 Found` status
 
 Returns a `302 Found` status
@@ -37,9 +39,11 @@ Returns a `302 Found` status
 GET /status/302
 ```
 
-**Operation ID:** `redirect`
-
 #### Responses
+
+**Status Code:** default
+
+**Description:** successful response
 
 ### Returns a `204 No Content` with no body
 
@@ -49,6 +53,8 @@ Returns a `204 No Content` with no body
 GET /status/204
 ```
 
-**Operation ID:** `nocontent`
-
 #### Responses
+
+**Status Code:** default
+
+**Description:** successful response

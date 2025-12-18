@@ -10,7 +10,7 @@ Create beautiful product and API documentation with our developer friendly platf
 
 ## API Registry
 
-### Get an API definition file that's been uploaded to ReadMe.
+### Retrieve an entry from the API Registry
 
 Get an API definition file that's been uploaded to ReadMe.
 
@@ -40,7 +40,7 @@ Unknown type
 
 ## API Specification
 
-### Get API specification metadata.
+### Get metadata
 
 Get API specification metadata.
 
@@ -82,7 +82,7 @@ Unknown type
 
 Unknown type
 
-### Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/main/docs/rdme.
+### Upload specification
 
 Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/main/docs/rdme.
 
@@ -136,7 +136,7 @@ Unknown type
 
 Unknown type
 
-### Update an API specification in ReadMe.
+### Update specification
 
 Update an API specification in ReadMe.
 
@@ -190,7 +190,7 @@ Unknown type
 
 Unknown type
 
-### Delete an API specification in ReadMe.
+### Delete specification
 
 Delete an API specification in ReadMe.
 
@@ -230,7 +230,7 @@ Unknown type
 
 Unknown type
 
-### Validate an API specification.
+### Validate API specification
 
 Validate an API specification.
 
@@ -266,7 +266,7 @@ Unknown type
 
 Unknown type
 
-### Returns a copy of our OpenAPI Definition.
+### Get our OpenAPI Definition
 
 Returns a copy of our OpenAPI Definition.
 
@@ -284,7 +284,7 @@ object
 
 ## Apply to ReadMe
 
-### Returns all the roles we're hiring for at ReadMe!
+### Get open roles
 
 Returns all the roles we're hiring for at ReadMe!
 
@@ -300,7 +300,7 @@ GET /apply
 
 Array, item type: object
 
-### This endpoint will let you apply to a job at ReadMe programatically, without having to go through our UI!
+### Submit your application!
 
 This endpoint will let you apply to a job at ReadMe programatically, without having to go through our UI!
 
@@ -330,7 +330,7 @@ POST /apply
 
 ## Categories
 
-### Returns all the categories for a specified version.
+### Get all categories
 
 Returns all the categories for a specified version.
 
@@ -346,7 +346,7 @@ GET /categories
 | perPage | query | integer | No | Number of items to include in pagination (up to 100, defaults to 10). |
 | page | query | integer | No | Used to specify further pages (starts at 1). |
 
-### Create a new category inside of this project.
+### Create category
 
 Create a new category inside of this project.
 
@@ -376,7 +376,7 @@ Unknown type
 
 Unknown type
 
-### Returns the category with this slug.
+### Get category
 
 Returns the category with this slug.
 
@@ -399,7 +399,7 @@ GET /categories/{slug}
 
 Unknown type
 
-### Change the properties of a category.
+### Update category
 
 Change the properties of a category.
 
@@ -442,7 +442,7 @@ Unknown type
 
 Unknown type
 
-### Delete the category with this slug.
+### Delete category
 
 Delete the category with this slug.
 
@@ -465,7 +465,7 @@ DELETE /categories/{slug}
 
 Unknown type
 
-### Returns the docs and children docs within this category.
+### Get docs for category
 
 Returns the docs and children docs within this category.
 
@@ -490,7 +490,7 @@ Unknown type
 
 ## Changelog
 
-### Returns a list of changelogs.
+### Get changelogs
 
 Returns a list of changelogs.
 
@@ -505,7 +505,7 @@ GET /changelogs
 | perPage | query | integer | No | Number of items to include in pagination (up to 100, defaults to 10). |
 | page | query | integer | No | Used to specify further pages (starts at 1). |
 
-### Create a new changelog entry.
+### Create changelog
 
 Create a new changelog entry.
 
@@ -529,7 +529,7 @@ POST /changelogs
 | hidden | boolean | No | Visibility of the changelog. |
 
 
-### Returns the changelog with this slug.
+### Get changelog
 
 Returns the changelog with this slug.
 
@@ -543,7 +543,7 @@ GET /changelogs/{slug}
 | ---- | -------- | ---- | -------- | ----------- |
 | slug | path | string | Yes | A URL-safe representation of the changelog title. Slugs must be all lowercase, and replace spaces with hyphens. For example, for the changelog "Owlet Update", enter the slug "owlet-update". |
 
-### Update a changelog with this slug.
+### Update changelog
 
 Update a changelog with this slug.
 
@@ -573,7 +573,7 @@ PUT /changelogs/{slug}
 | hidden | boolean | No | Visibility of the changelog. |
 
 
-### Delete the changelog with this slug.
+### Delete changelog
 
 Delete the changelog with this slug.
 
@@ -589,7 +589,7 @@ DELETE /changelogs/{slug}
 
 ## Custom Pages
 
-### Returns a list of custom pages.
+### Get custom pages
 
 Returns a list of custom pages.
 
@@ -618,7 +618,7 @@ Unknown type
 
 Unknown type
 
-### Create a new custom page inside of this project.
+### Create custom page
 
 Create a new custom page inside of this project.
 
@@ -663,7 +663,7 @@ Unknown type
 
 Unknown type
 
-### Returns the custom page with this slug.
+### Get custom page
 
 Returns the custom page with this slug.
 
@@ -697,7 +697,7 @@ Unknown type
 
 Unknown type
 
-### Update a custom page with this slug.
+### Update custom page
 
 Update a custom page with this slug.
 
@@ -754,7 +754,7 @@ Unknown type
 
 Unknown type
 
-### Delete the custom page with this slug.
+### Delete custom page
 
 Delete the custom page with this slug.
 
@@ -790,7 +790,7 @@ Unknown type
 
 ## Docs
 
-### Create a new doc inside of this project.
+### Create doc
 
 Create a new doc inside of this project.
 
@@ -884,7 +884,7 @@ Unknown type
 
 Unknown type
 
-### Returns all docs that match the search.
+### Search docs
 
 Returns all docs that match the search.
 
@@ -913,7 +913,7 @@ Unknown type
 
 Unknown type
 
-### Returns the doc with this slug.
+### Get doc
 
 Returns the doc with this slug.
 
@@ -976,7 +976,7 @@ Unknown type
 
 Unknown type
 
-### Update a doc with this slug.
+### Update doc
 
 Update a doc with this slug.
 
@@ -1077,7 +1077,7 @@ Unknown type
 
 Unknown type
 
-### Delete the doc with this slug.
+### Delete doc
 
 Delete the doc with this slug.
 
@@ -1112,7 +1112,7 @@ Unknown type
 
 Unknown type
 
-### This is intended for use by enterprise users with staging enabled. This endpoint will return the live version of your document, whereas the standard endpoint will always return staging.
+### Get production doc
 
 This is intended for use by enterprise users with staging enabled. This endpoint will return the live version of your document, whereas the standard endpoint will always return staging.
 
@@ -1179,10 +1179,7 @@ Unknown type
 
 ## IP Addresses
 
-### Returns all of ReadMe’s IP addresses used for outbound webhook requests and the “Try It!” button on the API Explorer.
-
-Although ReadMe’s outbound IP addresses may change, the IPs in this API response will be valid for at least 7 days. If you configure your API or webhooks to limit access based on these IPs, you should refresh the IP list from this endpoint weekly.
-
+### Get ReadMe’s outbound IP addresses
 
 Returns all of ReadMe’s IP addresses used for outbound webhook requests and the “Try It!” button on the API Explorer.
 
@@ -1203,7 +1200,7 @@ Array, item type: object
 
 ## Projects
 
-### Returns project data for the API key.
+### Get metadata about the current project
 
 Returns project data for the API key.
 
@@ -1242,7 +1239,7 @@ Unknown type
 
 ## Version
 
-### Retrieve a list of versions associated with a project API key.
+### Get versions
 
 Retrieve a list of versions associated with a project API key.
 
@@ -1264,7 +1261,7 @@ Unknown type
 
 Unknown type
 
-### Create a new version.
+### Create version
 
 Create a new version.
 
@@ -1318,7 +1315,7 @@ Unknown type
 
 Unknown type
 
-### Returns the version with this version ID.
+### Get version
 
 Returns the version with this version ID.
 
@@ -1352,7 +1349,7 @@ Unknown type
 
 Unknown type
 
-### Update an existing version.
+### Update version
 
 Update an existing version.
 
@@ -1412,7 +1409,7 @@ Unknown type
 
 Unknown type
 
-### Delete a version
+### Delete version
 
 Delete a version
 
@@ -1454,7 +1451,7 @@ Unknown type
 
 ## Owlbot AI
 
-### Ask Owlbot a question about the content of your docs.
+### Ask Owlbot AI a question
 
 Ask Owlbot a question about the content of your docs.
 

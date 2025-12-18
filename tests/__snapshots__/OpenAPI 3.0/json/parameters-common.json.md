@@ -10,7 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#path-
 
 ## Default
 
-### [get] Description
+### [get] Summary
 
 [get] Description
 
@@ -18,7 +18,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#path-
 GET /anything/{id}
 ```
 
-### [post] Description
+### [post] Summary
 
 [post] Description
 
@@ -32,7 +32,7 @@ POST /anything/{id}
 | ---- | -------- | ---- | -------- | ----------- |
 | limit | query | integer | No | The numbers of items to return. |
 
-### [get] Description
+### [get] Summary
 
 [get] Description
 
@@ -40,7 +40,7 @@ POST /anything/{id}
 GET /anything/{id}/{action}
 ```
 
-### [get] Description
+### [get] Summary
 
 [get] Description
 

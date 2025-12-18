@@ -12,13 +12,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schem
 
 Showcasing enum handling and support
 
-### Support and handling of enums on `type: string` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### String enum support
 
 Support and handling of enums on `type: string` schemas.
 
@@ -53,13 +47,7 @@ POST /anything/strings
 | enum (with empty option and empty default) | string | No | This enum has a an empty string (`""`) as its only available option, and that same value is set as its `default`. |
 
 
-### Support and handling of enums on `type: number` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Number enum support
 
 Support and handling of enums on `type: number` schemas.
 
@@ -91,13 +79,7 @@ GET /anything/strings
 | enum (with duplicate options) | number | No | This enum has multiple duplicate options, they should get deduped in the UI |
 
 
-### Support and handling of enums on `type: boolean` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Boolean enum support
 
 Support and handling of enums on `type: boolean` schemas.
 

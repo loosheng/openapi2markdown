@@ -10,7 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#user-co
 
 ## Default
 
-### This operation has a top-level `jsonSchemaDialect` set to abide by [JSON Schema Draft 04](https://json-schema.org/specification-links.html#draft-4).
+### Number validation
 
 This operation has a top-level `jsonSchemaDialect` set to abide by [JSON Schema Draft 04](https://json-schema.org/specification-links.html#draft-4).
 

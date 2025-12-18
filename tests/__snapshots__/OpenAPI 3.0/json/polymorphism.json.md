@@ -58,7 +58,7 @@ POST /anything/any-of-primitive
 
 Unknown type
 
-### AnyOf's with a top level type parameter should not render that type outside of their options
+### anyOf With Type
 
 AnyOf's with a top level type parameter should not render that type outside of their options
 
@@ -180,7 +180,7 @@ POST /anything/nested-one-of-object-with-nested-one-of
 | config | unknown | No | - |
 
 
-### OneOf's with a top level type parameter should not render that type outside of their options
+### One Of With Type
 
 OneOf's with a top level type parameter should not render that type outside of their options
 

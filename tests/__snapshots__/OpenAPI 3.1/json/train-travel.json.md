@@ -16,7 +16,7 @@ This API definition was ported over from https://github.com/bump-sh-examples/tra
 
 Find and filter train stations across Europe, including their location  and local timezone.
 
-### Returns a list of all train stations in the system.
+### Get a list of train stations
 
 Returns a list of all train stations in the system.
 
@@ -90,7 +90,7 @@ Unknown type
 
 Timetables and routes for train trips between stations, including  pricing and availability.
 
-### Returns a list of available train trips between the specified origin and destination stations on the given date, and allows for filtering by bicycle and dog allowances.
+### Get available train trips
 
 Returns a list of available train trips between the specified origin and destination stations on the given date, and allows for filtering by bicycle and dog allowances.
 
@@ -174,7 +174,7 @@ Unknown type
 
 Create and manage bookings for train trips, including passenger  details and optional extras.
 
-### Returns a list of all trips booking by the authenticated user.
+### List existing bookings
 
 Returns a list of all trips booking by the authenticated user.
 
@@ -244,7 +244,7 @@ Unknown type
 
 Unknown type
 
-### A booking is a temporary hold on a trip. It is not confirmed until the payment is processed.
+### Create a booking
 
 A booking is a temporary hold on a trip. It is not confirmed until the payment is processed.
 
@@ -356,7 +356,7 @@ Unknown type
 
 Unknown type
 
-### Returns the details of a specific booking.
+### Get a booking
 
 Returns the details of a specific booking.
 
@@ -436,7 +436,7 @@ Unknown type
 
 Unknown type
 
-### Deletes a booking, cancelling the hold on the trip.
+### Delete a booking
 
 Deletes a booking, cancelling the hold on the trip.
 
@@ -515,7 +515,7 @@ status and history.
 > Bookings usually expire within 1 hour so you'll need to make your payment before the expiry date 
 
 
-### A payment is an attempt to pay for the booking, which will confirm the booking for the user and enable them to get their tickets.
+### Pay for a Booking
 
 A payment is an attempt to pay for the booking, which will confirm the booking for the user and enable them to get their tickets.
 

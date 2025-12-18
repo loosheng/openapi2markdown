@@ -8,7 +8,7 @@ This is a slimmed down single path version of the Petstore definition.
 
 Everything about your Pets
 
-### Returns a single pet
+### Find pet by ID
 
 Returns a single pet
 

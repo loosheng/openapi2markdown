@@ -14,13 +14,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#serve
 
 ## Global
 
-### Support and handling of servers and server variables.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Server Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#serverObject)
-
-* [3.1.0 Server Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#serverObject)
+### Global servers + variables
 
 Support and handling of servers and server variables.
 
@@ -36,13 +30,7 @@ POST /global
 
 ## Operation
 
-### Support and handling of servers and server variables set at the operation level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Operation Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#operationObject)
-
-* [3.1.0 Operation Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#operationObject)
+### Operation-level servers + variables
 
 Support and handling of servers and server variables set at the operation level.
 
@@ -58,13 +46,7 @@ POST /operation
 
 ## Path
 
-### Support and handling of servers and server variables set at the path level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Path Item Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#pathItemObject)
-
-* [3.1.0 Path Item Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemObject)
+### Path-common level operation servers
 
 Support and handling of servers and server variables set at the path level.
 
@@ -78,13 +60,7 @@ Support and handling of servers and server variables set at the path level.
 PUT /path
 ```
 
-### Support and handling of servers and server variables set at the path **and** operation level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Path Item Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#pathItemObject)
-
-* [3.1.0 Path Item Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#pathItemObject)
+### Path-common level and operation-level operation servers
 
 Support and handling of servers and server variables set at the path **and** operation level.
 

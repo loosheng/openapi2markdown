@@ -10,7 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securit
 
 ## API Key
 
-### `apiKey` auth will be supplied within an `apiKey` query parameter.
+### Query parameter
 
 `apiKey` auth will be supplied within an `apiKey` query parameter.
 
@@ -18,7 +18,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securit
 GET /anything/apiKey
 ```
 
-### `apiKey` auth will be supplied within an `api_key` cookie.
+### Cookie
 
 `apiKey` auth will be supplied within an `api_key` cookie.
 
@@ -26,7 +26,7 @@ GET /anything/apiKey
 POST /anything/apiKey
 ```
 
-### `apiKey` auth will be supplied within an `X-API-KEY` header.
+### Header
 
 `apiKey` auth will be supplied within an `X-API-KEY` header.
 
@@ -36,9 +36,7 @@ PUT /anything/apiKey
 
 ## HTTP
 
-### Authentication credentials will be supplied within a `Basic` `Authorization` header.
-
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#basic-authentication-sample
+### Basic
 
 Authentication credentials will be supplied within a `Basic` `Authorization` header.
 
@@ -48,9 +46,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#basic-a
 POST /anything/basic
 ```
 
-### Authentication credentials will be supplied within a `Bearer` `Authorization` header.
-
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#basic-authentication-sample
+### Bearer
 
 Authentication credentials will be supplied within a `Bearer` `Authorization` header.
 
@@ -62,7 +58,7 @@ POST /anything/bearer
 
 ## Mutual TLS
 
-### 🚧 This is not supported.
+### `mutualTLS` auth
 
 🚧 This is not supported.
 
@@ -72,10 +68,7 @@ POST /anything/mutualTLS
 
 ## OAuth 2
 
-### > ℹ️
-> We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
-
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-fields-23
+### General support (all flow types)
 
 > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -86,10 +79,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 POST /anything/oauth2
 ```
 
-### > ℹ️
-> We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
-
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-fields-23
+### General support (authorizationCode flow type)
 
 > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -100,10 +90,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 GET /anything/oauth2
 ```
 
-### > ℹ️
-> We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
-
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-fields-23
+### General support (clientCredentials flow type)
 
 > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -114,10 +101,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 PUT /anything/oauth2
 ```
 
-### > ℹ️
-> We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
-
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-fields-23
+### General support (implicit flow type)
 
 > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -128,10 +112,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 PATCH /anything/oauth2
 ```
 
-### > ℹ️
-> We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
-
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-fields-23
+### General support (password flow type)
 
 > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -144,7 +125,7 @@ DELETE /anything/oauth2
 
 ## OpenID Connect
 
-### 🚧 This is not supported.
+### General support
 
 🚧 This is not supported.
 
@@ -154,7 +135,7 @@ POST /anything/openIdConnect
 
 ## Other
 
-### This operation does not have any authentication requirements.
+### No auth requirements
 
 This operation does not have any authentication requirements.
 
@@ -162,7 +143,7 @@ This operation does not have any authentication requirements.
 POST /anything/no-auth
 ```
 
-### This endpoint requires an authentication header but making any request to it will forcefully return a 401 status code for invalid auth.
+### Forced invalid authentication
 
 This endpoint requires an authentication header but making any request to it will forcefully return a 401 status code for invalid auth.
 

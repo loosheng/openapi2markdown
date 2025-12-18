@@ -10,7 +10,7 @@ This ia variant of `petstore-simple` except that there are no `tags` configured.
 
 ## Default
 
-### This operation will update a pet in the database.
+### Update a pet
 
 This operation will update a pet in the database.
 
@@ -18,7 +18,7 @@ This operation will update a pet in the database.
 PUT /pet/{id}
 ```
 
-### This operation will find a pet in the database.
+### Find a pet
 
 This operation will find a pet in the database.
 

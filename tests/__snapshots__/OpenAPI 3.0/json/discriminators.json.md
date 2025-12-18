@@ -10,7 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#discr
 
 ## Quirks
 
-### This operation has a `discriminator` that's in reference to a property a level above it. **This is an improper use of discriminators.** Though this is improper, in this case we should ignore the discriminator instead of failing to render the operation.
+### oneOf with a discriminator that is referencing a property up a level
 
 This operation has a `discriminator` that's in reference to a property a level above it. **This is an improper use of discriminators.** Though this is improper, in this case we should ignore the discriminator instead of failing to render the operation.
 
@@ -30,7 +30,7 @@ PATCH /improper-discriminator-placement
 | connector_properties | object | No | - |
 
 
-### Redocly allows users to define [a discriminator mapping without an `anyOf` or `oneOf` that contains the discriminated objects](https://redocly.com/docs/resources/discriminator#allof-for-inheritance). This endpoint demonstrates that.
+### Discriminator without `anyOf` or `oneOf` that Redocly supports
 
 Redocly allows users to define [a discriminator mapping without an `anyOf` or `oneOf` that contains the discriminated objects](https://redocly.com/docs/resources/discriminator#allof-for-inheritance). This endpoint demonstrates that.
 
@@ -61,7 +61,7 @@ PATCH /redocly-flavored-discriminator
 | range | integer | No | The 95th percentile range of a trip in kilometers. |
 
 
-### This operation contains a schema that at one point produced an edgecase within the form system where `formData` was `undefined`.
+### Handling for potentially undefined formData
 
 This operation contains a schema that at one point produced an edgecase within the form system where `formData` was `undefined`.
 

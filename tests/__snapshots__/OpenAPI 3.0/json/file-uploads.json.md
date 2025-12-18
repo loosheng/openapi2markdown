@@ -10,9 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#consi
 
 ## image/png
 
-### Support for a `requestBody` with an `image/png` media type to upload a single image binary.
-
-https://swagger.io/docs/specification/describing-request-body/file-upload/
+### `image/png` uploads
 
 Support for a `requestBody` with an `image/png` media type to upload a single image binary.
 
@@ -30,9 +28,7 @@ string
 
 ## multipart/form-data
 
-### Support for a `requestBody` with a `multipart/form-data` media type.
-
-https://swagger.io/docs/specification/describing-request-body/file-upload/
+### Single file
 
 Support for a `requestBody` with a `multipart/form-data` media type.
 
@@ -55,9 +51,7 @@ POST /anything/multipart-formdata
 | documentFile | string | No | - |
 
 
-### Support for a `requestBody` with a `multipart/form-data` containing multiple files.
-
-https://swagger.io/docs/specification/describing-request-body/file-upload/
+### Multiple files
 
 Support for a `requestBody` with a `multipart/form-data` containing multiple files.
 

@@ -317,7 +317,7 @@ GET /anything/recursive
 
 Array, item type: object
 
-### This example is to ensure that we don't hard fail out on attempting to parse a non-JSON string as JSON, and instead fallback to the standard syntax highlighter.
+### Returns as JSON, but is actually a simple string
 
 This example is to ensure that we don't hard fail out on attempting to parse a non-JSON string as JSON, and instead fallback to the standard syntax highlighter.
 

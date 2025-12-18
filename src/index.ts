@@ -621,7 +621,7 @@ export async function openapi2markdown(
 
         for (const { path, method, operation } of endpoints) {
           // Endpoint title
-          const title = operation.description || operation.summary || ''
+          const title = operation.summary || operation.description || ''
           md.h3(title)
 
           // Description - only output if different from title
@@ -773,7 +773,7 @@ export async function openapi2markdown(
 
         for (const { path, method, operation } of endpoints) {
           // Endpoint title
-          const title = operation.description || operation.summary || ''
+          const title = operation.summary || operation.description || ''
           md.h3(title)
 
           // Description - only output if different from title

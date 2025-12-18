@@ -12,9 +12,7 @@ https://docs.readme.com/docs/openapi-extensions
 
 https://docs.readme.com/docs/openapi-extensions#custom-code-samples
 
-### This is a demonstration of our handling of our `x-readme.code-samples` extension.
-
-https://docs.readme.com/docs/openapi-extensions#custom-code-samples
+### Custom code samples with the "x-readme.code-samples" extension
 
 This is a demonstration of our handling of our `x-readme.code-samples` extension.
 
@@ -38,11 +36,7 @@ POST /x-code-samples
 | name | string | No | - |
 
 
-### This is a demonstration of our handling of our `x-code-samples` extension.
-
-> If this is present alongside `x-readme.code-samples` then the `x-readme.code-samples` extension will take precedence over this extension.
-
-https://docs.readme.com/docs/openapi-extensions#custom-code-samples
+### Custom code samples with the "x-code-samples" extension
 
 This is a demonstration of our handling of our `x-code-samples` extension.
 
@@ -58,11 +52,7 @@ GET /x-code-samples
 
 https://docs.readme.com/docs/openapi-extensions#static-headers
 
-### This is a demonstration of our handling of our `x-readme.headers` extension where when present, headers specified within it will be statically sent with API requests made in "Try It" and added into generated code snippets.
-
-In this case we have statically defined an `x-api-key` header with the value of `static-value`.
-
-https://docs.readme.com/docs/openapi-extensions#static-headers
+### Static headers with the "x-readme.headers" extension
 
 This is a demonstration of our handling of our `x-readme.headers` extension where when present, headers specified within it will be statically sent with API requests made in "Try It" and added into generated code snippets.
 
@@ -74,13 +64,7 @@ https://docs.readme.com/docs/openapi-extensions#static-headers
 POST /x-headers
 ```
 
-### This is a demonstration of our handling of our `x-readme.headers` extension where when present, headers specified within it will be statically sent with API requests made in "Try It" and added into generated code snippets.
-
-In this case we have statically defined an `x-api-key` header with the value of `static-value`.
-
-> If this is present alongside `x-readme.headers` then the `x-readme.headers` extension will take precedence over this extension.
-
-https://docs.readme.com/docs/openapi-extensions#static-headers
+### Static headers with the "x-headers" extension
 
 This is a demonstration of our handling of our `x-readme.headers` extension where when present, headers specified within it will be statically sent with API requests made in "Try It" and added into generated code snippets.
 
@@ -98,9 +82,7 @@ PATCH /x-headers
 
 https://docs.readme.com/docs/openapi-extensions#disable-the-api-explorer
 
-### When `x-readme.explorer-enabled` is present on an operation and set to `false`, the reference guide will be non-interactive and though your users will still be able to fill out a form and receive an auto-generated code sample to use, they will not be able to make requests to your API with our "Try It" button.
-
-https://docs.readme.com/docs/openapi-extensions#disable-the-api-explorer
+### Disable interactivity with the "x-readme.explorer-enabled" extension
 
 When `x-readme.explorer-enabled` is present on an operation and set to `false`, the reference guide will be non-interactive and though your users will still be able to fill out a form and receive an auto-generated code sample to use, they will not be able to make requests to your API with our "Try It" button.
 
@@ -135,13 +117,7 @@ POST /x-explorer-enabled
 | name | string | No | - |
 
 
-### When `x-explorer-enabled` is present on an operation and set to `false`, the reference guide will be non-interactive and though your users will still be able to fill out a form and receive an auto-generated code sample to use, they will not be able to make requests to your API with our "Try It" button.
-
-In this case we have statically defined an `x-api-key` header with the value of `static-value`.
-
-> If this is present alongside `x-readme.explorer-enabled` then the `x-readme.explorer-enabled` extension will take precedence over this extension.
-
-https://docs.readme.com/docs/openapi-extensions#disable-the-api-explorer
+### Disable interactivity with the "x-explorer-enabled" extension
 
 When `x-explorer-enabled` is present on an operation and set to `false`, the reference guide will be non-interactive and though your users will still be able to fill out a form and receive an auto-generated code sample to use, they will not be able to make requests to your API with our "Try It" button.
 
@@ -184,9 +160,7 @@ PATCH /x-explorer-enabled
 
 https://docs.readme.com/docs/openapi-extensions#code-sample-languages
 
-### With an array of languages present in `x-readme.samples-languages` code samples will be generated for only those languages. If not present, it will default to: `curl`, `node`, `ruby`, `javascript`, and `python`.
-
-https://docs.readme.com/guides/docs/openapi-extensions#code-sample-languages
+### Control available code sample languages the "x-readme.samples-languages" extension
 
 With an array of languages present in `x-readme.samples-languages` code samples will be generated for only those languages. If not present, it will default to: `curl`, `node`, `ruby`, `javascript`, and `python`.
 
@@ -196,11 +170,7 @@ https://docs.readme.com/guides/docs/openapi-extensions#code-sample-languages
 GET /x-samples-languages
 ```
 
-### With an array of languages present in `x-samples-languages` code samples will be generated for only those languages. If not present, it will default to: `curl`, `node`, `ruby`, `javascript`, and `python`.
-
-> If this is present alongside `x-readme.samples-languages` then the `x-readme.samples-languages` extension will take precedence over this extension.
-
-https://docs.readme.com/guides/docs/openapi-extensions#code-sample-languages
+### Control available code sample languages the "x-samples-languages" extension
 
 With an array of languages present in `x-samples-languages` code samples will be generated for only those languages. If not present, it will default to: `curl`, `node`, `ruby`, `javascript`, and `python`.
 
@@ -216,9 +186,7 @@ POST /x-samples-languages
 
 https://docs.readme.com/docs/openapi-extensions#cors-proxy-enabled
 
-### When `x-readme.proxy-enabled` is set to `false` all requests from the interactive API Explorer will be funneled directly to the configured server URL, otherwise they will be piped through our proxy to allow [CORS-enabled](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests for you.
-
-https://docs.readme.com/docs/openapi-extensions#cors-proxy-enabled
+### Disable funneling requests through our CORS proxy with the "x-readme.proxy-enabled" extension
 
 When `x-readme.proxy-enabled` is set to `false` all requests from the interactive API Explorer will be funneled directly to the configured server URL, otherwise they will be piped through our proxy to allow [CORS-enabled](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests for you.
 
@@ -228,11 +196,7 @@ https://docs.readme.com/docs/openapi-extensions#cors-proxy-enabled
 POST /x-proxy-enabled
 ```
 
-### When `x-proxy-enabled` is set to `false` all requests from the interactive API Explorer will be funneled directly to the configured server URL, otherwise they will be piped through our proxy to allow [CORS-enabled](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests for you.
-
-> If this is present alongside `x-readme.proxy-enabled` then the `x-readme.proxy-enabled` extension will take precedence over this extension.
-
-https://docs.readme.com/docs/openapi-extensions#cors-proxy-enabled
+### Disable funneling requests through our CORS proxy with the "x-proxy-enabled" extension
 
 When `x-proxy-enabled` is set to `false` all requests from the interactive API Explorer will be funneled directly to the configured server URL, otherwise they will be piped through our proxy to allow [CORS-enabled](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests for you.
 
@@ -248,9 +212,7 @@ PATCH /x-proxy-enabled
 
 https://docs.readme.com/docs/openapi-extensions#disable-api-metrics
 
-### When `x-readme.metrics-enabled` is set to `false` all requests from the interactive API Explorer will not be tracked for you within our [API Metrics product](https://readme.com/metrics) and you will not see any requests on that operations reference page that may have been logged to API Metrics through one of our many SDKs.
-
-https://docs.readme.com/docs/openapi-extensions#disable-api-metrics
+### Disable tracking requests through our API Metrics product with the "x-readme.metrics-enabled" extension
 
 When `x-readme.metrics-enabled` is set to `false` all requests from the interactive API Explorer will not be tracked for you within our [API Metrics product](https://readme.com/metrics) and you will not see any requests on that operations reference page that may have been logged to API Metrics through one of our many SDKs.
 
@@ -260,9 +222,7 @@ https://docs.readme.com/docs/openapi-extensions#disable-api-metrics
 POST /x-metrics-enabled
 ```
 
-### When `x-metrics-enabled` is set to `false` all requests from the interactive API Explorer will not be tracked for you within our [API Metrics product](https://readme.com/metrics) and you will not see any requests on that operations reference page that may have been logged to API Metrics through one of our many SDKs.
-
-https://docs.readme.com/docs/openapi-extensions#disable-api-metrics
+### Disable tracking requests through our API Metrics product with the "x-metrics-enabled" extension
 
 When `x-metrics-enabled` is set to `false` all requests from the interactive API Explorer will not be tracked for you within our [API Metrics product](https://readme.com/metrics) and you will not see any requests on that operations reference page that may have been logged to API Metrics through one of our many SDKs.
 

@@ -10,7 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specify
 
 ## Default
 
-### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+### Number validation
 
 The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
 
@@ -18,7 +18,7 @@ The parameter schemas contained within this operation have their own individual 
 GET /anything/numbers
 ```
 
-### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+### String validation
 
 The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
 
@@ -26,7 +26,7 @@ The parameter schemas contained within this operation have their own individual 
 GET /anything/strings
 ```
 
-### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+### Formats defined by JSON Schema
 
 The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
 
@@ -34,7 +34,7 @@ The parameter schemas contained within this operation have their own individual 
 GET /anything/jsonschema-formats
 ```
 
-### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+### Formats defined by OAS
 
 The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
 
@@ -42,7 +42,7 @@ The parameter schemas contained within this operation have their own individual 
 GET /anything/oas-formats
 ```
 
-### The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
+### Booleans
 
 The parameter schemas contained within this operation have their own individual JSON Schema dialects specified with the [$schema](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#specifying-schema-dialects) property.
 

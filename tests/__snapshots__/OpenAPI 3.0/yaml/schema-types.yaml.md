@@ -14,13 +14,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schem
 
 Showcasing handling and support for `type: string` schemas.
 
-### Support and handling of `type: string` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### String support
 
 Support and handling of `type: string` schemas.
 
@@ -57,13 +51,7 @@ POST /anything/strings
 | enum (with empty option and empty default) | string | No | This enum has a an empty string (`""`) as its only available option, and that same value is set as its `default`. |
 
 
-### Handling of `format` data types on `type: string` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### `format` data types
 
 Handling of `format` data types on `type: string` schemas.
 
@@ -100,13 +88,7 @@ PUT /anything/strings
 | unknown-format | string | No | - |
 
 
-### Handling of a `requestBody` payload that's a single `type: string`.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### Top-level payloads
 
 Handling of a `requestBody` payload that's a single `type: string`.
 
@@ -126,13 +108,7 @@ POST /anything/strings/top-level-payloads
 
 string
 
-### Handling of a `requestBody` payload that's a single `type: string` but `format: json`.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### Top-level payloads (JSON)
 
 Handling of a `requestBody` payload that's a single `type: string` but `format: json`.
 
@@ -156,13 +132,7 @@ string
 
 Showcasing handling and support for `type: integer` and `type: number` schemas.
 
-### Support and handling of `type: integer` and `type: number` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Number support
 
 Support and handling of `type: integer` and `type: number` schemas.
 
@@ -203,13 +173,7 @@ POST /anything/numbers
 | number (nullable) | number | No | This number is `nullable`.. |
 
 
-### Handling `format` data types on `type: integer` and `type: number` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### `format` data types
 
 Handling `format` data types on `type: integer` and `type: number` schemas.
 
@@ -244,13 +208,7 @@ PUT /anything/numbers
 | number (format: double) | number | No | - |
 
 
-### Handling of a `requestBody` payload that's a single `type: integer`.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### Top-level payloads
 
 Handling of a `requestBody` payload that's a single `type: integer`.
 
@@ -274,13 +232,7 @@ integer
 
 Showcasing handling and support for `type: boolean` schemas.
 
-### Support and handling of `type: boolean` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Boolean support
 
 Support and handling of `type: boolean` schemas.
 
@@ -311,13 +263,7 @@ POST /anything/booleans
 | inferred from enum | unknown | No | Though this is missing a `type` declaration it should be treated as `boolean` because it contains an enum of `true` and `false`. |
 
 
-### Handling of a `requestBody` payload that's a single `type: boolean`.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### Top-level payloads
 
 Handling of a `requestBody` payload that's a single `type: boolean`.
 
@@ -341,13 +287,7 @@ boolean
 
 Showcasing handling and support for `type: array` schemas.
 
-### Support and handling of `type: array` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Array support
 
 Support and handling of `type: array` schemas.
 
@@ -397,13 +337,7 @@ Though its supported, not all OpenAPI validators allow it though so our support 
 | boolean | boolean | No | - |
 
 
-### Handling of a `requestBody` payload that's a `type: array` composed of objects.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### Top-level payloads (objects)
 
 Handling of a `requestBody` payload that's a `type: array` composed of objects.
 
@@ -423,13 +357,7 @@ POST /anything/arrays/top-level-payloads
 
 Array, item type: object
 
-### Handling of a `requestBody` payload that's a `type: array` composed of primitives.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#data-types)
-
-* [3.1.0 Data Types](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#dataTypes)
+### Top-level payloads (primitives)
 
 Handling of a `requestBody` payload that's a `type: array` composed of primitives.
 
@@ -453,13 +381,7 @@ Array, item type: string
 
 Showcasing handling and support for `type: object` schemas.
 
-### Support and handling of `type: object` schemas.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Object support
 
 Support and handling of `type: object` schemas.
 
@@ -536,13 +458,7 @@ POST /anything/objects
 
 Showcasing handling and support for circular references (`$ref` pointers).
 
-### Handling of a nested `$ref` that recursively references itself.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Reference Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#referenceObject)
-
-* [3.1.0 Reference Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#referenceObject)
+### Nested circular $ref
 
 Handling of a nested `$ref` that recursively references itself.
 
@@ -639,13 +555,7 @@ POST /anything/circular
 | children | object[] | No | - |
 
 
-### Handling of a top-level request body `$ref` that recursively references itself.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Reference Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#referenceObject)
-
-* [3.1.0 Reference Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#referenceObject)
+### Top-level circular $ref
 
 Handling of a top-level request body `$ref` that recursively references itself.
 
@@ -747,9 +657,7 @@ PATCH /anything/circular
 
 Showcasing handling and support for various ReadMe-flavored schema additions.
 
-### This is a special value on ReadMe to denote a top level property. This can be done better using JSON Schema, but from ReadMe's dash, this is the only way to do it.
-
-<https://docs.readme.com/docs/raw-body-content>
+### Top-level RAW_BODY (string)
 
 This is a special value on ReadMe to denote a top level property. This can be done better using JSON Schema, but from ReadMe's dash, this is the only way to do it.
 
@@ -770,9 +678,7 @@ POST /anything/raw_body/top-level-payloads
 | RAW_BODY | string | No | - |
 
 
-### This is a special value on ReadMe to denote a top level property. This can be done better using JSON Schema, but from ReadMe's dash, this is the only way to do it.
-
-<https://docs.readme.com/docs/raw-body-content>
+### Top-level RAW_BODY (JSON)
 
 This is a special value on ReadMe to denote a top level property. This can be done better using JSON Schema, but from ReadMe's dash, this is the only way to do it.
 
@@ -797,13 +703,7 @@ PATCH /anything/raw_body/top-level-payloads
 
 Showcasing handling and support for various schema type quirks.
 
-### Handling cases for when `type` is missing from a schema.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Missing schema type
 
 Handling cases for when `type` is missing from a schema.
 
@@ -838,13 +738,7 @@ POST /anything/quirks
 | name | string | No | - |
 
 
-### Handling cases for when a nested `allOf` cannot be merged together.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Incompatible nested allOf schemas
 
 Handling cases for when a nested `allOf` cannot be merged together.
 
@@ -874,13 +768,7 @@ This is obviously less than ideal but it assures that the user can still interac
 | compatible | unknown | No | Unlike the `incompatible` property above this `allOf` consists of two objects that **can** be merged. |
 
 
-### When an `allOf` sits at the top of a request body schema and it cannot be merged, we're unable to render out anything for an input because there's no usable schema for us.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Incompatible allOf schemas on a root requestBody
 
 When an `allOf` sits at the top of a request body schema and it cannot be merged, we're unable to render out anything for an input because there's no usable schema for us.
 
@@ -902,15 +790,7 @@ PUT /anything/quirks/polymorphism
 
 Unknown type
 
-### Like `quirks_entirelyIncompatibleAllOf`, when we're to merge an `allOf` together we eliminate it, however this schema here has additional properties (`description`) alongside that `allOf` so it's not a wholly empty schema and we can use it. Unfortunately since we don't have any of the real data for the request body to use we treat this as a string input with a `format` of `json` so that the user can input a raw JSON input to make their request with.
-
-Unfortunately in this case we don't support `description` on the root schema so it won't show up, but a large input box still will for the user. Obviously all of this less than ideal as we're losing request body schema data but since the `allOf` present is incompatible it's unusable and this is the best we can do under the circumstances.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schemaObject)
-
-* [3.1.0 Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#schemaObject)
+### Incompatible allOf schemas on a root requestBody (with other schema properties)
 
 Like `quirks_entirelyIncompatibleAllOf`, when we're to merge an `allOf` together we eliminate it, however this schema here has additional properties (`description`) alongside that `allOf` so it's not a wholly empty schema and we can use it. Unfortunately since we don't have any of the real data for the request body to use we treat this as a string input with a `format` of `json` so that the user can input a raw JSON input to make their request with.
 

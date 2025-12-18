@@ -10,13 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#request
 
 ## Multiple examples
 
-### This operation has several parameters with examples alongside separately maintained example within `examples` at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Within `examples` (parameters)
 
 This operation has several parameters with examples alongside separately maintained example within `examples` at the Media Type Object level.
 
@@ -65,13 +59,7 @@ GET /parameterExamples/{param1}/{param2}
 | name | string | No | - |
 
 
-### This operation has parameter and body examples alongside separately maintained example within `examples` at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Within `examples` (mixed)
 
 This operation has parameter and body examples alongside separately maintained example within `examples` at the Media Type Object level.
 
@@ -139,13 +127,7 @@ PATCH /parameterExamples/{param1}/{param2}
 | name | string | No | - |
 
 
-### This operation has a `requestBody` with separately maintained examples within `examples` at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Within `examples` (body)
 
 This operation has a `requestBody` with separately maintained examples within `examples` at the Media Type Object level.
 
@@ -202,13 +184,7 @@ POST /requestBody
 | name | string | No | - |
 
 
-### This operation has a `requestBody` with separately maintained example within `examples` at the Media Type Object level containing stringified JSON object.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Stringified JSON object in an `examples` value
 
 This operation has a `requestBody` with separately maintained example within `examples` at the Media Type Object level containing stringified JSON object.
 
@@ -250,13 +226,7 @@ PATCH /requestBody-primitive-example
 | petType | string | No | - |
 
 
-### This operation has a `requestBody` with separately maintained example within `examples` at the Media Type Object level containing a stringified JSON array.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Stringified JSON arrays in an `examples` value
 
 This operation has a `requestBody` with separately maintained example within `examples` at the Media Type Object level containing a stringified JSON array.
 
@@ -288,13 +258,7 @@ Array, item type: object
 
 ## Single example
 
-### This operation has a param example and `requestBody` with separately maintained example within a simple `example` object at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Within `example`
 
 This operation has a param example and `requestBody` with separately maintained example within a simple `example` object at the Media Type Object level.
 
@@ -345,13 +309,7 @@ PUT /parameterExamples/{param1}/{param2}
 | name | string | No | - |
 
 
-### This operation has a `requestBody` with separately maintained example within a simple `example` object at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Within `example`
 
 This operation has a `requestBody` with separately maintained example within a simple `example` object at the Media Type Object level.
 
@@ -395,13 +353,7 @@ PATCH /requestBody
 | name | string | No | - |
 
 
-### This operation has a `requestBody` with separately maintained example within a `$ref` in a simple `example` object at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### `$ref` within `example`
 
 This operation has a `requestBody` with separately maintained example within a `$ref` in a simple `example` object at the Media Type Object level.
 
@@ -445,13 +397,7 @@ PUT /requestBody
 | name | string | No | - |
 
 
-### This operation has a `requestBody` with separately maintained **primitive** example within a simple `example` object at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Primitive `example`
 
 This operation has a `requestBody` with separately maintained **primitive** example within a simple `example` object at the Media Type Object level.
 
@@ -483,13 +429,7 @@ string
 
 ## Multiple media types
 
-### This operation has a `requestBody` containing multiple media types with each containing a separately maintained example within `examples` at the Media Type Object level.
-
-📚 OpenAPI specification references:
-
-* [3.0.3 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#mediaTypeObject)
-
-* [3.1.0 Media Type Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#mediaTypeObject)
+### Within `examples`
 
 This operation has a `requestBody` containing multiple media types with each containing a separately maintained example within `examples` at the Media Type Object level.
 

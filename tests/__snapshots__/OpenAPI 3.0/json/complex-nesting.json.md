@@ -10,7 +10,7 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schem
 
 ## Default
 
-### This payload is an array containing a simple flat object.
+### Simple Array
 
 This payload is an array containing a simple flat object.
 
@@ -32,7 +32,7 @@ Array, item type: object
 
 Array, item type: object
 
-### This payload is an array containing a complex payload of arrays, objects, and primitives.
+### Array of Everything
 
 This payload is an array containing a complex payload of arrays, objects, and primitives.
 
@@ -54,7 +54,7 @@ Array, item type: object
 
 Array, item type: object
 
-### This payload is an object comprised of simple flat objects.
+### Simple Object
 
 This payload is an object comprised of simple flat objects.
 

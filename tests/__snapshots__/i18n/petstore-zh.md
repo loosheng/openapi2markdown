@@ -164,7 +164,7 @@ PUT /pet
 | name | string | 否 | - |
 
 
-### Multiple status values can be provided with comma separated strings
+### Finds Pets by status
 
 Multiple status values can be provided with comma separated strings
 
@@ -190,7 +190,7 @@ GET /pet/findByStatus
 
 数组, 项目类型: object
 
-### Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+### Finds Pets by tags
 
 Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
 
@@ -216,7 +216,7 @@ GET /pet/findByTags
 
 数组, 项目类型: object
 
-### Returns a single pet
+### Find pet by ID
 
 Returns a single pet
 
@@ -374,7 +374,7 @@ POST /pet/{petId}/uploadImage
 
 Access to Petstore orders
 
-### Returns a map of status codes to quantities
+### Returns pet inventories by status
 
 Returns a map of status codes to quantities
 
@@ -448,7 +448,7 @@ POST /store/order
 | complete | boolean | 否 | - |
 
 
-### For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
+### Find purchase order by ID
 
 For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
 
@@ -494,7 +494,7 @@ GET /store/order/{orderId}
 | complete | boolean | 否 | - |
 
 
-### For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
+### Delete purchase order by ID
 
 For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
 
@@ -512,7 +512,7 @@ DELETE /store/order/{orderId}
 
 Operations about user
 
-### This can only be done by the logged in user.
+### Create user
 
 This can only be done by the logged in user.
 
@@ -653,7 +653,7 @@ GET /user/{username}
 | userStatus | integer | 否 | User Status |
 
 
-### This can only be done by the logged in user.
+### Updated user
 
 This can only be done by the logged in user.
 
@@ -689,7 +689,7 @@ PUT /user/{username}
 | userStatus | integer | 否 | User Status |
 
 
-### This can only be done by the logged in user.
+### Delete user
 
 This can only be done by the logged in user.
 

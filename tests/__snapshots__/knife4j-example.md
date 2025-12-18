@@ -384,7 +384,7 @@ POST /user/getRequest1
 | name | string | No | part部分名称 |
 
 
-### 根据姓名创建用户1
+### 创建用户-createOne
 
 根据姓名创建用户1
 
@@ -420,7 +420,7 @@ POST /user/createOne
 | name | string | No | 名称 |
 
 
-### 根据姓名创建用户1
+### 创建用户-Schema
 
 根据姓名创建用户1
 
@@ -474,7 +474,7 @@ POST /user/createOneSchema
 | name | string | No | part部分名称 |
 
 
-### 根据姓名创建用户1
+### 创建用户1
 
 根据姓名创建用户1
 
@@ -539,7 +539,7 @@ GET /user/getRequest
 | name | string | No | part部分名称 |
 
 
-### 根据姓名创建用户
+### 创建用户
 
 根据姓名创建用户
 
@@ -563,7 +563,7 @@ string
 
 ## 文件上传
 
-### 单纯文件上传，无任何参数
+### 单纯文件上传
 
 单纯文件上传，无任何参数
 

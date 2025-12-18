@@ -10,14 +10,4 @@
 POST /post
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| body | body | object | No | No description |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** Circular
+**Request Body:** object

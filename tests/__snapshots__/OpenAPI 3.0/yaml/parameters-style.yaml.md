@@ -40,12 +40,6 @@ GET /cookies
 | array | cookie | string[] | No | A standard array. |
 | object | cookie | object | No | A standard object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of cookie parameters with `style: form` and `explode: false` serialization.
 
 📚 OpenAPI specification references:
@@ -77,12 +71,6 @@ GET /cookies#formNonExploded
 | object | cookie | object | No | A `form` style, non-exploded object
 
 > On ReadMe we encode this kind of parameter within [@readme/httpsnippet](https://npm.im/@readme/httpsnippet) but it's unclear whether this encoding is the correct behavior because the `Cookie` header deviates from all other headers. |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of cookie parameters with `style: form` and `explode: true` serialization.
 
@@ -116,12 +104,6 @@ GET /cookies#formExploded
 
 > On ReadMe we encode this kind of parameter within [@readme/httpsnippet](https://npm.im/@readme/httpsnippet) but it's unclear whether this encoding is the correct behavior because the `Cookie` header deviates from all other headers. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ## Header
 
 Showcasing handling of `style` on header parameters.
@@ -152,12 +134,6 @@ GET /anything/headers
 > Because headers cannot be duplicated, for an array'd header parameter to be sent it **must** have a `style` property present. |
 | object | header | object | No | A standard object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of header parameters with `style: simple` and `explode: false` serialization.
 
 📚 OpenAPI specification references:
@@ -182,12 +158,6 @@ GET /anything/headers/simple
 | array | header | string[] | No | A `simple` style, non-exploded array. |
 | object | header | object | No | A `simple` style, non-exploded object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of header parameters with `style: simple` and `explode: true` serialization.
 
 📚 OpenAPI specification references:
@@ -211,12 +181,6 @@ POST /anything/headers/simple
 | primitive | header | string | No | A `simple` style, exploded primitive. |
 | array | header | string[] | No | A `simple` style, exploded array. |
 | object | header | object | No | A `simple` style, exploded object. |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Path
 
@@ -246,12 +210,6 @@ GET /anything/path/{primitive}/{array}/{object}
 | array | path | string[] | Yes | A standard array. |
 | object | path | object | Yes | A standard object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of path parameters with `style: matrix` and `explode: false` serialization.
 
 📚 OpenAPI specification references:
@@ -275,12 +233,6 @@ GET /anything/path/matrix/{primitive}/{array}/{object}
 | primitive | path | string | Yes | A `matrix` style, non-exploded primitive. |
 | array | path | string[] | Yes | A `matrix` style, non-exploded array. |
 | object | path | object | Yes | A `matrix` style, non-exploded object. |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of path parameters with `style: matrix` and `explode: true` serialization.
 
@@ -306,12 +258,6 @@ POST /anything/path/matrix/{primitive}/{array}/{object}
 | array | path | string[] | Yes | A `matrix` style, exploded array. |
 | object | path | object | Yes | A `matrix` style, exploded object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of path parameters with `style: label` and `explode: false` serialization.
 
 📚 OpenAPI specification references:
@@ -335,12 +281,6 @@ GET /anything/path/label/{primitive}/{array}/{object}
 | primitive | path | string | Yes | A `label` style, non-exploded primitive. |
 | array | path | string[] | Yes | A `label` style, non-exploded array. |
 | object | path | object | Yes | A `label` style, non-exploded object. |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of cookie parameters with `style: label` and `explode: true` serialization.
 
@@ -366,12 +306,6 @@ POST /anything/path/label/{primitive}/{array}/{object}
 | array | path | string[] | Yes | A `label` style, exploded array. |
 | object | path | object | Yes | A `label` style, exploded object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of path parameters with `style: simple` and `explode: false` serialization.
 
 📚 OpenAPI specification references:
@@ -396,12 +330,6 @@ GET /anything/path/simple/{primitive}/{array}/{object}
 | array | path | string[] | Yes | A `simple` style, non-exploded array. |
 | object | path | object | Yes | A `simple` style, non-exploded object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of path parameters with `style: simple` and `explode: true` serialization.
 
 📚 OpenAPI specification references:
@@ -425,12 +353,6 @@ POST /anything/path/simple/{primitive}/{array}/{object}
 | primitive | path | string | Yes | A `simple` style, exploded primitive. |
 | array | path | string[] | Yes | A `simple` style, exploded array. |
 | object | path | object | Yes | A `simple` style, exploded object. |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Query
 
@@ -460,12 +382,6 @@ GET /anything/query
 | array | query | string[] | No | A standard array. |
 | object | query | object | No | A standard object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of query parameters with `style: form` and `explode: false` serialization.
 
 📚 OpenAPI specification references:
@@ -490,12 +406,6 @@ GET /anything/query/form
 | array | query | string[] | No | A `form` style, non-exploded array. |
 | object | query | object | No | A `form` style, non-exploded object. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of cookie parameters with `style: form` and `explode: true` serialization.
 
 📚 OpenAPI specification references:
@@ -519,12 +429,6 @@ POST /anything/query/form
 | primitive | query | string | No | A `form` style, exploded primitive. |
 | array | query | string[] | No | A `form` style, exploded array. |
 | object | query | object | No | A `form` style, exploded object. |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of cookie parameters with `style: spaceDelimited` and `explode: false` serialization.
 
@@ -551,12 +455,6 @@ GET /anything/query/spaceDelimited
 
 >⚠️ This is currently unsupported. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of cookie parameters with `style: pipeDelimited` and `explode: false` serialization.
 
 📚 OpenAPI specification references:
@@ -582,12 +480,6 @@ GET /anything/query/pipeDelimited
 
 >⚠️ This is currently unsupported. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of cookie parameters with `style: deepObject` and `explode: true` serialization.
 
 📚 OpenAPI specification references:
@@ -609,12 +501,6 @@ GET /anything/query/deepObject
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
 | object | query | object | No | A `deepObject` style, exploded object. |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## multipart/form-data Encoding
 
@@ -653,15 +539,9 @@ POST /anything/form-data
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: form` and `explode: false`.
 
@@ -696,15 +576,9 @@ POST /anything/form-data/form
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: form` and `explode: true`.
 
@@ -739,15 +613,9 @@ PUT /anything/form-data/form
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: spaceDelimited` and `explode: false`.
 
@@ -783,15 +651,9 @@ POST /anything/form-data/spaceDelimited
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: pipeDelimited` and `explode: false`.
 
@@ -827,15 +689,9 @@ POST /anything/form-data/pipeDelimited
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: deepObject` and `explode: false`.
 
@@ -870,12 +726,5 @@ POST /anything/form-data/deepObject
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
-
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
+| foo | string | No | - |
+| bar | string | No | - |

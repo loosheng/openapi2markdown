@@ -34,14 +34,12 @@ GET /parameterExamples/{param1}/{param2}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| param1 | path | string | Yes | No description |
-| param2 | path | string | Yes | No description |
+| param1 | path | string | Yes | - |
+| param2 | path | string | Yes | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -49,20 +47,12 @@ GET /parameterExamples/{param1}/{param2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
-**Status Code:** 400
-
-**Description:** Validation failed
-
-**Content Type:** `application/xml`
-
-**Status Code:** default
-
-**Description:** OK
+**default** - OK
 
 **Content Type:** `application/json`
 
@@ -70,9 +60,9 @@ GET /parameterExamples/{param1}/{param2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 ### This operation has parameter and body examples alongside separately maintained example within `examples` at the Media Type Object level.
@@ -99,12 +89,12 @@ PATCH /parameterExamples/{param1}/{param2}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| param1 | path | string | Yes | No description |
-| param2 | path | string | Yes | No description |
-| param3 | query | string | No | No description |
-| param4 | query | string | No | No description |
-| param5 | header | string | Yes | No description |
-| param6 | header | string | No | No description |
+| param1 | path | string | Yes | - |
+| param2 | path | string | Yes | - |
+| param3 | query | string | No | - |
+| param4 | query | string | No | - |
+| param5 | header | string | Yes | - |
+| param6 | header | string | No | - |
 
 #### Request Body
 
@@ -116,16 +106,14 @@ PATCH /parameterExamples/{param1}/{param2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -133,20 +121,12 @@ PATCH /parameterExamples/{param1}/{param2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
-**Status Code:** 400
-
-**Description:** Validation failed
-
-**Content Type:** `application/xml`
-
-**Status Code:** default
-
-**Description:** OK
+**default** - OK
 
 **Content Type:** `application/json`
 
@@ -154,9 +134,9 @@ PATCH /parameterExamples/{param1}/{param2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 ### This operation has a `requestBody` with separately maintained examples within `examples` at the Media Type Object level.
@@ -189,16 +169,14 @@ POST /requestBody
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -206,20 +184,12 @@ POST /requestBody
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
-**Status Code:** 400
-
-**Description:** Validation failed
-
-**Content Type:** `application/xml`
-
-**Status Code:** default
-
-**Description:** OK
+**default** - OK
 
 **Content Type:** `application/json`
 
@@ -227,9 +197,9 @@ POST /requestBody
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 ### This operation has a `requestBody` with separately maintained example within `examples` at the Media Type Object level containing stringified JSON object.
@@ -262,15 +232,13 @@ PATCH /requestBody-primitive-example
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| name | string | No | No description |
-| petType | string | No | No description |
+| name | string | No | - |
+| petType | string | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -278,8 +246,8 @@ PATCH /requestBody-primitive-example
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| name | string | No | No description |
-| petType | string | No | No description |
+| name | string | No | - |
+| petType | string | No | - |
 
 
 ### This operation has a `requestBody` with separately maintained example within `examples` at the Media Type Object level containing a stringified JSON array.
@@ -312,9 +280,7 @@ Array, item type: object
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -346,8 +312,8 @@ PUT /parameterExamples/{param1}/{param2}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| param1 | path | string | Yes | No description |
-| param2 | path | string | Yes | No description |
+| param1 | path | string | Yes | - |
+| param2 | path | string | Yes | - |
 
 #### Request Body
 
@@ -359,16 +325,14 @@ PUT /parameterExamples/{param1}/{param2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -376,9 +340,9 @@ PUT /parameterExamples/{param1}/{param2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 ### This operation has a `requestBody` with separately maintained example within a simple `example` object at the Media Type Object level.
@@ -411,16 +375,14 @@ PATCH /requestBody
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -428,9 +390,9 @@ PATCH /requestBody
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 ### This operation has a `requestBody` with separately maintained example within a `$ref` in a simple `example` object at the Media Type Object level.
@@ -463,16 +425,14 @@ PUT /requestBody
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -480,9 +440,9 @@ PUT /requestBody
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | number | No | No description |
-| email | string | No | No description |
-| name | string | No | No description |
+| id | number | No | - |
+| email | string | No | - |
+| name | string | No | - |
 
 
 ### This operation has a `requestBody` with separately maintained **primitive** example within a simple `example` object at the Media Type Object level.
@@ -515,9 +475,7 @@ string
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -554,19 +512,3 @@ POST /requestBody-multi-media-types
 **Content Type:** `application/json`
 
 **Required:** Yes
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
-**Content Type:** `text/plain`
-
-**Content Type:** `application/json`
-
-**Status Code:** 400
-
-**Description:** Validation failed
-
-**Content Type:** `application/xml`

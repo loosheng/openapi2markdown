@@ -619,8 +619,8 @@ POST /anything/form-data
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: form` and `explode: false`.
@@ -660,8 +660,8 @@ POST /anything/form-data/form
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: form` and `explode: true`.
@@ -701,8 +701,8 @@ PUT /anything/form-data/form
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: spaceDelimited` and `explode: false`.
@@ -743,8 +743,8 @@ GET /anything/form-data/spaceDelimited
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: pipeDelimited` and `explode: false`.
@@ -785,8 +785,8 @@ POST /anything/form-data/pipeDelimited
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |
 
 
 ### Support and handling of a `multipart/form-data` request body with `encoding` serialization of `style: deepObject` and `explode: false`.
@@ -826,5 +826,5 @@ POST /anything/form-data/deepObject
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
+| foo | string | No | - |
+| bar | string | No | - |

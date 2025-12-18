@@ -12,12 +12,6 @@ Nam sed condimentum est. Maecenas tempor sagittis sapien, nec rhoncus sem sagitt
 Sed tempus felis lobortis leo pulvinar rutrum. Nam mattis velit nisl, eu condimentum ligula luctus nec. Phasellus semper velit eget aliquet faucibus. In a mattis elit. Phasellus vel urna viverra, condimentum lorem id, rhoncus nibh. Ut pellentesque posuere elementum. Sed a varius odio. Morbi rhoncus ligula libero, vel eleifend nunc tristique vitae. Fusce et sem dui. Aenean nec scelerisque tortor. Fusce malesuada accumsan magna vel tempus. Quisque mollis felis eu dolor tristique, sit amet auctor felis gravida. Sed libero lorem, molestie sed nisl in, accumsan tempor nisi. Fusce sollicitudin massa ut lacinia mattis. Sed vel eleifend lorem. Pellentesque vitae felis pretium, pulvinar elit eu, euismod sapien.
 
 
-Returns all pets from the system that the user has access to
-Nam sed condimentum est. Maecenas tempor sagittis sapien, nec rhoncus sem sagittis sit amet. Aenean at gravida augue, ac iaculis sem. Curabitur odio lorem, ornare eget elementum nec, cursus id lectus. Duis mi turpis, pulvinar ac eros ac, tincidunt varius justo. In hac habitasse platea dictumst. Integer at adipiscing ante, a sagittis ligula. Aenean pharetra tempor ante molestie imperdiet. Vivamus id aliquam diam. Cras quis velit non tortor eleifend sagittis. Praesent at enim pharetra urna volutpat venenatis eget eget mauris. In eleifend fermentum facilisis. Praesent enim enim, gravida ac sodales sed, placerat id erat. Suspendisse lacus dolor, consectetur non augue vel, vehicula interdum libero. Morbi euismod sagittis libero sed lacinia.
-
-Sed tempus felis lobortis leo pulvinar rutrum. Nam mattis velit nisl, eu condimentum ligula luctus nec. Phasellus semper velit eget aliquet faucibus. In a mattis elit. Phasellus vel urna viverra, condimentum lorem id, rhoncus nibh. Ut pellentesque posuere elementum. Sed a varius odio. Morbi rhoncus ligula libero, vel eleifend nunc tristique vitae. Fusce et sem dui. Aenean nec scelerisque tortor. Fusce malesuada accumsan magna vel tempus. Quisque mollis felis eu dolor tristique, sit amet auctor felis gravida. Sed libero lorem, molestie sed nisl in, accumsan tempor nisi. Fusce sollicitudin massa ut lacinia mattis. Sed vel eleifend lorem. Pellentesque vitae felis pretium, pulvinar elit eu, euismod sapien.
-
-
 ```http
 GET /pets
 ```
@@ -31,61 +25,45 @@ GET /pets
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** pet response
+**200** - pet response
 
 Array, item type: object
 
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |
 
 
 ### Creates a new pet in the store.  Duplicates are allowed
-
-Creates a new pet in the store.  Duplicates are allowed
 
 ```http
 POST /pets
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| pet | body | object | Yes | Pet to add to the store |
+**Request Body:** Pet to add to the store
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** pet response
+**200** - pet response
 
 object
 
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |
 
 
 ### Returns a user based on a single ID, if the user does not have access to the pet
-
-Returns a user based on a single ID, if the user does not have access to the pet
 
 ```http
 GET /pets/{id}
@@ -99,27 +77,21 @@ GET /pets/{id}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** pet response
+**200** - pet response
 
 object
 
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |
 
 
 ### deletes a single pet based on the ID supplied
-
-deletes a single pet based on the ID supplied
 
 ```http
 DELETE /pets/{id}
@@ -133,17 +105,11 @@ DELETE /pets/{id}
 
 #### Responses
 
-**Status Code:** 204
-
-**Description:** pet deleted
-
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |

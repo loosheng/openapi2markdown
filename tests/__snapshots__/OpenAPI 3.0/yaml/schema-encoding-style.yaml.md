@@ -12,8 +12,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#encodin
 
 ### Form style serialization
 
-Form style serialization
-
 ```http
 PUT /form/primitive
 ```
@@ -26,21 +24,14 @@ PUT /form/primitive
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | string | No | No description |
-| array | string[] | No | No description |
-| object | object | No | No description |
+| primitive | string | No | - |
+| array | string[] | No | - |
+| object | object | No | - |
 
 
 **object 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| bar | string | No | No description |
-
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
+| foo | string | No | - |
+| bar | string | No | - |

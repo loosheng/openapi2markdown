@@ -14,17 +14,13 @@ Find out about the data sets
 
 ### List available data sets
 
-List available data sets
-
 ```http
 GET /
 ```
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** Returns a list of data sets
+**200** - Returns a list of data sets
 
 **Content Type:** `application/json`
 
@@ -32,8 +28,8 @@ GET /
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| total | integer | No | No description |
-| apis | object[] | No | No description |
+| total | integer | No | - |
+| apis | object[] | No | - |
 
 
 **apis 数组项结构:**
@@ -63,17 +59,13 @@ GET /{dataset}/{version}/fields
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The dataset API for the given version is found and it is accessible to consume.
+**200** - The dataset API for the given version is found and it is accessible to consume.
 
 **Content Type:** `application/json`
 
 string
 
-**Status Code:** 404
-
-**Description:** The combination of dataset name and version is not found in the system or it is not published yet to be consumed by public.
+**404** - The combination of dataset name and version is not found in the system or it is not published yet to be consumed by public.
 
 **Content Type:** `application/json`
 
@@ -113,14 +105,8 @@ POST /{dataset}/{version}/records
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Content Type:** `application/json`
 
 Array, item type: object
-
-**Status Code:** 404
-
-**Description:** No matching record found for the given criteria.

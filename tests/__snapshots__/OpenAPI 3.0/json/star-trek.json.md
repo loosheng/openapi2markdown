@@ -10,8 +10,6 @@
 
 ### Retrival of a single animal
 
-Retrival of a single animal
-
 ```http
 GET /animal
 ```
@@ -25,9 +23,7 @@ GET /animal
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -51,9 +47,7 @@ GET /animal
 | feline | boolean | No | Whether it's a feline |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -66,8 +60,6 @@ GET /animal
 
 
 ### Pagination over animals
-
-Pagination over animals
 
 ```http
 GET /animal/search
@@ -83,9 +75,7 @@ GET /animal/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -140,9 +130,7 @@ GET /animal/search
 | feline | boolean | No | Whether it's a feline |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -155,8 +143,6 @@ GET /animal/search
 
 
 ### Searching animals
-
-Searching animals
 
 ```http
 POST /animal/search
@@ -179,9 +165,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -240,8 +224,6 @@ Unknown type
 
 ### Retrival of a single astronomical object
 
-Retrival of a single astronomical object
-
 ```http
 GET /astronomicalObject
 ```
@@ -255,9 +237,7 @@ GET /astronomicalObject
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -315,9 +295,7 @@ GET /astronomicalObject
 | name | string | Yes | Astronomical object name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -330,8 +308,6 @@ GET /astronomicalObject
 
 
 ### Pagination over astronomical objects
-
-Pagination over astronomical objects
 
 ```http
 GET /astronomicalObject/search
@@ -347,9 +323,7 @@ GET /astronomicalObject/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -409,9 +383,7 @@ GET /astronomicalObject/search
 | name | string | Yes | Astronomical object name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -424,8 +396,6 @@ GET /astronomicalObject/search
 
 
 ### Searching astronomical objects
-
-Searching astronomical objects
 
 ```http
 POST /astronomicalObject/search
@@ -448,9 +418,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -514,8 +482,6 @@ Unknown type
 
 ### Retrival of a single book
 
-Retrival of a single book
-
 ```http
 GET /book
 ```
@@ -529,9 +495,7 @@ GET /book
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -990,9 +954,7 @@ GET /book
 | yearTo | integer | No | Ending year of book collection stories |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -1005,8 +967,6 @@ GET /book
 
 
 ### Pagination over books
-
-Pagination over books
 
 ```http
 GET /book/search
@@ -1022,9 +982,7 @@ GET /book/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -1096,9 +1054,7 @@ GET /book/search
 | productionNumber | string | No | Book's production number |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -1111,8 +1067,6 @@ GET /book/search
 
 
 ### Searching books
-
-Searching books
 
 ```http
 POST /book/search
@@ -1135,9 +1089,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -1213,8 +1165,6 @@ Unknown type
 
 ### Retrival of a single book collection
 
-Retrival of a single book collection
-
 ```http
 GET /bookCollection
 ```
@@ -1228,9 +1178,7 @@ GET /bookCollection
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -1583,9 +1531,7 @@ GET /bookCollection
 | productionNumber | string | No | Book's production number |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -1598,8 +1544,6 @@ GET /bookCollection
 
 
 ### Pagination over book collections
-
-Pagination over book collections
 
 ```http
 GET /bookCollection/search
@@ -1615,9 +1559,7 @@ GET /bookCollection/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -1675,9 +1617,7 @@ GET /bookCollection/search
 | yearTo | integer | No | Ending year of book collection stories |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -1690,8 +1630,6 @@ GET /bookCollection/search
 
 
 ### Searching book collections
-
-Searching book collections
 
 ```http
 POST /bookCollection/search
@@ -1714,9 +1652,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -1778,8 +1714,6 @@ Unknown type
 
 ### Retrival of a single book series
 
-Retrival of a single book series
-
 ```http
 GET /bookSeries
 ```
@@ -1793,9 +1727,7 @@ GET /bookSeries
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -1916,9 +1848,7 @@ GET /bookSeries
 | productionNumber | string | No | Book's production number |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -1931,8 +1861,6 @@ GET /bookSeries
 
 
 ### Pagination over book series
-
-Pagination over book series
 
 ```http
 GET /bookSeries/search
@@ -1948,9 +1876,7 @@ GET /bookSeries/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -2009,9 +1935,7 @@ GET /bookSeries/search
 | eBookSeries | boolean | No | Whether it's a e-book series |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -2024,8 +1948,6 @@ GET /bookSeries/search
 
 
 ### Searching book series
-
-Searching book series
 
 ```http
 POST /bookSeries/search
@@ -2048,9 +1970,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -2113,8 +2033,6 @@ Unknown type
 
 ### Retrival of a single character
 
-Retrival of a single character
-
 ```http
 GET /character
 ```
@@ -2128,9 +2046,7 @@ GET /character
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -2356,9 +2272,7 @@ GET /character
 | alternateReality | boolean | No | Whether this location is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -2371,8 +2285,6 @@ GET /character
 
 
 ### Pagination over characters
-
-Pagination over characters
 
 ```http
 GET /character/search
@@ -2388,9 +2300,7 @@ GET /character/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -2462,9 +2372,7 @@ GET /character/search
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -2477,8 +2385,6 @@ GET /character/search
 
 
 ### Searching characters
-
-Searching characters
 
 ```http
 POST /character/search
@@ -2501,9 +2407,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -2579,8 +2483,6 @@ Unknown type
 
 ### Retrival of a single comics
 
-Retrival of a single comics
-
 ```http
 GET /comics
 ```
@@ -2594,9 +2496,7 @@ GET /comics
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -3018,9 +2918,7 @@ GET /comics
 | photonovel | boolean | No | Whether it's a photonovel collection |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -3033,8 +2931,6 @@ GET /comics
 
 
 ### Pagination over comics
-
-Pagination over comics
 
 ```http
 GET /comics/search
@@ -3050,9 +2946,7 @@ GET /comics/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -3115,9 +3009,7 @@ GET /comics/search
 | adaptation | boolean | No | Whether it's an adaptation of an episode or a movie |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -3130,8 +3022,6 @@ GET /comics/search
 
 
 ### Searching comics
-
-Searching comics
 
 ```http
 POST /comics/search
@@ -3154,9 +3044,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -3223,8 +3111,6 @@ Unknown type
 
 ### Retrival of a single comic collection
 
-Retrival of a single comic collection
-
 ```http
 GET /comicCollection
 ```
@@ -3238,9 +3124,7 @@ GET /comicCollection
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -3662,9 +3546,7 @@ GET /comicCollection
 | adaptation | boolean | No | Whether it's an adaptation of an episode or a movie |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -3677,8 +3559,6 @@ GET /comicCollection
 
 
 ### Pagination over comic collections
-
-Pagination over comic collections
 
 ```http
 GET /comicCollection/search
@@ -3694,9 +3574,7 @@ GET /comicCollection/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -3758,9 +3636,7 @@ GET /comicCollection/search
 | photonovel | boolean | No | Whether it's a photonovel collection |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -3773,8 +3649,6 @@ GET /comicCollection/search
 
 
 ### Searching comic collections
-
-Searching comic collections
 
 ```http
 POST /comicCollection/search
@@ -3797,9 +3671,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -3865,8 +3737,6 @@ Unknown type
 
 ### Retrival of a single comic series
 
-Retrival of a single comic series
-
 ```http
 GET /comicSeries
 ```
@@ -3880,9 +3750,7 @@ GET /comicSeries
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4006,9 +3874,7 @@ GET /comicSeries
 | adaptation | boolean | No | Whether it's an adaptation of an episode or a movie |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -4021,8 +3887,6 @@ GET /comicSeries
 
 
 ### Pagination over comic series
-
-Pagination over comic series
 
 ```http
 GET /comicSeries/search
@@ -4038,9 +3902,7 @@ GET /comicSeries/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4103,9 +3965,7 @@ GET /comicSeries/search
 | photonovelSeries | boolean | No | Whether it's a photonovel series |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -4118,8 +3978,6 @@ GET /comicSeries/search
 
 
 ### Searching comic series
-
-Searching comic series
 
 ```http
 POST /comicSeries/search
@@ -4142,9 +4000,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4211,8 +4067,6 @@ Unknown type
 
 ### Retrival of a single comic strip
 
-Retrival of a single comic strip
-
 ```http
 GET /comicStrip
 ```
@@ -4226,9 +4080,7 @@ GET /comicStrip
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4450,9 +4302,7 @@ GET /comicStrip
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -4465,8 +4315,6 @@ GET /comicStrip
 
 
 ### Pagination over comic strips
-
-Pagination over comic strips
 
 ```http
 GET /comicStrip/search
@@ -4482,9 +4330,7 @@ GET /comicStrip/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4544,9 +4390,7 @@ GET /comicStrip/search
 | yearTo | integer | No | Ending year of comic strip story |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -4559,8 +4403,6 @@ GET /comicStrip/search
 
 
 ### Searching comic strips
-
-Searching comic strips
 
 ```http
 POST /comicStrip/search
@@ -4583,9 +4425,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4649,8 +4489,6 @@ Unknown type
 
 ### Retrival of a single company
 
-Retrival of a single company
-
 ```http
 GET /company
 ```
@@ -4664,9 +4502,7 @@ GET /company
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4702,9 +4538,7 @@ GET /company
 | videoGameCompany | boolean | No | Whether it's a video game company |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -4717,8 +4551,6 @@ GET /company
 
 
 ### Pagination over companies
-
-Pagination over companies
 
 ```http
 GET /company/search
@@ -4734,9 +4566,7 @@ GET /company/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4803,9 +4633,7 @@ GET /company/search
 | videoGameCompany | boolean | No | Whether it's a video game company |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -4818,8 +4646,6 @@ GET /company/search
 
 
 ### Searching companies
-
-Searching companies
 
 ```http
 POST /company/search
@@ -4842,9 +4668,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -4915,8 +4739,6 @@ Unknown type
 
 ### Retrival of a single conflict
 
-Retrival of a single conflict
-
 ```http
 GET /conflict
 ```
@@ -4930,9 +4752,7 @@ GET /conflict
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -5094,9 +4914,7 @@ GET /conflict
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -5109,8 +4927,6 @@ GET /conflict
 
 
 ### Pagination over conflicts
-
-Pagination over conflicts
 
 ```http
 GET /conflict/search
@@ -5126,9 +4942,7 @@ GET /conflict/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -5185,9 +4999,7 @@ GET /conflict/search
 | alternateReality | boolean | No | Whether this conflict is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -5200,8 +5012,6 @@ GET /conflict/search
 
 
 ### Searching conflicts
-
-Searching conflicts
 
 ```http
 POST /conflict/search
@@ -5224,9 +5034,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -5287,8 +5095,6 @@ Unknown type
 
 ### Retrival of a single element
 
-Retrival of a single element
-
 ```http
 GET /element
 ```
@@ -5302,9 +5108,7 @@ GET /element
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -5333,9 +5137,7 @@ GET /element
 | worldSeries | boolean | No | Whether it belongs to World series |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -5348,8 +5150,6 @@ GET /element
 
 
 ### Pagination over elements
-
-Pagination over elements
 
 ```http
 GET /element/search
@@ -5365,9 +5165,7 @@ GET /element/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -5427,9 +5225,7 @@ GET /element/search
 | worldSeries | boolean | No | Whether it belongs to World series |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -5442,8 +5238,6 @@ GET /element/search
 
 
 ### Searching elements
-
-Searching elements
 
 ```http
 POST /element/search
@@ -5466,9 +5260,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -5532,8 +5324,6 @@ Unknown type
 
 ### Retrival of a single episode
 
-Retrival of a single episode
-
 ```http
 GET /episode
 ```
@@ -5547,9 +5337,7 @@ GET /episode
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6031,9 +5819,7 @@ GET /episode
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6046,8 +5832,6 @@ GET /episode
 
 
 ### Pagination over episodes
-
-Pagination over episodes
 
 ```http
 GET /episode/search
@@ -6063,9 +5847,7 @@ GET /episode/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6146,9 +5928,7 @@ GET /episode/search
 | title | string | Yes | Season title |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6161,8 +5941,6 @@ GET /episode/search
 
 
 ### Searching episodes
-
-Searching episodes
 
 ```http
 POST /episode/search
@@ -6185,9 +5963,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6272,8 +6048,6 @@ Unknown type
 
 ### Retrival of a single food
 
-Retrival of a single food
-
 ```http
 GET /food
 ```
@@ -6287,9 +6061,7 @@ GET /food
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6318,9 +6090,7 @@ GET /food
 | tea | boolean | No | Whether it's a tea |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6333,8 +6103,6 @@ GET /food
 
 
 ### Pagination over foods
-
-Pagination over foods
 
 ```http
 GET /food/search
@@ -6350,9 +6118,7 @@ GET /food/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6412,9 +6178,7 @@ GET /food/search
 | tea | boolean | No | Whether it's a tea |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6427,8 +6191,6 @@ GET /food/search
 
 
 ### Searching foods
-
-Searching foods
 
 ```http
 POST /food/search
@@ -6451,9 +6213,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6517,8 +6277,6 @@ Unknown type
 
 ### Retrival of a single literature
 
-Retrival of a single literature
-
 ```http
 GET /literature
 ```
@@ -6532,9 +6290,7 @@ GET /literature
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6559,9 +6315,7 @@ GET /literature
 | religiousLiterature | boolean | No | Whether it's a religious literature |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6574,8 +6328,6 @@ GET /literature
 
 
 ### Pagination over literature
-
-Pagination over literature
 
 ```http
 GET /literature/search
@@ -6591,9 +6343,7 @@ GET /literature/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6649,9 +6399,7 @@ GET /literature/search
 | religiousLiterature | boolean | No | Whether it's a religious literature |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6664,8 +6412,6 @@ GET /literature/search
 
 
 ### Searching literature
-
-Searching literature
 
 ```http
 POST /literature/search
@@ -6688,9 +6434,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6750,8 +6494,6 @@ Unknown type
 
 ### Retrival of a single location
 
-Retrival of a single location
-
 ```http
 GET /location
 ```
@@ -6765,9 +6507,7 @@ GET /location
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6809,9 +6549,7 @@ GET /location
 | alternateReality | boolean | No | Whether this location is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6824,8 +6562,6 @@ GET /location
 
 
 ### Pagination over locations
-
-Pagination over locations
 
 ```http
 GET /location/search
@@ -6841,9 +6577,7 @@ GET /location/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -6916,9 +6650,7 @@ GET /location/search
 | alternateReality | boolean | No | Whether this location is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -6931,8 +6663,6 @@ GET /location/search
 
 
 ### Searching locations
-
-Searching locations
 
 ```http
 POST /location/search
@@ -6955,9 +6685,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7034,8 +6762,6 @@ Unknown type
 
 ### Retrival of a single magazine
 
-Retrival of a single magazine
-
 ```http
 GET /magazine
 ```
@@ -7049,9 +6775,7 @@ GET /magazine
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7188,9 +6912,7 @@ GET /magazine
 | videoGameCompany | boolean | No | Whether it's a video game company |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -7203,8 +6925,6 @@ GET /magazine
 
 
 ### Pagination over magazines
-
-Pagination over magazines
 
 ```http
 GET /magazine/search
@@ -7220,9 +6940,7 @@ GET /magazine/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7280,9 +6998,7 @@ GET /magazine/search
 | issueNumber | string | No | Magazine issue number |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -7295,8 +7011,6 @@ GET /magazine/search
 
 
 ### Searching magazines
-
-Searching magazines
 
 ```http
 POST /magazine/search
@@ -7319,9 +7033,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7383,8 +7095,6 @@ Unknown type
 
 ### Retrival of a single magazine series
 
-Retrival of a single magazine series
-
 ```http
 GET /magazineSeries
 ```
@@ -7398,9 +7108,7 @@ GET /magazineSeries
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7537,9 +7245,7 @@ GET /magazineSeries
 | issueNumber | string | No | Magazine issue number |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -7552,8 +7258,6 @@ GET /magazineSeries
 
 
 ### Pagination over magazine series
-
-Pagination over magazine series
 
 ```http
 GET /magazineSeries/search
@@ -7569,9 +7273,7 @@ GET /magazineSeries/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7626,9 +7328,7 @@ GET /magazineSeries/search
 | numberOfIssues | integer | No | Number of issues |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -7641,8 +7341,6 @@ GET /magazineSeries/search
 
 
 ### Searching magazine series
-
-Searching magazine series
 
 ```http
 POST /magazineSeries/search
@@ -7665,9 +7363,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7726,8 +7422,6 @@ Unknown type
 
 ### Retrival of a single material
 
-Retrival of a single material
-
 ```http
 GET /material
 ```
@@ -7741,9 +7435,7 @@ GET /material
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7772,9 +7464,7 @@ GET /material
 | preciousMaterial | boolean | No | Whether it's a precious material |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -7787,8 +7477,6 @@ GET /material
 
 
 ### Pagination over materials
-
-Pagination over materials
 
 ```http
 GET /material/search
@@ -7804,9 +7492,7 @@ GET /material/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7866,9 +7552,7 @@ GET /material/search
 | preciousMaterial | boolean | No | Whether it's a precious material |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -7881,8 +7565,6 @@ GET /material/search
 
 
 ### Searching materials
-
-Searching materials
 
 ```http
 POST /material/search
@@ -7905,9 +7587,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -7971,8 +7651,6 @@ Unknown type
 
 ### Retrival of a single medical condition
 
-Retrival of a single medical condition
-
 ```http
 GET /medicalCondition
 ```
@@ -7986,9 +7664,7 @@ GET /medicalCondition
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -8008,9 +7684,7 @@ GET /medicalCondition
 | psychologicalCondition | boolean | No | Whether it's a psychological condition |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -8023,8 +7697,6 @@ GET /medicalCondition
 
 
 ### Pagination over medical conditions
-
-Pagination over medical conditions
 
 ```http
 GET /medicalCondition/search
@@ -8040,9 +7712,7 @@ GET /medicalCondition/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -8093,9 +7763,7 @@ GET /medicalCondition/search
 | psychologicalCondition | boolean | No | Whether it's a psychological condition |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -8108,8 +7776,6 @@ GET /medicalCondition/search
 
 
 ### Searching medical conditions
-
-Searching medical conditions
 
 ```http
 POST /medicalCondition/search
@@ -8132,9 +7798,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -8189,8 +7853,6 @@ Unknown type
 
 ### Retrival of a single movie
 
-Retrival of a single movie
-
 ```http
 GET /movie
 ```
@@ -8204,9 +7866,7 @@ GET /movie
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -8845,9 +8505,7 @@ GET /movie
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -8860,8 +8518,6 @@ GET /movie
 
 
 ### Pagination over movies
-
-Pagination over movies
 
 ```http
 GET /movie/search
@@ -8877,9 +8533,7 @@ GET /movie/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -8953,9 +8607,7 @@ GET /movie/search
 | name | string | Yes | Staff name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -8968,8 +8620,6 @@ GET /movie/search
 
 
 ### Searching movies
-
-Searching movies
 
 ```http
 POST /movie/search
@@ -8992,9 +8642,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9072,8 +8720,6 @@ Unknown type
 
 ### Retrival of a single occupation
 
-Retrival of a single occupation
-
 ```http
 GET /occupation
 ```
@@ -9087,9 +8733,7 @@ GET /occupation
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9142,9 +8786,7 @@ GET /occupation
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -9157,8 +8799,6 @@ GET /occupation
 
 
 ### Pagination over occupations
-
-Pagination over occupations
 
 ```http
 GET /occupation/search
@@ -9174,9 +8814,7 @@ GET /occupation/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9229,9 +8867,7 @@ GET /occupation/search
 | scientificOccupation | boolean | No | Whether it's a scientific occupation |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -9244,8 +8880,6 @@ GET /occupation/search
 
 
 ### Searching occupations
-
-Searching occupations
 
 ```http
 POST /occupation/search
@@ -9268,9 +8902,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9327,8 +8959,6 @@ Unknown type
 
 ### Retrival of a single organization
 
-Retrival of a single organization
-
 ```http
 GET /organization
 ```
@@ -9342,9 +8972,7 @@ GET /organization
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9406,9 +9034,7 @@ GET /organization
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -9421,8 +9047,6 @@ GET /organization
 
 
 ### Pagination over organizations
-
-Pagination over organizations
 
 ```http
 GET /organization/search
@@ -9438,9 +9062,7 @@ GET /organization/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9502,9 +9124,7 @@ GET /organization/search
 | alternateReality | boolean | No | Whether this location is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -9517,8 +9137,6 @@ GET /organization/search
 
 
 ### Searching organizations
-
-Searching organizations
 
 ```http
 POST /organization/search
@@ -9541,9 +9159,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9609,8 +9225,6 @@ Unknown type
 
 ### Retrival of a single performer
 
-Retrival of a single performer
-
 ```http
 GET /performer
 ```
@@ -9624,9 +9238,7 @@ GET /performer
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -9914,9 +9526,7 @@ GET /performer
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -9929,8 +9539,6 @@ GET /performer
 
 
 ### Pagination over performers
-
-Pagination over performers
 
 ```http
 GET /performer/search
@@ -9946,9 +9554,7 @@ GET /performer/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10017,9 +9623,7 @@ GET /performer/search
 | voyPerformer | boolean | No | Whether it's a performer that appeared in Star Trek: Voyager |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -10032,8 +9636,6 @@ GET /performer/search
 
 
 ### Searching performers
-
-Searching performers
 
 ```http
 POST /performer/search
@@ -10056,9 +9658,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10131,8 +9731,6 @@ Unknown type
 
 ### Retrival of a single season
 
-Retrival of a single season
-
 ```http
 GET /season
 ```
@@ -10146,9 +9744,7 @@ GET /season
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10244,9 +9840,7 @@ GET /season
 | title | string | Yes | Season title |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -10259,8 +9853,6 @@ GET /season
 
 
 ### Pagination over seasons
-
-Pagination over seasons
 
 ```http
 GET /season/search
@@ -10276,9 +9868,7 @@ GET /season/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10339,9 +9929,7 @@ GET /season/search
 | title | string | Yes | Series title |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -10354,8 +9942,6 @@ GET /season/search
 
 
 ### Searching seasons
-
-Searching seasons
 
 ```http
 POST /season/search
@@ -10378,9 +9964,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10445,8 +10029,6 @@ Unknown type
 
 ### Retrival of a single series
 
-Retrival of a single series
-
 ```http
 GET /series
 ```
@@ -10460,9 +10042,7 @@ GET /series
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10601,9 +10181,7 @@ GET /series
 | title | string | Yes | Series title |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -10616,8 +10194,6 @@ GET /series
 
 
 ### Pagination over series
-
-Pagination over series
 
 ```http
 GET /series/search
@@ -10633,9 +10209,7 @@ GET /series/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10711,9 +10285,7 @@ GET /series/search
 | name | string | Yes | Company title |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -10726,8 +10298,6 @@ GET /series/search
 
 
 ### Searching series
-
-Searching series
 
 ```http
 POST /series/search
@@ -10750,9 +10320,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -10832,8 +10400,6 @@ Unknown type
 
 ### Retrival of a single soundtrack
 
-Retrival of a single soundtrack
-
 ```http
 GET /soundtrack
 ```
@@ -10847,9 +10413,7 @@ GET /soundtrack
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11116,9 +10680,7 @@ GET /soundtrack
 | referenceNumber | string | No | Reference number |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -11131,8 +10693,6 @@ GET /soundtrack
 
 
 ### Pagination over soundtracks
-
-Pagination over soundtracks
 
 ```http
 GET /soundtrack/search
@@ -11148,9 +10708,7 @@ GET /soundtrack/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11202,9 +10760,7 @@ GET /soundtrack/search
 | length | integer | No | Length, in seconds |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -11217,8 +10773,6 @@ GET /soundtrack/search
 
 
 ### Searching soundtracks
-
-Searching soundtracks
 
 ```http
 POST /soundtrack/search
@@ -11241,9 +10795,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11299,8 +10851,6 @@ Unknown type
 
 ### Retrival of a single spacecraft
 
-Retrival of a single spacecraft
-
 ```http
 GET /spacecraft
 ```
@@ -11314,9 +10864,7 @@ GET /spacecraft
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11439,9 +10987,7 @@ GET /spacecraft
 | name | string | No | Spacecraft type name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -11454,8 +11000,6 @@ GET /spacecraft
 
 
 ### Pagination over spacecrafts
-
-Pagination over spacecrafts
 
 ```http
 GET /spacecraft/search
@@ -11471,9 +11015,7 @@ GET /spacecraft/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11553,9 +11095,7 @@ GET /spacecraft/search
 | name | string | Yes | Organization name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -11568,8 +11108,6 @@ GET /spacecraft/search
 
 
 ### Searching spacecrafts
-
-Searching spacecrafts
 
 ```http
 POST /spacecraft/search
@@ -11592,9 +11130,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11678,8 +11214,6 @@ Unknown type
 
 ### Retrival of a single spacecraft class
 
-Retrival of a single spacecraft class
-
 ```http
 GET /spacecraftClass
 ```
@@ -11693,9 +11227,7 @@ GET /spacecraftClass
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11839,9 +11371,7 @@ GET /spacecraftClass
 | name | string | Yes | Organization name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -11854,8 +11384,6 @@ GET /spacecraftClass
 
 
 ### Pagination over spacecraft classes
-
-Pagination over spacecraft classes
 
 ```http
 GET /spacecraftClass/search
@@ -11871,9 +11399,7 @@ GET /spacecraftClass/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -11964,9 +11490,7 @@ GET /spacecraftClass/search
 | name | string | Yes | Organization name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -11979,8 +11503,6 @@ GET /spacecraftClass/search
 
 
 ### Searching spacecraft classes
-
-Searching spacecraft classes
 
 ```http
 POST /spacecraftClass/search
@@ -12003,9 +11525,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -12100,8 +11620,6 @@ Unknown type
 
 ### Retrival of a single species
 
-Retrival of a single species
-
 ```http
 GET /species
 ```
@@ -12115,9 +11633,7 @@ GET /species
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -12217,9 +11733,7 @@ GET /species
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -12232,8 +11746,6 @@ GET /species
 
 
 ### Pagination over species
-
-Pagination over species
 
 ```http
 GET /species/search
@@ -12249,9 +11761,7 @@ GET /species/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -12331,9 +11841,7 @@ GET /species/search
 | name | string | Yes | Astronomical object name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -12346,8 +11854,6 @@ GET /species/search
 
 
 ### Searching species
-
-Searching species
 
 ```http
 POST /species/search
@@ -12370,9 +11876,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -12456,8 +11960,6 @@ Unknown type
 
 ### Retrival of a single staff
 
-Retrival of a single staff
-
 ```http
 GET /staff
 ```
@@ -12471,9 +11973,7 @@ GET /staff
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -12951,9 +12451,7 @@ GET /staff
 | name | string | Yes | Staff name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -12966,8 +12464,6 @@ GET /staff
 
 
 ### Pagination over staff
-
-Pagination over staff
 
 ```http
 GET /staff/search
@@ -12983,9 +12479,7 @@ GET /staff/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13096,9 +12590,7 @@ GET /staff/search
 | writer | boolean | No | Whether this person is a writer |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -13111,8 +12603,6 @@ GET /staff/search
 
 
 ### Searching staff
-
-Searching staff
 
 ```http
 POST /staff/search
@@ -13135,9 +12625,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13252,8 +12740,6 @@ Unknown type
 
 ### Retrival of a single technology
 
-Retrival of a single technology
-
 ```http
 GET /technology
 ```
@@ -13267,9 +12753,7 @@ GET /technology
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13308,9 +12792,7 @@ GET /technology
 | transporterTechnology | boolean | No | Whether it's a transporter technology |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -13323,8 +12805,6 @@ GET /technology
 
 
 ### Pagination over technology
-
-Pagination over technology
 
 ```http
 GET /technology/search
@@ -13340,9 +12820,7 @@ GET /technology/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13412,9 +12890,7 @@ GET /technology/search
 | transporterTechnology | boolean | No | Whether it's a transporter technology |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -13427,8 +12903,6 @@ GET /technology/search
 
 
 ### Searching technology
-
-Searching technology
 
 ```http
 POST /technology/search
@@ -13451,9 +12925,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13527,8 +12999,6 @@ Unknown type
 
 ### Retrival of a single title
 
-Retrival of a single title
-
 ```http
 GET /title
 ```
@@ -13542,9 +13012,7 @@ GET /title
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13599,9 +13067,7 @@ GET /title
 | alternateReality | boolean | No | Whether this character is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -13614,8 +13080,6 @@ GET /title
 
 
 ### Pagination over titles
-
-Pagination over titles
 
 ```http
 GET /title/search
@@ -13631,9 +13095,7 @@ GET /title/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13688,9 +13150,7 @@ GET /title/search
 | mirror | boolean | No | Whether this title is from mirror universe |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -13703,8 +13163,6 @@ GET /title/search
 
 
 ### Searching titles
-
-Searching titles
 
 ```http
 POST /title/search
@@ -13727,9 +13185,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13788,8 +13244,6 @@ Unknown type
 
 ### Retrival of a single trading card
 
-Retrival of a single trading card
-
 ```http
 GET /tradingCard
 ```
@@ -13803,9 +13257,7 @@ GET /tradingCard
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13865,9 +13317,7 @@ GET /tradingCard
 | name | string | Yes | Trading card set name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -13880,8 +13330,6 @@ GET /tradingCard
 
 
 ### Pagination over trading cards
-
-Pagination over trading cards
 
 ```http
 GET /tradingCard/search
@@ -13897,9 +13345,7 @@ GET /tradingCard/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -13970,9 +13416,7 @@ GET /tradingCard/search
 | name | string | Yes | Trading card deck name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -13985,8 +13429,6 @@ GET /tradingCard/search
 
 
 ### Searching trading cards
-
-Searching trading cards
 
 ```http
 POST /tradingCard/search
@@ -14009,9 +13451,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14086,8 +13526,6 @@ Unknown type
 
 ### Retrival of a single trading card deck
 
-Retrival of a single trading card deck
-
 ```http
 GET /tradingCardDeck
 ```
@@ -14101,9 +13539,7 @@ GET /tradingCardDeck
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14162,9 +13598,7 @@ GET /tradingCardDeck
 | name | string | Yes | Trading card deck name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -14177,8 +13611,6 @@ GET /tradingCardDeck
 
 
 ### Pagination over trading card decks
-
-Pagination over trading card decks
 
 ```http
 GET /tradingCardDeck/search
@@ -14194,9 +13626,7 @@ GET /tradingCardDeck/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14256,9 +13686,7 @@ GET /tradingCardDeck/search
 | name | string | Yes | Trading card set name |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -14271,8 +13699,6 @@ GET /tradingCardDeck/search
 
 
 ### Searching trading card decks
-
-Searching trading card decks
 
 ```http
 POST /tradingCardDeck/search
@@ -14295,9 +13721,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14361,8 +13785,6 @@ Unknown type
 
 ### Retrival of a single trading card set
 
-Retrival of a single trading card set
-
 ```http
 GET /tradingCardSet
 ```
@@ -14376,9 +13798,7 @@ GET /tradingCardSet
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14492,9 +13912,7 @@ GET /tradingCardSet
 | iso31661Alpha2Code | string | No | ISO 3166-1 alpha-2 code |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -14507,8 +13925,6 @@ GET /tradingCardSet
 
 
 ### Pagination over trading card sets
-
-Pagination over trading card sets
 
 ```http
 GET /tradingCardSet/search
@@ -14524,9 +13940,7 @@ GET /tradingCardSet/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14586,9 +14000,7 @@ GET /tradingCardSet/search
 | cardHeight | number | No | Card height, in inches |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -14601,8 +14013,6 @@ GET /tradingCardSet/search
 
 
 ### Searching trading card sets
-
-Searching trading card sets
 
 ```http
 POST /tradingCardSet/search
@@ -14625,9 +14035,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14691,8 +14099,6 @@ Unknown type
 
 ### Retrival of a single video game
 
-Retrival of a single video game
-
 ```http
 GET /videoGame
 ```
@@ -14706,9 +14112,7 @@ GET /videoGame
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14823,9 +14227,7 @@ GET /videoGame
 | referenceNumber | string | No | Reference number |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -14838,8 +14240,6 @@ GET /videoGame
 
 
 ### Pagination over video games
-
-Pagination over video games
 
 ```http
 GET /videoGame/search
@@ -14855,9 +14255,7 @@ GET /videoGame/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -14913,9 +14311,7 @@ GET /videoGame/search
 | systemRequirements | string | No | System requirements |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -14928,8 +14324,6 @@ GET /videoGame/search
 
 
 ### Searching video games
-
-Searching video games
 
 ```http
 POST /videoGame/search
@@ -14952,9 +14346,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -15014,8 +14406,6 @@ Unknown type
 
 ### Retrival of a single video release
 
-Retrival of a single video release
-
 ```http
 GET /videoRelease
 ```
@@ -15029,9 +14419,7 @@ GET /videoRelease
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -15179,9 +14567,7 @@ GET /videoRelease
 | iso6391Code | string | No | ISO 639-1 code |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -15194,8 +14580,6 @@ GET /videoRelease
 
 
 ### Pagination over video releases
-
-Pagination over video releases
 
 ```http
 GET /videoRelease/search
@@ -15211,9 +14595,7 @@ GET /videoRelease/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -15305,9 +14687,7 @@ GET /videoRelease/search
 | title | string | Yes | Season title |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -15320,8 +14700,6 @@ GET /videoRelease/search
 
 
 ### Searching video releases
-
-Searching video releases
 
 ```http
 POST /videoRelease/search
@@ -15344,9 +14722,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -15442,8 +14818,6 @@ Unknown type
 
 ### Retrival of a single weapon
 
-Retrival of a single weapon
-
 ```http
 GET /weapon
 ```
@@ -15457,9 +14831,7 @@ GET /weapon
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -15485,9 +14857,7 @@ GET /weapon
 | alternateReality | boolean | No | Whether this weapon is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -15500,8 +14870,6 @@ GET /weapon
 
 
 ### Pagination over weapons
-
-Pagination over weapons
 
 ```http
 GET /weapon/search
@@ -15517,9 +14885,7 @@ GET /weapon/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -15576,9 +14942,7 @@ GET /weapon/search
 | alternateReality | boolean | No | Whether this weapon is from alternate reality |
 
 
-**Status Code:** default
-
-**Description:** Unexpected error
+**default** - Unexpected error
 
 **Content Type:** `application/json`
 
@@ -15591,8 +14955,6 @@ GET /weapon/search
 
 
 ### Searching weapons
-
-Searching weapons
 
 ```http
 POST /weapon/search
@@ -15615,9 +14977,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 

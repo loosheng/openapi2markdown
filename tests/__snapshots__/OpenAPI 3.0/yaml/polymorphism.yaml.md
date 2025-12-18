@@ -12,8 +12,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schem
 
 ### oneOf request with a nested allOf
 
-oneOf request with a nested allOf
-
 ```http
 PATCH /pets
 ```
@@ -24,15 +22,7 @@ PATCH /pets
 
 Unknown type
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** Updated
-
 ### allOf with listed objects
-
-allOf with listed objects
 
 ```http
 POST /anything/all-of-object
@@ -44,15 +34,7 @@ POST /anything/all-of-object
 
 object
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### anyOf object
-
-anyOf object
 
 ```http
 POST /anything/any-of-object
@@ -64,15 +46,7 @@ POST /anything/any-of-object
 
 Unknown type
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### anyOf primitive
-
-anyOf primitive
 
 ```http
 POST /anything/any-of-primitive
@@ -83,12 +57,6 @@ POST /anything/any-of-primitive
 **Content Type:** `application/json`
 
 Unknown type
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### AnyOf's with a top level type parameter should not render that type outside of their options
 
@@ -106,18 +74,10 @@ POST /any-of-with-type
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| event | string | No | No description |
+| event | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 204
-
-**Description:** Provides no response body
 
 ### oneOf object
-
-oneOf object
 
 ```http
 POST /anything/one-of-object
@@ -129,15 +89,7 @@ POST /anything/one-of-object
 
 Unknown type
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### oneOf primitive
-
-oneOf primitive
 
 ```http
 POST /anything/one-of-primitive
@@ -149,15 +101,7 @@ POST /anything/one-of-primitive
 
 Unknown type
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### oneOf object with $ref pointers
-
-oneOf object with $ref pointers
 
 ```http
 POST /anything/one-of-object-ref
@@ -169,15 +113,7 @@ POST /anything/one-of-object-ref
 
 Unknown type
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### oneOf object with a complex schema
-
-oneOf object with a complex schema
 
 ```http
 POST /one-of-complex
@@ -191,15 +127,7 @@ POST /one-of-complex
 
 object
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### nested oneOf object with $ref pointers
-
-nested oneOf object with $ref pointers
 
 ```http
 POST /anything/nested-one-of-object-ref
@@ -213,14 +141,8 @@ POST /anything/nested-one-of-object-ref
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| config | unknown | No | No description |
+| config | unknown | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### 
 
@@ -238,14 +160,8 @@ POST /anything/nested-one-of-ref
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| config | unknown | No | No description |
+| config | unknown | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### 
 
@@ -261,14 +177,8 @@ POST /anything/nested-one-of-object-with-nested-one-of
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| config | unknown | No | No description |
+| config | unknown | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### OneOf's with a top level type parameter should not render that type outside of their options
 
@@ -286,11 +196,4 @@ POST /one-of-with-type
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| event | string | No | No description |
-
-
-#### Responses
-
-**Status Code:** 204
-
-**Description:** Provides no response body
+| event | string | No | - |

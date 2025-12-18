@@ -16,9 +16,7 @@ GET /anything
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -26,345 +24,345 @@ GET /anything
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 ### 
@@ -381,186 +379,178 @@ POST /anything
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| circular | object | No | No description |
+| circular | object | No | - |
 
 
 **circular 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| dateTime | string | No | No description |
-| offsetAfter | object | No | No description |
-| offsetBefore | object | No | No description |
+| dateTime | string | No | - |
+| offsetAfter | object | No | - |
+| offsetBefore | object | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### This operation is different because it has a circular ref array as a parameter and in its response, but not its request body.
-
-This operation is different because it has a circular ref array as a parameter and in its response, but not its request body.
 
 ```http
 PUT /anything
@@ -570,21 +560,17 @@ PUT /anything
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| content | header | object[] | No | No description |
+| content | header | object[] | No | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
 Array, item type: object
 
-**Status Code:** 201
-
-**Description:** OK
+**201** - OK
 
 **Content Type:** `application/json`
 
@@ -592,67 +578,67 @@ Array, item type: object
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | unknown | No | No description |
+| stock | unknown | No | - |
 
 
 **stock 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| test_param | object[] | No | No description |
+| test_param | object[] | No | - |
 
 
 **test_param 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | unknown | No | No description |
+| stock | unknown | No | - |
 
 
 **stock 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| test_param | object[] | No | No description |
+| test_param | object[] | No | - |
 
 
 **test_param 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | unknown | No | No description |
+| stock | unknown | No | - |
 
 
 **stock 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| test_param | object[] | No | No description |
+| test_param | object[] | No | - |
 
 
 **test_param 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | unknown | No | No description |
+| stock | unknown | No | - |
 
 
 **stock 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| test_param | object[] | No | No description |
+| test_param | object[] | No | - |
 
 
 **test_param 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | unknown | No | No description |
+| stock | unknown | No | - |
 
 
 **stock 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| test_param | object[] | No | No description |
+| test_param | object[] | No | - |

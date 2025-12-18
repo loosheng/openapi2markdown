@@ -14,8 +14,6 @@ Everything about your Pets
 
 ### Add a new pet to the store
 
-Add a new pet to the store
-
 ```http
 POST /pet
 ```
@@ -32,11 +30,11 @@ POST /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| category | object | 否 | 无描述 |
-| name | string | 是 | 无描述 |
-| photoUrls | string[] | 是 | 无描述 |
-| tags | object[] | 否 | 无描述 |
+| id | integer | 否 | - |
+| category | object | 否 | - |
+| name | string | 是 | - |
+| photoUrls | string[] | 是 | - |
+| tags | object[] | 否 | - |
 | status | string | 否 | pet status in the store |
 
 
@@ -44,16 +42,16 @@ POST /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **tags 数组项结构:**
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **内容类型:** `application/xml`
@@ -66,11 +64,11 @@ POST /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| category | object | 否 | 无描述 |
-| name | string | 是 | 无描述 |
-| photoUrls | string[] | 是 | 无描述 |
-| tags | object[] | 否 | 无描述 |
+| id | integer | 否 | - |
+| category | object | 否 | - |
+| name | string | 是 | - |
+| photoUrls | string[] | 是 | - |
+| tags | object[] | 否 | - |
 | status | string | 否 | pet status in the store |
 
 
@@ -78,27 +76,19 @@ POST /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **tags 数组项结构:**
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
-
-#### 响应
-
-**状态码:** 405
-
-**描述:** Invalid input
 
 ### Update an existing pet
-
-Update an existing pet
 
 ```http
 PUT /pet
@@ -116,11 +106,11 @@ PUT /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| category | object | 否 | 无描述 |
-| name | string | 是 | 无描述 |
-| photoUrls | string[] | 是 | 无描述 |
-| tags | object[] | 否 | 无描述 |
+| id | integer | 否 | - |
+| category | object | 否 | - |
+| name | string | 是 | - |
+| photoUrls | string[] | 是 | - |
+| tags | object[] | 否 | - |
 | status | string | 否 | pet status in the store |
 
 
@@ -128,16 +118,16 @@ PUT /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **tags 数组项结构:**
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **内容类型:** `application/xml`
@@ -150,11 +140,11 @@ PUT /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| category | object | 否 | 无描述 |
-| name | string | 是 | 无描述 |
-| photoUrls | string[] | 是 | 无描述 |
-| tags | object[] | 否 | 无描述 |
+| id | integer | 否 | - |
+| category | object | 否 | - |
+| name | string | 是 | - |
+| photoUrls | string[] | 是 | - |
+| tags | object[] | 否 | - |
 | status | string | 否 | pet status in the store |
 
 
@@ -162,31 +152,17 @@ PUT /pet
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **tags 数组项结构:**
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
-
-#### 响应
-
-**状态码:** 400
-
-**描述:** Invalid ID supplied
-
-**状态码:** 404
-
-**描述:** Pet not found
-
-**状态码:** 405
-
-**描述:** Validation exception
 
 ### Multiple status values can be provided with comma separated strings
 
@@ -204,9 +180,7 @@ GET /pet/findByStatus
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/xml`
 
@@ -215,10 +189,6 @@ GET /pet/findByStatus
 **内容类型:** `application/json`
 
 数组, 项目类型: object
-
-**状态码:** 400
-
-**描述:** Invalid status value
 
 ### Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
 
@@ -236,9 +206,7 @@ GET /pet/findByTags
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/xml`
 
@@ -247,10 +215,6 @@ GET /pet/findByTags
 **内容类型:** `application/json`
 
 数组, 项目类型: object
-
-**状态码:** 400
-
-**描述:** Invalid tag value
 
 ### Returns a single pet
 
@@ -268,9 +232,7 @@ GET /pet/{petId}
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/xml`
 
@@ -278,11 +240,11 @@ GET /pet/{petId}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| category | object | 否 | 无描述 |
-| name | string | 是 | 无描述 |
-| photoUrls | string[] | 是 | 无描述 |
-| tags | object[] | 否 | 无描述 |
+| id | integer | 否 | - |
+| category | object | 否 | - |
+| name | string | 是 | - |
+| photoUrls | string[] | 是 | - |
+| tags | object[] | 否 | - |
 | status | string | 否 | pet status in the store |
 
 
@@ -290,16 +252,16 @@ GET /pet/{petId}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **tags 数组项结构:**
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **内容类型:** `application/json`
@@ -308,11 +270,11 @@ GET /pet/{petId}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| category | object | 否 | 无描述 |
-| name | string | 是 | 无描述 |
-| photoUrls | string[] | 是 | 无描述 |
-| tags | object[] | 否 | 无描述 |
+| id | integer | 否 | - |
+| category | object | 否 | - |
+| name | string | 是 | - |
+| photoUrls | string[] | 是 | - |
+| tags | object[] | 否 | - |
 | status | string | 否 | pet status in the store |
 
 
@@ -320,33 +282,19 @@ GET /pet/{petId}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
 
 **tags 数组项结构:**
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| name | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| name | string | 否 | - |
 
-
-**状态码:** 400
-
-**描述:** Invalid ID supplied
-
-**状态码:** 404
-
-**描述:** Pet not found
-
-**状态码:** default
-
-**描述:** successful response
 
 ### Updates a pet in the store with form data
-
-Updates a pet in the store with form data
 
 ```http
 POST /pet/{petId}
@@ -370,15 +318,7 @@ POST /pet/{petId}
 | status | string | 否 | Updated status of the pet |
 
 
-#### 响应
-
-**状态码:** 405
-
-**描述:** Invalid input
-
 ### Deletes a pet
-
-Deletes a pet
 
 ```http
 DELETE /pet/{petId}
@@ -388,22 +328,10 @@ DELETE /pet/{petId}
 
 | 名称 | 位置 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- | -- |
-| api_key | header | string | 否 | 无描述 |
+| api_key | header | string | 否 | - |
 | petId | path | integer | 是 | Pet id to delete |
 
-#### 响应
-
-**状态码:** 400
-
-**描述:** Invalid ID supplied
-
-**状态码:** 404
-
-**描述:** Pet not found
-
 ### Uploads an image
-
-Uploads an image
 
 ```http
 POST /pet/{petId}/uploadImage
@@ -429,9 +357,7 @@ POST /pet/{petId}/uploadImage
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/json`
 
@@ -439,9 +365,9 @@ POST /pet/{petId}/uploadImage
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| code | integer | 否 | 无描述 |
-| type | string | 否 | 无描述 |
-| message | string | 否 | 无描述 |
+| code | integer | 否 | - |
+| type | string | 否 | - |
+| message | string | 否 | - |
 
 
 ## store
@@ -458,17 +384,13 @@ GET /store/inventory
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/json`
 
 object
 
 ### Place an order for a pet
-
-Place an order for a pet
 
 ```http
 POST /store/order
@@ -486,19 +408,17 @@ POST /store/order
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| petId | integer | 否 | 无描述 |
-| quantity | integer | 否 | 无描述 |
-| shipDate | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| petId | integer | 否 | - |
+| quantity | integer | 否 | - |
+| shipDate | string | 否 | - |
 | status | string | 否 | Order Status |
-| complete | boolean | 否 | 无描述 |
+| complete | boolean | 否 | - |
 
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/xml`
 
@@ -506,12 +426,12 @@ POST /store/order
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| petId | integer | 否 | 无描述 |
-| quantity | integer | 否 | 无描述 |
-| shipDate | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| petId | integer | 否 | - |
+| quantity | integer | 否 | - |
+| shipDate | string | 否 | - |
 | status | string | 否 | Order Status |
-| complete | boolean | 否 | 无描述 |
+| complete | boolean | 否 | - |
 
 
 **内容类型:** `application/json`
@@ -520,17 +440,13 @@ POST /store/order
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| petId | integer | 否 | 无描述 |
-| quantity | integer | 否 | 无描述 |
-| shipDate | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| petId | integer | 否 | - |
+| quantity | integer | 否 | - |
+| shipDate | string | 否 | - |
 | status | string | 否 | Order Status |
-| complete | boolean | 否 | 无描述 |
+| complete | boolean | 否 | - |
 
-
-**状态码:** 400
-
-**描述:** Invalid Order
 
 ### For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
 
@@ -548,9 +464,7 @@ GET /store/order/{orderId}
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/xml`
 
@@ -558,12 +472,12 @@ GET /store/order/{orderId}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| petId | integer | 否 | 无描述 |
-| quantity | integer | 否 | 无描述 |
-| shipDate | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| petId | integer | 否 | - |
+| quantity | integer | 否 | - |
+| shipDate | string | 否 | - |
 | status | string | 否 | Order Status |
-| complete | boolean | 否 | 无描述 |
+| complete | boolean | 否 | - |
 
 
 **内容类型:** `application/json`
@@ -572,21 +486,13 @@ GET /store/order/{orderId}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| petId | integer | 否 | 无描述 |
-| quantity | integer | 否 | 无描述 |
-| shipDate | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| petId | integer | 否 | - |
+| quantity | integer | 否 | - |
+| shipDate | string | 否 | - |
 | status | string | 否 | Order Status |
-| complete | boolean | 否 | 无描述 |
+| complete | boolean | 否 | - |
 
-
-**状态码:** 400
-
-**描述:** Invalid ID supplied
-
-**状态码:** 404
-
-**描述:** Order not found
 
 ### For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
 
@@ -601,16 +507,6 @@ DELETE /store/order/{orderId}
 | 名称 | 位置 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- | -- |
 | orderId | path | integer | 是 | ID of the order that needs to be deleted |
-
-#### 响应
-
-**状态码:** 400
-
-**描述:** Invalid ID supplied
-
-**状态码:** 404
-
-**描述:** Order not found
 
 ## user
 
@@ -636,25 +532,17 @@ POST /user
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| username | string | 否 | 无描述 |
-| firstName | string | 否 | 无描述 |
-| lastName | string | 否 | 无描述 |
-| email | string | 否 | 无描述 |
-| password | string | 否 | 无描述 |
-| phone | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| username | string | 否 | - |
+| firstName | string | 否 | - |
+| lastName | string | 否 | - |
+| email | string | 否 | - |
+| password | string | 否 | - |
+| phone | string | 否 | - |
 | userStatus | integer | 否 | User Status |
 
 
-#### 响应
-
-**状态码:** default
-
-**描述:** successful operation
-
 ### Creates list of users with given input array
-
-Creates list of users with given input array
 
 ```http
 POST /user/createWithArray
@@ -670,15 +558,7 @@ POST /user/createWithArray
 
 数组, 项目类型: object
 
-#### 响应
-
-**状态码:** default
-
-**描述:** successful operation
-
 ### Creates list of users with given input array
-
-Creates list of users with given input array
 
 ```http
 POST /user/createWithList
@@ -694,15 +574,7 @@ POST /user/createWithList
 
 数组, 项目类型: object
 
-#### 响应
-
-**状态码:** default
-
-**描述:** successful operation
-
 ### Logs user into the system
-
-Logs user into the system
 
 ```http
 GET /user/login
@@ -717,9 +589,7 @@ GET /user/login
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/xml`
 
@@ -729,27 +599,13 @@ string
 
 string
 
-**状态码:** 400
-
-**描述:** Invalid username/password supplied
-
 ### Logs out current logged in user session
-
-Logs out current logged in user session
 
 ```http
 GET /user/logout
 ```
 
-#### 响应
-
-**状态码:** default
-
-**描述:** successful operation
-
 ### Get user by user name
-
-Get user by user name
 
 ```http
 GET /user/{username}
@@ -763,9 +619,7 @@ GET /user/{username}
 
 #### 响应
 
-**状态码:** 200
-
-**描述:** successful operation
+**200** - successful operation
 
 **内容类型:** `application/xml`
 
@@ -773,13 +627,13 @@ GET /user/{username}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| username | string | 否 | 无描述 |
-| firstName | string | 否 | 无描述 |
-| lastName | string | 否 | 无描述 |
-| email | string | 否 | 无描述 |
-| password | string | 否 | 无描述 |
-| phone | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| username | string | 否 | - |
+| firstName | string | 否 | - |
+| lastName | string | 否 | - |
+| email | string | 否 | - |
+| password | string | 否 | - |
+| phone | string | 否 | - |
 | userStatus | integer | 否 | User Status |
 
 
@@ -789,23 +643,15 @@ GET /user/{username}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| username | string | 否 | 无描述 |
-| firstName | string | 否 | 无描述 |
-| lastName | string | 否 | 无描述 |
-| email | string | 否 | 无描述 |
-| password | string | 否 | 无描述 |
-| phone | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| username | string | 否 | - |
+| firstName | string | 否 | - |
+| lastName | string | 否 | - |
+| email | string | 否 | - |
+| password | string | 否 | - |
+| phone | string | 否 | - |
 | userStatus | integer | 否 | User Status |
 
-
-**状态码:** 400
-
-**描述:** Invalid username supplied
-
-**状态码:** 404
-
-**描述:** User not found
 
 ### This can only be done by the logged in user.
 
@@ -833,25 +679,15 @@ PUT /user/{username}
 
 | 名称 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- |
-| id | integer | 否 | 无描述 |
-| username | string | 否 | 无描述 |
-| firstName | string | 否 | 无描述 |
-| lastName | string | 否 | 无描述 |
-| email | string | 否 | 无描述 |
-| password | string | 否 | 无描述 |
-| phone | string | 否 | 无描述 |
+| id | integer | 否 | - |
+| username | string | 否 | - |
+| firstName | string | 否 | - |
+| lastName | string | 否 | - |
+| email | string | 否 | - |
+| password | string | 否 | - |
+| phone | string | 否 | - |
 | userStatus | integer | 否 | User Status |
 
-
-#### 响应
-
-**状态码:** 400
-
-**描述:** Invalid user supplied
-
-**状态码:** 404
-
-**描述:** User not found
 
 ### This can only be done by the logged in user.
 
@@ -866,13 +702,3 @@ DELETE /user/{username}
 | 名称 | 位置 | 类型 | 必填 | 描述 |
 | -- | -- | -- | -- | -- |
 | username | path | string | 是 | The name that needs to be deleted |
-
-#### 响应
-
-**状态码:** 400
-
-**描述:** Invalid username supplied
-
-**状态码:** 404
-
-**描述:** User not found

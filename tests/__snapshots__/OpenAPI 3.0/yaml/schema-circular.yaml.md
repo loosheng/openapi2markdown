@@ -22,44 +22,38 @@ PUT /nestedTest
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foo | string | No | No description |
-| arr | array[] | No | No description |
-| obj | object | No | No description |
+| foo | string | No | - |
+| arr | array[] | No | - |
+| obj | object | No | - |
 
 
 **obj 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff | object | No | No description |
+| ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff | object | No | - |
 
 
 **ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| fooa | object | No | No description |
+| fooa | object | No | - |
 
 
 **fooa 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| foob: | object | No | No description |
+| foob: | object | No | - |
 
 
 **foob: 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| fooc | string | No | No description |
+| fooc | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### 
 
@@ -82,3386 +76,3366 @@ PUT /circular
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | file | object | No | A single file which will be added/updated or a ZIP archive containing files that will be added/updated. The name of the ZIP archive does not matter but the names of the files contained within do. |
-| typename | string | No | No description |
+| typename | string | No | - |
 
 
 **file 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| name | string | No | No description |
-| value | string | No | No description |
-| formDataContentDisposition | object | No | No description |
-| simple | boolean | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| name | string | No | - |
+| value | string | No | - |
+| formDataContentDisposition | object | No | - |
+| simple | boolean | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **contentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
 
 
 **headers 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **mediaType 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| subtype | string | No | No description |
-| parameters | object | No | No description |
-| wildcardType | boolean | No | No description |
-| wildcardSubtype | boolean | No | No description |
+| type | string | No | - |
+| subtype | string | No | - |
+| parameters | object | No | - |
+| wildcardType | boolean | No | - |
+| wildcardSubtype | boolean | No | - |
 
 
 **parent 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| bodyParts | object[] | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| bodyParts | object[] | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **bodyParts 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| contentDisposition | object | No | No description |
-| entity | object | No | No description |
-| headers | object | No | No description |
-| mediaType | object | No | No description |
-| messageBodyWorkers | object | No | No description |
-| parent | object | No | No description |
-| providers | object | No | No description |
-| parameterizedHeaders | object | No | No description |
+| contentDisposition | object | No | - |
+| entity | object | No | - |
+| headers | object | No | - |
+| mediaType | object | No | - |
+| messageBodyWorkers | object | No | - |
+| parent | object | No | - |
+| providers | object | No | - |
+| parameterizedHeaders | object | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
 
 **formDataContentDisposition 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| type | string | No | No description |
-| parameters | object | No | No description |
-| fileName | string | No | No description |
-| creationDate | string | No | No description |
-| modificationDate | string | No | No description |
-| readDate | string | No | No description |
-| size | integer | No | No description |
-| name | string | No | No description |
+| type | string | No | - |
+| parameters | object | No | - |
+| fileName | string | No | - |
+| creationDate | string | No | - |
+| modificationDate | string | No | - |
+| readDate | string | No | - |
+| size | integer | No | - |
+| name | string | No | - |
 
 
 **parameterizedHeaders 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| empty | boolean | No | No description |
+| empty | boolean | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** Successfully processed.
-
-**Status Code:** 400
-
-**Description:** Invalid payload. This can be due to invalid headers or form-data params.
-
-**Status Code:** 401
-
-**Description:** Permissions error. The Authorization header may be missing, the value may be invalid or the associated organization/user does not have permission to modify the specified typename.
-
-**Status Code:** 500
-
-**Description:** Server error. Something unexpected happened while processing the request. Try again later.
 
 ### This is a schema that is technically circular, but not in a way that will cause infinite recursion when processing it.
-
-This is a schema that is technically circular, but not in a way that will cause infinite recursion when processing it.
 
 ```http
 POST /not-quite-circular
@@ -3477,242 +3451,235 @@ POST /not-quite-circular
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| rules | object | No | No description |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| offsetBefore | object | No | No description |
-| offsetAfter | object | No | No description |
-| dateTimeAfter | string | No | No description |
-| dateTimeBefore | string | No | No description |
+| offsetBefore | object | No | - |
+| offsetAfter | object | No | - |
+| dateTimeAfter | string | No | - |
+| dateTimeBefore | string | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| offsetBefore | object | No | No description |
-| offsetAfter | object | No | No description |
-| dateTimeAfter | string | No | No description |
-| dateTimeBefore | string | No | No description |
+| offsetBefore | object | No | - |
+| offsetAfter | object | No | - |
+| dateTimeAfter | string | No | - |
+| dateTimeBefore | string | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| offsetBefore | object | No | No description |
-| offsetAfter | object | No | No description |
-| dateTimeAfter | string | No | No description |
-| dateTimeBefore | string | No | No description |
+| offsetBefore | object | No | - |
+| offsetAfter | object | No | - |
+| dateTimeAfter | string | No | - |
+| dateTimeBefore | string | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| offsetBefore | object | No | No description |
-| offsetAfter | object | No | No description |
-| dateTimeAfter | string | No | No description |
-| dateTimeBefore | string | No | No description |
+| offsetBefore | object | No | - |
+| offsetAfter | object | No | - |
+| dateTimeAfter | string | No | - |
+| dateTimeBefore | string | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| offsetBefore | object | No | No description |
-| offsetAfter | object | No | No description |
-| dateTimeAfter | string | No | No description |
-| dateTimeBefore | string | No | No description |
+| offsetBefore | object | No | - |
+| offsetAfter | object | No | - |
+| dateTimeAfter | string | No | - |
+| dateTimeBefore | string | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| offsetBefore | object | No | No description |
-| offsetAfter | object | No | No description |
-| dateTimeAfter | string | No | No description |
-| dateTimeBefore | string | No | No description |
+| offsetBefore | object | No | - |
+| offsetAfter | object | No | - |
+| dateTimeAfter | string | No | - |
+| dateTimeBefore | string | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **rules 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| transitions | object[] | No | No description |
+| transitions | object[] | No | - |
 
 
 **transitions 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| offsetBefore | object | No | No description |
-| offsetAfter | object | No | No description |
-| dateTimeAfter | string | No | No description |
-| dateTimeBefore | string | No | No description |
+| offsetBefore | object | No | - |
+| offsetAfter | object | No | - |
+| dateTimeAfter | string | No | - |
+| dateTimeBefore | string | No | - |
 
 
 **offsetBefore 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
+| id | string | No | - |
+| rules | object | No | - |
 
 
 **offsetAfter 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| rules | object | No | No description |
-
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** successful operation
+| id | string | No | - |
+| rules | object | No | - |

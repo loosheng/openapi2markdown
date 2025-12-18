@@ -14,8 +14,6 @@ Knife4j-Desktop OpenAPI3 Demo
 
 ### 普通body请求-put
 
-普通body请求-put
-
 ```http
 PUT /body/bodyPut
 ```
@@ -38,9 +36,7 @@ PUT /body/bodyPut
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -55,8 +51,6 @@ PUT /body/bodyPut
 
 
 ### 普通body请求
-
-普通body请求
 
 ```http
 POST /body/body
@@ -80,9 +74,7 @@ POST /body/body
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -98,8 +90,6 @@ POST /body/body
 
 ### 普通body请求+Param
 
-普通body请求+Param
-
 ```http
 POST /body/bodyParam
 ```
@@ -108,7 +98,7 @@ POST /body/bodyParam
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| name | query | string | Yes | No description |
+| name | query | string | Yes | - |
 
 #### Request Body
 
@@ -128,9 +118,7 @@ POST /body/bodyParam
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -145,8 +133,6 @@ POST /body/bodyParam
 
 
 ### 普通body请求+Param+Header
-
-普通body请求+Param+Header
 
 ```http
 POST /body/bodyParamHeader
@@ -177,9 +163,7 @@ POST /body/bodyParamHeader
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -194,8 +178,6 @@ POST /body/bodyParamHeader
 
 
 ### 普通body请求+Param+Header+Path
-
-普通body请求+Param+Header+Path
 
 ```http
 POST /body/bodyParamHeaderPath/{id}
@@ -227,9 +209,7 @@ POST /body/bodyParamHeaderPath/{id}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -246,8 +226,6 @@ POST /body/bodyParamHeaderPath/{id}
 ## 用户模块
 
 ### body请求
-
-body请求
 
 ```http
 POST /user/{deviceId}/body
@@ -269,9 +247,7 @@ object
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -293,8 +269,6 @@ object
 
 
 ### body请求1
-
-body请求1
 
 ```http
 POST /user/{deviceId}/body1
@@ -331,9 +305,7 @@ POST /user/{deviceId}/body1
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -356,8 +328,6 @@ POST /user/{deviceId}/body1
 
 ### json参数查询1
 
-json参数查询1
-
 ```http
 POST /user/getRequest1
 ```
@@ -366,7 +336,7 @@ POST /user/getRequest1
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| cade | query | string | Yes | No description |
+| cade | query | string | Yes | - |
 
 #### Request Body
 
@@ -393,9 +363,7 @@ POST /user/getRequest1
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -440,9 +408,7 @@ POST /user/createOne
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -487,9 +453,7 @@ POST /user/createOneSchema
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -522,14 +486,12 @@ POST /user/createOne1
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| id | query | string | No | No description |
-| name | query | string | No | No description |
+| id | query | string | No | - |
+| name | query | string | No | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -543,8 +505,6 @@ POST /user/createOne1
 
 ### json参数查询
 
-json参数查询
-
 ```http
 GET /user/getRequest
 ```
@@ -553,14 +513,12 @@ GET /user/getRequest
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| userSchema | query | object | Yes | No description |
-| cade | query | string | Yes | No description |
+| userSchema | query | object | Yes | - |
+| cade | query | string | Yes | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -593,13 +551,11 @@ GET /user/create
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| name | query | string | Yes | No description |
+| name | query | string | Yes | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -623,14 +579,12 @@ POST /file/upload
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| file | string | Yes | No description |
+| file | string | Yes | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -645,8 +599,6 @@ POST /file/upload
 
 
 ### 文件上传-带参数
-
-文件上传-带参数
 
 ```http
 POST /file/uploadParam
@@ -672,9 +624,7 @@ POST /file/uploadParam
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -689,8 +639,6 @@ POST /file/uploadParam
 
 
 ### 文件上传-带参数Header
-
-文件上传-带参数Header
 
 ```http
 POST /file/uploadParamHeader
@@ -717,9 +665,7 @@ POST /file/uploadParamHeader
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -734,8 +680,6 @@ POST /file/uploadParamHeader
 
 
 ### 文件上传-带参数Path
-
-文件上传-带参数Path
 
 ```http
 POST /file/uploadParam/{id}
@@ -762,9 +706,7 @@ POST /file/uploadParam/{id}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -779,8 +721,6 @@ POST /file/uploadParam/{id}
 
 
 ### 多文件上传
-
-多文件上传
 
 ```http
 POST /file/uploadBatch
@@ -800,14 +740,12 @@ POST /file/uploadBatch
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| files | string[] | Yes | No description |
+| files | string[] | Yes | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 

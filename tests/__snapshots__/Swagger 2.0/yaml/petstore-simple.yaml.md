@@ -24,19 +24,17 @@ GET /pet/{petId}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| category | object | No | No description |
-| name | string | Yes | No description |
-| photoUrls | string[] | Yes | No description |
-| tags | object[] | No | No description |
+| id | integer | No | - |
+| category | object | No | - |
+| name | string | Yes | - |
+| photoUrls | string[] | Yes | - |
+| tags | object[] | No | - |
 | status | string | No | pet status in the store |
 
 
@@ -44,29 +42,19 @@ GET /pet/{petId}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 **tags 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
-
-**Status Code:** 400
-
-**Description:** Invalid ID supplied
-
-**Status Code:** 404
-
-**Description:** Pet not found
 
 ### Updates a pet in the store with form data
-
-Updates a pet in the store with form data
 
 ```http
 POST /pet/{petId}
@@ -80,15 +68,7 @@ POST /pet/{petId}
 | name | formData | string | No | Updated name of the pet |
 | status | formData | string | No | Updated status of the pet |
 
-#### Responses
-
-**Status Code:** 405
-
-**Description:** Invalid input
-
 ### Deletes a pet
-
-Deletes a pet
 
 ```http
 DELETE /pet/{petId}
@@ -98,15 +78,5 @@ DELETE /pet/{petId}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| api_key | header | string | No | No description |
+| api_key | header | string | No | - |
 | petId | path | integer | Yes | Pet id to delete |
-
-#### Responses
-
-**Status Code:** 400
-
-**Description:** Invalid ID supplied
-
-**Status Code:** 404
-
-**Description:** Pet not found

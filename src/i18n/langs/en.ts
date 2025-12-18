@@ -20,7 +20,7 @@ export const en = {
   // Values
   yes: 'Yes',
   no: 'No',
-  noDescription: 'No description',
+  noDescription: '-',
   noProperties: 'No properties',
   contentType: 'Content Type',
   schema: 'Schema',

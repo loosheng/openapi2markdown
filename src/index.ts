@@ -309,9 +309,7 @@ function formatSchemaProperties(
       type = Array.isArray(schemaType) ? schemaType.join(' | ') : schemaType
     }
     description =
-      effectiveProp?.description ??
-      prop.description ??
-      texts.noDescription
+      effectiveProp?.description ?? prop.description ?? texts.noDescription
 
     const visitKeyBase = prop.$ref || `${name}:${depth}`
 
@@ -372,7 +370,6 @@ function formatSchemaProperties(
       isRequired,
       description != null ? String(description) : texts.noDescription,
     ])
-
   })
 
   return { table: tableRows, nested: nestedSections }
@@ -432,6 +429,21 @@ function formatSchema(
   }
 
   return texts.unknownType
+}
+
+// Check if response has schema
+function hasResponseSchema(response: any): boolean {
+  // Swagger 2.0: 检查 response.schema
+  if (response.schema) return true
+
+  // OpenAPI 3.x: 检查 response.content 中是否有 schema
+  if (response.content) {
+    for (const contentType of Object.keys(response.content)) {
+      if (response.content[contentType].schema) return true
+    }
+  }
+
+  return false
 }
 
 // Match $ref that do not contain the prefix
@@ -533,8 +545,7 @@ export async function openapi2markdown(
       parsed = await dereference(sourceJSON)
     }
 
-    const openapiDoc =
-      typeof sourceJSON === 'string' ? parsed : sourceJSON
+    const openapiDoc = typeof sourceJSON === 'string' ? parsed : sourceJSON
 
     const md = tempo()
 
@@ -610,13 +621,16 @@ export async function openapi2markdown(
 
         for (const { path, method, operation } of endpoints) {
           // Endpoint title
-          md.h3(operation.description || operation.summary || '')
+          const title = operation.description || operation.summary || ''
+          md.h3(title)
 
-          // Description
-          if (operation.description) {
+          // Description - only output if different from title
+          if (
+            operation.description &&
+            operation.summary &&
+            operation.description !== operation.summary
+          ) {
             md.paragraph(operation.description)
-          } else if (operation.summary) {
-            md.paragraph(operation.summary)
           }
 
           md.codeBlock(`${method.toUpperCase()} ${path}`, 'http')
@@ -624,30 +638,39 @@ export async function openapi2markdown(
           // Parameters
           const parameters = operation.parameters || []
           if (parameters.length > 0) {
-            md.h4(texts.parameters)
-
-            // Create parameters table
-            const paramHeaders = [
-              texts.name,
-              texts.location,
-              texts.type,
-              texts.required,
-              texts.description,
-            ]
-            const paramRows = parameters.map((param: any) => {
-              const name = param.name || 'unknown'
-              const location = param.in || 'unknown'
-              const type = getParameterTypeName(param, texts)
-              const required = param.required
-                ? texts.yes || 'yes'
-                : texts.no || 'no'
+            // Check if single body parameter - simplify format
+            if (parameters.length === 1 && parameters[0].in === 'body') {
+              const bodyParam = parameters[0]
               const description =
-                param.description || texts.noDescription || 'No description'
+                bodyParam.description || bodyParam.schema?.title || texts.object
+              md.paragraph(`**${texts.requestBody}:** ${description}`)
+            } else {
+              // Regular parameters table
+              md.h4(texts.parameters)
 
-              return [name, location, type, required, description]
-            })
+              // Create parameters table
+              const paramHeaders = [
+                texts.name,
+                texts.location,
+                texts.type,
+                texts.required,
+                texts.description,
+              ]
+              const paramRows = parameters.map((param: any) => {
+                const name = param.name || 'unknown'
+                const location = param.in || 'unknown'
+                const type = getParameterTypeName(param, texts)
+                const required = param.required
+                  ? texts.yes || 'yes'
+                  : texts.no || 'no'
+                const description =
+                  param.description || texts.noDescription || 'No description'
 
-            md.table([paramHeaders, ...paramRows])
+                return [name, location, type, required, description]
+              })
+
+              md.table([paramHeaders, ...paramRows])
+            }
           }
 
           // Request body
@@ -689,54 +712,53 @@ export async function openapi2markdown(
             operation.responses &&
             Object.keys(operation.responses).length > 0
           ) {
-            md.h4(texts.responses)
-
-            for (const [statusCode, responseObj] of Object.entries(
+            // Filter responses with schema
+            const responsesWithSchema = Object.entries(
               operation.responses,
-            )) {
-              const response = responseObj as any
+            ).filter((entry) => hasResponseSchema(entry[1] as any))
 
-              // 跳过空响应（既没有 content 也没有 schema 也没有 description）
-              if (
-                !response.content &&
-                !response.schema &&
-                !response.description
-              )
-                continue
+            // Only render if there are responses with schema
+            if (responsesWithSchema.length > 0) {
+              md.h4(texts.responses)
 
-              md.paragraph(`**${texts.statusCode}:** ${statusCode}`)
+              for (const [statusCode, responseObj] of responsesWithSchema) {
+                const response = responseObj as any
 
-              if (response.description) {
-                md.paragraph(
-                  `**${texts.description}:** ${response.description}`,
-                )
-              }
+                // Status code and description in compact format
+                if (response.description) {
+                  md.paragraph(`**${statusCode}** - ${response.description}`)
+                } else {
+                  md.paragraph(`**${statusCode}**`)
+                }
 
-              // OpenAPI 3.x: 使用 response.content
-              if (response.content) {
-                const contentTypes = Object.keys(response.content)
+                // OpenAPI 3.x: 使用 response.content
+                if (response.content) {
+                  const contentTypes = Object.keys(response.content)
 
-                for (const contentType of contentTypes) {
-                  const content = response.content[contentType]
-                  const schema = content.schema
+                  for (const contentType of contentTypes) {
+                    const content = response.content[contentType]
+                    const schema = content.schema
 
-                  md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+                    md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
 
-                  if (schema) {
-                    if (schema.title) {
-                      md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                    if (schema) {
+                      if (schema.title) {
+                        md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                      }
+
+                      md.paragraph(formatSchema(schema, texts, openapiDoc))
                     }
-
-                    md.paragraph(formatSchema(schema, texts, openapiDoc))
                   }
                 }
-              }
-              // Swagger 2.0: 直接使用 response.schema
-              else if (response.schema) {
-                if (response.schema.title) {
-                  md.paragraph(`**${texts.schema}:** ${response.schema.title}`)
+                // Swagger 2.0: 直接使用 response.schema
+                else if (response.schema) {
+                  if (response.schema.title) {
+                    md.paragraph(
+                      `**${texts.schema}:** ${response.schema.title}`,
+                    )
+                  }
+                  md.paragraph(formatSchema(response.schema, texts, openapiDoc))
                 }
-                md.paragraph(formatSchema(response.schema, texts, openapiDoc))
               }
             }
           }
@@ -751,13 +773,16 @@ export async function openapi2markdown(
 
         for (const { path, method, operation } of endpoints) {
           // Endpoint title
-          md.h3(operation.description || operation.summary || '')
+          const title = operation.description || operation.summary || ''
+          md.h3(title)
 
-          // Description
-          if (operation.description) {
+          // Description - only output if different from title
+          if (
+            operation.description &&
+            operation.summary &&
+            operation.description !== operation.summary
+          ) {
             md.paragraph(operation.description)
-          } else if (operation.summary) {
-            md.paragraph(operation.summary)
           }
 
           md.codeBlock(`${method.toUpperCase()} ${path}`, 'http')
@@ -765,30 +790,39 @@ export async function openapi2markdown(
           // Parameters
           const parameters = operation.parameters || []
           if (parameters.length > 0) {
-            md.h4(texts.parameters)
-
-            // Create parameters table
-            const paramHeaders = [
-              texts.name,
-              texts.location,
-              texts.type,
-              texts.required,
-              texts.description,
-            ]
-            const paramRows = parameters.map((param: any) => {
-              const name = param.name || 'unknown'
-              const location = param.in || 'unknown'
-              const type = getParameterTypeName(param, texts)
-              const required = param.required
-                ? texts.yes || 'yes'
-                : texts.no || 'no'
+            // Check if single body parameter - simplify format
+            if (parameters.length === 1 && parameters[0].in === 'body') {
+              const bodyParam = parameters[0]
               const description =
-                param.description || texts.noDescription || 'No description'
+                bodyParam.description || bodyParam.schema?.title || texts.object
+              md.paragraph(`**${texts.requestBody}:** ${description}`)
+            } else {
+              // Regular parameters table
+              md.h4(texts.parameters)
 
-              return [name, location, type, required, description]
-            })
+              // Create parameters table
+              const paramHeaders = [
+                texts.name,
+                texts.location,
+                texts.type,
+                texts.required,
+                texts.description,
+              ]
+              const paramRows = parameters.map((param: any) => {
+                const name = param.name || 'unknown'
+                const location = param.in || 'unknown'
+                const type = getParameterTypeName(param, texts)
+                const required = param.required
+                  ? texts.yes || 'yes'
+                  : texts.no || 'no'
+                const description =
+                  param.description || texts.noDescription || 'No description'
 
-            md.table([paramHeaders, ...paramRows])
+                return [name, location, type, required, description]
+              })
+
+              md.table([paramHeaders, ...paramRows])
+            }
           }
 
           // Request body
@@ -830,54 +864,53 @@ export async function openapi2markdown(
             operation.responses &&
             Object.keys(operation.responses).length > 0
           ) {
-            md.h4(texts.responses)
-
-            for (const [statusCode, responseObj] of Object.entries(
+            // Filter responses with schema
+            const responsesWithSchema = Object.entries(
               operation.responses,
-            )) {
-              const response = responseObj as any
+            ).filter((entry) => hasResponseSchema(entry[1] as any))
 
-              // 跳过空响应（既没有 content 也没有 schema 也没有 description）
-              if (
-                !response.content &&
-                !response.schema &&
-                !response.description
-              )
-                continue
+            // Only render if there are responses with schema
+            if (responsesWithSchema.length > 0) {
+              md.h4(texts.responses)
 
-              md.paragraph(`**${texts.statusCode}:** ${statusCode}`)
+              for (const [statusCode, responseObj] of responsesWithSchema) {
+                const response = responseObj as any
 
-              if (response.description) {
-                md.paragraph(
-                  `**${texts.description}:** ${response.description}`,
-                )
-              }
+                // Status code and description in compact format
+                if (response.description) {
+                  md.paragraph(`**${statusCode}** - ${response.description}`)
+                } else {
+                  md.paragraph(`**${statusCode}**`)
+                }
 
-              // OpenAPI 3.x: 使用 response.content
-              if (response.content) {
-                const contentTypes = Object.keys(response.content)
+                // OpenAPI 3.x: 使用 response.content
+                if (response.content) {
+                  const contentTypes = Object.keys(response.content)
 
-                for (const contentType of contentTypes) {
-                  const content = response.content[contentType]
-                  const schema = content.schema
+                  for (const contentType of contentTypes) {
+                    const content = response.content[contentType]
+                    const schema = content.schema
 
-                  md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
+                    md.paragraph(`**${texts.contentType}:** \`${contentType}\``)
 
-                  if (schema) {
-                    if (schema.title) {
-                      md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                    if (schema) {
+                      if (schema.title) {
+                        md.paragraph(`**${texts.schema}:** ${schema.title}`)
+                      }
+
+                      md.paragraph(formatSchema(schema, texts, openapiDoc))
                     }
-
-                    md.paragraph(formatSchema(schema, texts, openapiDoc))
                   }
                 }
-              }
-              // Swagger 2.0: 直接使用 response.schema
-              else if (response.schema) {
-                if (response.schema.title) {
-                  md.paragraph(`**${texts.schema}:** ${response.schema.title}`)
+                // Swagger 2.0: 直接使用 response.schema
+                else if (response.schema) {
+                  if (response.schema.title) {
+                    md.paragraph(
+                      `**${texts.schema}:** ${response.schema.title}`,
+                    )
+                  }
+                  md.paragraph(formatSchema(response.schema, texts, openapiDoc))
                 }
-                md.paragraph(formatSchema(response.schema, texts, openapiDoc))
               }
             }
           }

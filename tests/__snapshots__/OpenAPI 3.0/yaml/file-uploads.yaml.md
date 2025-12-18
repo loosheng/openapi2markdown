@@ -28,12 +28,6 @@ POST /anything/image-png
 
 string
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ## multipart/form-data
 
 ### Support for a `requestBody` with a `multipart/form-data` media type.
@@ -56,16 +50,10 @@ POST /anything/multipart-formdata
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| orderId | integer | No | No description |
-| userId | integer | No | No description |
-| documentFile | string | No | No description |
+| orderId | integer | No | - |
+| userId | integer | No | - |
+| documentFile | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Support for a `requestBody` with a `multipart/form-data` containing multiple files.
 
@@ -87,11 +75,4 @@ PUT /anything/multipart-formdata
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| filename | string[] | No | No description |
-
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
+| filename | string[] | No | - |

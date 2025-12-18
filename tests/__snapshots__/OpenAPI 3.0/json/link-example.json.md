@@ -14,13 +14,11 @@ GET /2.0/users/{username}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | string | Yes | No description |
+| username | path | string | Yes | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The User
+**200** - The User
 
 **Content Type:** `application/json`
 
@@ -28,8 +26,8 @@ GET /2.0/users/{username}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| username | string | No | No description |
-| uuid | string | No | No description |
+| username | string | No | - |
+| uuid | string | No | - |
 
 
 ### 
@@ -42,13 +40,11 @@ GET /2.0/repositories/{username}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | string | Yes | No description |
+| username | path | string | Yes | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** repositories owned by the supplied user
+**200** - repositories owned by the supplied user
 
 **Content Type:** `application/json`
 
@@ -64,14 +60,12 @@ GET /2.0/repositories/{username}/{slug}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | string | Yes | No description |
-| slug | path | string | Yes | No description |
+| username | path | string | Yes | - |
+| slug | path | string | Yes | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The repository
+**200** - The repository
 
 **Content Type:** `application/json`
 
@@ -79,16 +73,16 @@ GET /2.0/repositories/{username}/{slug}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| slug | string | No | No description |
-| owner | object | No | No description |
+| slug | string | No | - |
+| owner | object | No | - |
 
 
 **owner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| username | string | No | No description |
-| uuid | string | No | No description |
+| username | string | No | - |
+| uuid | string | No | - |
 
 
 ### 
@@ -101,15 +95,13 @@ GET /2.0/repositories/{username}/{slug}/pullrequests
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | string | Yes | No description |
-| slug | path | string | Yes | No description |
-| state | query | string | No | No description |
+| username | path | string | Yes | - |
+| slug | path | string | Yes | - |
+| state | query | string | No | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** an array of pull request objects
+**200** - an array of pull request objects
 
 **Content Type:** `application/json`
 
@@ -125,15 +117,13 @@ GET /2.0/repositories/{username}/{slug}/pullrequests/{pid}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | string | Yes | No description |
-| slug | path | string | Yes | No description |
-| pid | path | string | Yes | No description |
+| username | path | string | Yes | - |
+| slug | path | string | Yes | - |
+| pid | path | string | Yes | - |
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** a pull request object
+**200** - a pull request object
 
 **Content Type:** `application/json`
 
@@ -141,34 +131,34 @@ GET /2.0/repositories/{username}/{slug}/pullrequests/{pid}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| title | string | No | No description |
-| repository | object | No | No description |
-| author | object | No | No description |
+| id | integer | No | - |
+| title | string | No | - |
+| repository | object | No | - |
+| author | object | No | - |
 
 
 **repository 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| slug | string | No | No description |
-| owner | object | No | No description |
+| slug | string | No | - |
+| owner | object | No | - |
 
 
 **owner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| username | string | No | No description |
-| uuid | string | No | No description |
+| username | string | No | - |
+| uuid | string | No | - |
 
 
 **author 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| username | string | No | No description |
-| uuid | string | No | No description |
+| username | string | No | - |
+| uuid | string | No | - |
 
 
 ### 
@@ -181,12 +171,6 @@ POST /2.0/repositories/{username}/{slug}/pullrequests/{pid}/merge
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| username | path | string | Yes | No description |
-| slug | path | string | Yes | No description |
-| pid | path | string | Yes | No description |
-
-#### Responses
-
-**Status Code:** 204
-
-**Description:** the PR was successfully merged
+| username | path | string | Yes | - |
+| slug | path | string | Yes | - |
+| pid | path | string | Yes | - |

@@ -16,13 +16,7 @@ GET /anything
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
-
-**Status Code:** 404
-
-**Description:** Not found
+**404** - Not found
 
 **Content Type:** `application/json`
 
@@ -30,107 +24,107 @@ GET /anything
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |
 
 
 **inner 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| statusCode | integer | No | No description |
-| error | string | No | No description |
-| inner | object | No | No description |
-| canBeRetried | string | No | No description |
-| detailedErrorCode | integer | No | No description |
+| statusCode | integer | No | - |
+| error | string | No | - |
+| inner | object | No | - |
+| canBeRetried | string | No | - |
+| detailedErrorCode | integer | No | - |

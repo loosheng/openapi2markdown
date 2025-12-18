@@ -12,25 +12,19 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schem
 
 ### Array of primitives
 
-Array of primitives
-
 ```http
 GET /anything/array-of-primitives
 ```
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
 Array, item type: string
 
 ### Object (also demonstrates readonly/writeonly)
-
-Object (also demonstrates readonly/writeonly)
 
 ```http
 GET /anything/object
@@ -44,61 +38,59 @@ GET /anything/object
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | string | No | No description |
-| read-only | string | No | No description |
-| write-only | string | No | No description |
-| object | object | No | No description |
-| array | object[] | No | No description |
-| pets | object[] | No | No description |
+| primitive | string | No | - |
+| read-only | string | No | - |
+| write-only | string | No | - |
+| object | object | No | - |
+| array | object[] | No | - |
+| pets | object[] | No | - |
 
 
 **object 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **array 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **pets 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| name2 | string | No | No description |
-| name3 | string | No | No description |
-| name4 | string | No | No description |
-| name5 | string | No | No description |
-| name6 | string | No | No description |
-| name7 | string | No | No description |
-| name8 | string | No | No description |
-| name9 | string | No | No description |
-| name10 | string | No | No description |
-| name11 | string | No | No description |
-| name12 | string | No | No description |
-| name13 | string | No | No description |
-| name14 | string | No | No description |
-| name15 | string | No | No description |
-| name16 | string | No | No description |
-| name17 | string | No | No description |
-| name18 | string | No | No description |
-| name19 | string | No | No description |
-| photoUrls | string[] | Yes | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| name2 | string | No | - |
+| name3 | string | No | - |
+| name4 | string | No | - |
+| name5 | string | No | - |
+| name6 | string | No | - |
+| name7 | string | No | - |
+| name8 | string | No | - |
+| name9 | string | No | - |
+| name10 | string | No | - |
+| name11 | string | No | - |
+| name12 | string | No | - |
+| name13 | string | No | - |
+| name14 | string | No | - |
+| name15 | string | No | - |
+| name16 | string | No | - |
+| name17 | string | No | - |
+| name18 | string | No | - |
+| name19 | string | No | - |
+| photoUrls | string[] | Yes | - |
 | status | string | No | pet status in the store |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -106,59 +98,57 @@ GET /anything/object
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | string | No | No description |
-| read-only | string | No | No description |
-| write-only | string | No | No description |
-| object | object | No | No description |
-| array | object[] | No | No description |
-| pets | object[] | No | No description |
+| primitive | string | No | - |
+| read-only | string | No | - |
+| write-only | string | No | - |
+| object | object | No | - |
+| array | object[] | No | - |
+| pets | object[] | No | - |
 
 
 **object 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **array 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **pets 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| name2 | string | No | No description |
-| name3 | string | No | No description |
-| name4 | string | No | No description |
-| name5 | string | No | No description |
-| name6 | string | No | No description |
-| name7 | string | No | No description |
-| name8 | string | No | No description |
-| name9 | string | No | No description |
-| name10 | string | No | No description |
-| name11 | string | No | No description |
-| name12 | string | No | No description |
-| name13 | string | No | No description |
-| name14 | string | No | No description |
-| name15 | string | No | No description |
-| name16 | string | No | No description |
-| name17 | string | No | No description |
-| name18 | string | No | No description |
-| name19 | string | No | No description |
-| photoUrls | string[] | Yes | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| name2 | string | No | - |
+| name3 | string | No | - |
+| name4 | string | No | - |
+| name5 | string | No | - |
+| name6 | string | No | - |
+| name7 | string | No | - |
+| name8 | string | No | - |
+| name9 | string | No | - |
+| name10 | string | No | - |
+| name11 | string | No | - |
+| name12 | string | No | - |
+| name13 | string | No | - |
+| name14 | string | No | - |
+| name15 | string | No | - |
+| name16 | string | No | - |
+| name17 | string | No | - |
+| name18 | string | No | - |
+| name19 | string | No | - |
+| photoUrls | string[] | Yes | - |
 | status | string | No | pet status in the store |
 
 
 ### Markdown
-
-Markdown
 
 ```http
 GET /anything/markdown
@@ -166,9 +156,7 @@ GET /anything/markdown
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** Test
+**200** - Test
  - Bullet one
  - Bullet two
  *italics*
@@ -179,59 +167,57 @@ GET /anything/markdown
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | string | No | No description |
-| read-only | string | No | No description |
-| write-only | string | No | No description |
-| object | object | No | No description |
-| array | object[] | No | No description |
-| pets | object[] | No | No description |
+| primitive | string | No | - |
+| read-only | string | No | - |
+| write-only | string | No | - |
+| object | object | No | - |
+| array | object[] | No | - |
+| pets | object[] | No | - |
 
 
 **object 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **array 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **pets 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| name2 | string | No | No description |
-| name3 | string | No | No description |
-| name4 | string | No | No description |
-| name5 | string | No | No description |
-| name6 | string | No | No description |
-| name7 | string | No | No description |
-| name8 | string | No | No description |
-| name9 | string | No | No description |
-| name10 | string | No | No description |
-| name11 | string | No | No description |
-| name12 | string | No | No description |
-| name13 | string | No | No description |
-| name14 | string | No | No description |
-| name15 | string | No | No description |
-| name16 | string | No | No description |
-| name17 | string | No | No description |
-| name18 | string | No | No description |
-| name19 | string | No | No description |
-| photoUrls | string[] | Yes | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| name2 | string | No | - |
+| name3 | string | No | - |
+| name4 | string | No | - |
+| name5 | string | No | - |
+| name6 | string | No | - |
+| name7 | string | No | - |
+| name8 | string | No | - |
+| name9 | string | No | - |
+| name10 | string | No | - |
+| name11 | string | No | - |
+| name12 | string | No | - |
+| name13 | string | No | - |
+| name14 | string | No | - |
+| name15 | string | No | - |
+| name16 | string | No | - |
+| name17 | string | No | - |
+| name18 | string | No | - |
+| name19 | string | No | - |
+| photoUrls | string[] | Yes | - |
 | status | string | No | pet status in the store |
 
 
-**Status Code:** 400
-
-**Description:** OK
+**400** - OK
 
 **Content Type:** `application/json`
 
@@ -239,59 +225,57 @@ GET /anything/markdown
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | string | No | No description |
-| read-only | string | No | No description |
-| write-only | string | No | No description |
-| object | object | No | No description |
-| array | object[] | No | No description |
-| pets | object[] | No | No description |
+| primitive | string | No | - |
+| read-only | string | No | - |
+| write-only | string | No | - |
+| object | object | No | - |
+| array | object[] | No | - |
+| pets | object[] | No | - |
 
 
 **object 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **array 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| primitive | boolean | No | No description |
+| primitive | boolean | No | - |
 
 
 **pets 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| name2 | string | No | No description |
-| name3 | string | No | No description |
-| name4 | string | No | No description |
-| name5 | string | No | No description |
-| name6 | string | No | No description |
-| name7 | string | No | No description |
-| name8 | string | No | No description |
-| name9 | string | No | No description |
-| name10 | string | No | No description |
-| name11 | string | No | No description |
-| name12 | string | No | No description |
-| name13 | string | No | No description |
-| name14 | string | No | No description |
-| name15 | string | No | No description |
-| name16 | string | No | No description |
-| name17 | string | No | No description |
-| name18 | string | No | No description |
-| name19 | string | No | No description |
-| photoUrls | string[] | Yes | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| name2 | string | No | - |
+| name3 | string | No | - |
+| name4 | string | No | - |
+| name5 | string | No | - |
+| name6 | string | No | - |
+| name7 | string | No | - |
+| name8 | string | No | - |
+| name9 | string | No | - |
+| name10 | string | No | - |
+| name11 | string | No | - |
+| name12 | string | No | - |
+| name13 | string | No | - |
+| name14 | string | No | - |
+| name15 | string | No | - |
+| name16 | string | No | - |
+| name17 | string | No | - |
+| name18 | string | No | - |
+| name19 | string | No | - |
+| photoUrls | string[] | Yes | - |
 | status | string | No | pet status in the store |
 
 
 ### Array of objects
-
-Array of objects
 
 ```http
 GET /anything/array-of-objects
@@ -299,9 +283,7 @@ GET /anything/array-of-objects
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -309,17 +291,13 @@ Array, item type: object
 
 ### Polymorphism
 
-Polymorphism
-
 ```http
 GET /anything/polymorphism
 ```
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -327,17 +305,13 @@ Unknown type
 
 ### Recursive $ref lookup
 
-Recursive $ref lookup
-
 ```http
 GET /anything/recursive
 ```
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -353,9 +327,7 @@ GET /anything/returns-as-json-but-is-actually-string
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -363,17 +335,13 @@ string
 
 ### Object
 
-Object
-
 ```http
 GET /multiple-responses/object
 ```
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `application/json`
 
@@ -381,13 +349,11 @@ GET /multiple-responses/object
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| hello | string | No | No description |
-| there | string | No | No description |
+| hello | string | No | - |
+| there | string | No | - |
 
 
-**Status Code:** 400
-
-**Description:** A 400 error response
+**400** - A 400 error response
 
 **Content Type:** `application/json`
 
@@ -395,5 +361,5 @@ GET /multiple-responses/object
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| obi | string | No | No description |
-| wan | string | No | No description |
+| obi | string | No | - |
+| wan | string | No | - |

@@ -12,56 +12,24 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#securit
 
 ### Multiple forms of auth are required (&&)
 
-Multiple forms of auth are required (&&)
-
 ```http
 POST /anything/and
 ```
 
-#### Responses
-
-**Status Code:** 401
-
-**Description:** Unauthorized
-
 ### Two forms of auth can be used, only one is required (||)
-
-Two forms of auth can be used, only one is required (||)
 
 ```http
 POST /anything/or
 ```
 
-#### Responses
-
-**Status Code:** 401
-
-**Description:** Unauthorized
-
 ### Two security flows are present, one of which has multiple forms of required auth (&& ||)
-
-Two security flows are present, one of which has multiple forms of required auth (&& ||)
 
 ```http
 POST /anything/and-or
 ```
 
-#### Responses
-
-**Status Code:** 401
-
-**Description:** Unauthorized
-
 ### Many security flows are present, each with multiple forms of required auth (&& ||)
-
-Many security flows are present, each with multiple forms of required auth (&& ||)
 
 ```http
 POST /anything/many-and-or
 ```
-
-#### Responses
-
-**Status Code:** 401
-
-**Description:** Unauthorized

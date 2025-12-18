@@ -25,12 +25,6 @@ GET /cache
 | If-Modified-Since | header | string | No | An RFC 3339 formatted `date-time` string, preferably in UTC. If the resource was last updated before the provided `date-time`, the server should return a `304 Not Modified` response, otherwise a 200 with an accurate `last-modified` time. |
 | If-None-Match | header | string | No | If you provide a value here, it will be checked against the generated ETAG of the target resource. If they match, you'll get a `304 Not Modified` response, otherwise a `200 OK` with a new ETAG. |
 
-#### Responses
-
-**Status Code:** default
-
-**Description:** successful response
-
 ### Returns a `302 Found` status
 
 Returns a `302 Found` status
@@ -39,12 +33,6 @@ Returns a `302 Found` status
 GET /status/302
 ```
 
-#### Responses
-
-**Status Code:** default
-
-**Description:** successful response
-
 ### Returns a `204 No Content` with no body
 
 Returns a `204 No Content` with no body
@@ -52,9 +40,3 @@ Returns a `204 No Content` with no body
 ```http
 GET /status/204
 ```
-
-#### Responses
-
-**Status Code:** default
-
-**Description:** successful response

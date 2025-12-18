@@ -16,8 +16,6 @@ Care Interaction App Facade
 
 ### 获取user列表
 
-获取user列表
-
 ```http
 POST /app/careInteraction/getInteractionUserList
 ```
@@ -39,9 +37,7 @@ POST /app/careInteraction/getInteractionUserList
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OK
+**200** - OK
 
 **Content Type:** `*/*`
 
@@ -51,9 +47,9 @@ POST /app/careInteraction/getInteractionUserList
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | string | No | No description |
-| data | object | No | No description |
-| message | string | No | No description |
+| code | string | No | - |
+| data | object | No | - |
+| message | string | No | - |
 
 
 **data 对象结构:**
@@ -80,20 +76,3 @@ POST /app/careInteraction/getInteractionUserList
 | avatar | string | No | 用户头像 |
 | userId | string | No | 用户id |
 | userName | string | No | 用户姓名 |
-
-
-**Status Code:** 201
-
-**Description:** Created
-
-**Status Code:** 401
-
-**Description:** Unauthorized
-
-**Status Code:** 403
-
-**Description:** Forbidden
-
-**Status Code:** 404
-
-**Description:** Not Found

@@ -16,8 +16,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schema-
 
 ### https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#operationObject
 
-https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#operationObject
-
 ```http
 POST /anything
 ```
@@ -30,7 +28,7 @@ POST /anything
 | filterLegacy | query | string | No | This query parameter is deprecated.
 
 https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameter-object |
-| status | query | string[] | Yes | No description |
+| status | query | string[] | Yes | - |
 
 #### Request Body
 
@@ -47,46 +45,46 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#paramet
 | id | integer | No | This `requestBody` schema property is marked as deprecated.
 
 https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schema-object |
-| category | object | No | No description |
+| category | object | No | - |
 | category_alt | object | No | Though this loads a `$ref` to the `Category` schema, and that contains deprecated properties within itself, this `category_alt` parameter is also deprecated. |
-| name | string | Yes | No description |
-| photoUrls | string[] | Yes | No description |
-| tags | object[] | No | No description |
+| name | string | Yes | - |
+| photoUrls | string[] | Yes | - |
+| tags | object[] | No | - |
 | tags_alt | object[] | No | Unlike the `tags` parameter, this is **not** deprecated, but the contents within itself are. |
 | status | string | No | pet status in the store |
-| polymorphism | object | No | No description |
+| polymorphism | object | No | - |
 
 
 **category 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 **category_alt 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 **tags 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 **tags_alt 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 **polymorphism 对象结构:**
@@ -100,14 +98,8 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#schema-
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Content Type:** `application/json`
 
 Array, item type: object
-
-**Status Code:** 400
-
-**Description:** Invalid status value

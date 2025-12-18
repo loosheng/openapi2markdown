@@ -106,10 +106,10 @@ POST /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| photoUrls | string[] | Yes | No description |
-| tags | object[] | No | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| photoUrls | string[] | Yes | - |
+| tags | object[] | No | - |
 | status | string | No | pet status in the store |
 
 
@@ -117,8 +117,8 @@ POST /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 ### When `x-explorer-enabled` is present on an operation and set to `false`, the reference guide will be non-interactive and though your users will still be able to fill out a form and receive an auto-generated code sample to use, they will not be able to make requests to your API with our "Try It" button.
@@ -151,10 +151,10 @@ PATCH /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| photoUrls | string[] | Yes | No description |
-| tags | object[] | No | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| photoUrls | string[] | Yes | - |
+| tags | object[] | No | - |
 | status | string | No | pet status in the store |
 
 
@@ -162,8 +162,8 @@ PATCH /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 ## Designate code sample languages

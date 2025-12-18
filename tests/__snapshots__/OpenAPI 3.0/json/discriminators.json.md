@@ -26,15 +26,9 @@ PATCH /improper-discriminator-placement
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| connector_type | string | No | No description |
-| connector_properties | object | No | No description |
+| connector_type | string | No | - |
+| connector_properties | object | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Redocly allows users to define [a discriminator mapping without an `anyOf` or `oneOf` that contains the discriminated objects](https://redocly.com/docs/resources/discriminator#allof-for-inheritance). This endpoint demonstrates that.
 
@@ -67,12 +61,6 @@ PATCH /redocly-flavored-discriminator
 | range | integer | No | The 95th percentile range of a trip in kilometers. |
 
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### This operation contains a schema that at one point produced an edgecase within the form system where `formData` was `undefined`.
 
 This operation contains a schema that at one point produced an edgecase within the form system where `formData` was `undefined`.
@@ -88,9 +76,3 @@ POST /potentially-undefined-formData
 **Required:** Yes
 
 Unknown type
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

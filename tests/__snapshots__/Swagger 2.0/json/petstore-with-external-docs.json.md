@@ -8,8 +8,6 @@ A sample API that uses a petstore as an example to demonstrate features in the s
 
 ### Returns all pets from the system that the user has access to
 
-Returns all pets from the system that the user has access to
-
 ```http
 GET /pets
 ```
@@ -23,61 +21,45 @@ GET /pets
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** pet response
+**200** - pet response
 
 Array, item type: object
 
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |
 
 
 ### Creates a new pet in the store.  Duplicates are allowed
-
-Creates a new pet in the store.  Duplicates are allowed
 
 ```http
 POST /pets
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| pet | body | object | Yes | Pet to add to the store |
+**Request Body:** Pet to add to the store
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** pet response
+**200** - pet response
 
 object
 
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |
 
 
 ### Returns a user based on a single ID, if the user does not have access to the pet
-
-Returns a user based on a single ID, if the user does not have access to the pet
 
 ```http
 GET /pets/{id}
@@ -91,27 +73,21 @@ GET /pets/{id}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** pet response
+**200** - pet response
 
 object
 
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |
 
 
 ### deletes a single pet based on the ID supplied
-
-deletes a single pet based on the ID supplied
 
 ```http
 DELETE /pets/{id}
@@ -125,17 +101,11 @@ DELETE /pets/{id}
 
 #### Responses
 
-**Status Code:** 204
-
-**Description:** pet deleted
-
-**Status Code:** default
-
-**Description:** unexpected error
+**default** - unexpected error
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | Yes | No description |
-| message | string | Yes | No description |
+| code | integer | Yes | - |
+| message | string | Yes | - |

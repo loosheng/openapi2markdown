@@ -26,9 +26,7 @@ GET /stations
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** A list of train stations
+**200** - A list of train stations
 
 **Content Type:** `application/json`
 
@@ -38,9 +36,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 400
-
-**Description:** Bad Request
+**400** - Bad Request
 
 **Content Type:** `application/problem+json`
 
@@ -50,9 +46,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/problem+json`
 
@@ -62,9 +56,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Forbidden
+**403** - Forbidden
 
 **Content Type:** `application/problem+json`
 
@@ -74,9 +66,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 429
-
-**Description:** Too Many Requests
+**429** - Too Many Requests
 
 **Content Type:** `application/problem+json`
 
@@ -86,9 +76,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 500
-
-**Description:** Internal Server Error
+**500** - Internal Server Error
 
 **Content Type:** `application/problem+json`
 
@@ -122,9 +110,7 @@ GET /trips
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** A list of available train trips
+**200** - A list of available train trips
 
 **Content Type:** `application/json`
 
@@ -134,9 +120,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 400
-
-**Description:** Bad Request
+**400** - Bad Request
 
 **Content Type:** `application/problem+json`
 
@@ -146,9 +130,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/problem+json`
 
@@ -158,9 +140,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Forbidden
+**403** - Forbidden
 
 **Content Type:** `application/problem+json`
 
@@ -170,9 +150,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 429
-
-**Description:** Too Many Requests
+**429** - Too Many Requests
 
 **Content Type:** `application/problem+json`
 
@@ -182,9 +160,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 500
-
-**Description:** Internal Server Error
+**500** - Internal Server Error
 
 **Content Type:** `application/problem+json`
 
@@ -208,9 +184,7 @@ GET /bookings
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** A list of bookings
+**200** - A list of bookings
 
 **Content Type:** `application/json`
 
@@ -220,9 +194,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 400
-
-**Description:** Bad Request
+**400** - Bad Request
 
 **Content Type:** `application/problem+json`
 
@@ -232,9 +204,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/problem+json`
 
@@ -244,9 +214,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Forbidden
+**403** - Forbidden
 
 **Content Type:** `application/problem+json`
 
@@ -256,9 +224,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 429
-
-**Description:** Too Many Requests
+**429** - Too Many Requests
 
 **Content Type:** `application/problem+json`
 
@@ -268,9 +234,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 500
-
-**Description:** Internal Server Error
+**500** - Internal Server Error
 
 **Content Type:** `application/problem+json`
 
@@ -322,9 +286,7 @@ POST /bookings
 
 #### Responses
 
-**Status Code:** 201
-
-**Description:** Booking successful
+**201** - Booking successful
 
 **Content Type:** `application/json`
 
@@ -334,9 +296,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 400
-
-**Description:** Bad Request
+**400** - Bad Request
 
 **Content Type:** `application/problem+json`
 
@@ -346,9 +306,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/problem+json`
 
@@ -358,9 +316,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** Not Found
+**404** - Not Found
 
 **Content Type:** `application/problem+json`
 
@@ -370,9 +326,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 409
-
-**Description:** Conflict
+**409** - Conflict
 
 **Content Type:** `application/problem+json`
 
@@ -382,9 +336,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 429
-
-**Description:** Too Many Requests
+**429** - Too Many Requests
 
 **Content Type:** `application/problem+json`
 
@@ -394,9 +346,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 500
-
-**Description:** Internal Server Error
+**500** - Internal Server Error
 
 **Content Type:** `application/problem+json`
 
@@ -416,9 +366,7 @@ GET /bookings/{bookingId}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The booking details
+**200** - The booking details
 
 **Content Type:** `application/json`
 
@@ -428,9 +376,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 400
-
-**Description:** Bad Request
+**400** - Bad Request
 
 **Content Type:** `application/problem+json`
 
@@ -440,9 +386,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/problem+json`
 
@@ -452,9 +396,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Forbidden
+**403** - Forbidden
 
 **Content Type:** `application/problem+json`
 
@@ -464,9 +406,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** Not Found
+**404** - Not Found
 
 **Content Type:** `application/problem+json`
 
@@ -476,9 +416,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 429
-
-**Description:** Too Many Requests
+**429** - Too Many Requests
 
 **Content Type:** `application/problem+json`
 
@@ -488,9 +426,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 500
-
-**Description:** Internal Server Error
+**500** - Internal Server Error
 
 **Content Type:** `application/problem+json`
 
@@ -510,13 +446,7 @@ DELETE /bookings/{bookingId}
 
 #### Responses
 
-**Status Code:** 204
-
-**Description:** Booking deleted
-
-**Status Code:** 400
-
-**Description:** Bad Request
+**400** - Bad Request
 
 **Content Type:** `application/problem+json`
 
@@ -526,9 +456,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/problem+json`
 
@@ -538,9 +466,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Forbidden
+**403** - Forbidden
 
 **Content Type:** `application/problem+json`
 
@@ -550,9 +476,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** Not Found
+**404** - Not Found
 
 **Content Type:** `application/problem+json`
 
@@ -562,9 +486,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 429
-
-**Description:** Too Many Requests
+**429** - Too Many Requests
 
 **Content Type:** `application/problem+json`
 
@@ -574,9 +496,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 500
-
-**Description:** Internal Server Error
+**500** - Internal Server Error
 
 **Content Type:** `application/problem+json`
 
@@ -620,17 +540,13 @@ POST /bookings/{bookingId}/payment
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** Payment successful
+**200** - Payment successful
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 400
-
-**Description:** Bad Request
+**400** - Bad Request
 
 **Content Type:** `application/problem+json`
 
@@ -640,9 +556,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/problem+json`
 
@@ -652,9 +566,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Forbidden
+**403** - Forbidden
 
 **Content Type:** `application/problem+json`
 
@@ -664,9 +576,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 429
-
-**Description:** Too Many Requests
+**429** - Too Many Requests
 
 **Content Type:** `application/problem+json`
 
@@ -676,9 +586,7 @@ Unknown type
 
 Unknown type
 
-**Status Code:** 500
-
-**Description:** Internal Server Error
+**500** - Internal Server Error
 
 **Content Type:** `application/problem+json`
 

@@ -42,26 +42,20 @@ POST /anything/strings
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | string | No | No description |
+| stock | string | No | - |
 | description (markdown) | string | No | This is a string with a **markdown** description: [link](ref:action-object) |
-| title | string | No | No description |
+| title | string | No | - |
 | required | string | Yes | This string should be required. |
 | default | string | No | This string has a `default` of `default value`. |
 | default (null) | string | No | This string has a `default` of `null`. |
 | default (required) | string | Yes | This string has a `default` of `default value` and is required. |
 | nullable | string | No | This string has is `nullable`. |
-| enum | string | No | No description |
+| enum | string | No | - |
 | enum (with default) | string | No | This enum has a `default` of `available`. |
 | enum (with default and required) | string | No | This enum has a `default` of `available` and is required. |
 | enum (with empty option) | string | No | This enum has a an empty string (`""`) as one of its available options. |
 | enum (with empty option and empty default) | string | No | This enum has a an empty string (`""`) as its only available option, and that same value is set as its `default`. |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling of `format` data types on `type: string` schemas.
 
@@ -91,26 +85,20 @@ PUT /anything/strings
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| binary | string | No | No description |
-| binary (with default) | string | Yes | No description |
+| binary | string | No | - |
+| binary (with default) | string | Yes | - |
 | blob | string | No | Strings with `format: blob` should render a `<textarea>`. |
-| date | string | No | No description |
+| date | string | No | - |
 | date (with pattern) | string | No | This accepts a pattern of matching `(\d{4})-(\d{2})-(\d{2})` |
 | date-time | string | No | Unsupported due to the varying ways that `date-time` is utilized in API definitions for representing dates, the [lack of wide browser support for the input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local#Browser_compatibility), and that it's not [RFC 3339](https://tools.ietf.org/html/rfc3339) compliant. |
 | html | string | No | Strings with `format: html` should render a `<textarea>`. |
 | json | string | No | This is a special ReadMe data type to render a `<textarea>` to be parsed as JSON |
-| string | string | No | No description |
-| password | string | No | No description |
+| string | string | No | - |
+| password | string | No | - |
 | password (minLength: 5, maxLength: 20) | string | No | This `format: password` input has a `minLength` and `maxLength` configured. |
-| url | string | No | No description |
-| unknown-format | string | No | No description |
+| url | string | No | - |
+| unknown-format | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling of a `requestBody` payload that's a single `type: string`.
 
@@ -138,12 +126,6 @@ POST /anything/strings/top-level-payloads
 
 string
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Handling of a `requestBody` payload that's a single `type: string` but `format: json`.
 
 📚 OpenAPI specification references:
@@ -169,12 +151,6 @@ PATCH /anything/strings/top-level-payloads
 **Content Type:** `application/json`
 
 string
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Numbers
 
@@ -208,30 +184,24 @@ POST /anything/numbers
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| integer (stock) | integer | No | No description |
+| integer (stock) | integer | No | - |
 | integer (markdown description) | integer | No | This is an `integer` with a **markdown** description: [link](ref:action-object) |
-| integer (title) | integer | No | No description |
+| integer (title) | integer | No | - |
 | integer (required) | integer | Yes | This integer should be required. |
 | integer (default) | integer | No | This integer has a `default` of `1234`. |
 | integer (default null) | integer | No | This integer has a `default` of `null`. |
 | integer (default, required) | integer | Yes | This integer has a `default` of `1234` and is required. |
 | integer (nullable) | integer | No | This integer is `nullable`. |
 | integer (minimum / maximum) | integer | No | This integer has a `minimum` of `100` and `maximum` of `999`. |
-| number (stock) | number | No | No description |
+| number (stock) | number | No | - |
 | number (markdown description) | number | No | This is a `number` with a **markdown** description: [link](ref:action-object) |
-| number (title) | number | No | No description |
+| number (title) | number | No | - |
 | number (required) | number | Yes | This number should be required. |
 | number (default) | number | No | This number has a `default` of `12.34`. |
 | number (default null) | number | No | This number has a `default` of `null`. |
 | number (default, required) | number | Yes | This number has a `default` of `12.34` and is required. |
 | number (nullable) | number | No | This number is `nullable`.. |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling `format` data types on `type: integer` and `type: number` schemas.
 
@@ -261,24 +231,18 @@ PUT /anything/numbers
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| integer (format: int8) | integer | No | No description |
-| integer (format: uint8) | integer | No | No description |
-| integer (format: int16) | integer | No | No description |
-| integer (format: uint16) | integer | No | No description |
-| integer (format: int32) | integer | No | No description |
+| integer (format: int8) | integer | No | - |
+| integer (format: uint8) | integer | No | - |
+| integer (format: int16) | integer | No | - |
+| integer (format: uint16) | integer | No | - |
+| integer (format: int32) | integer | No | - |
 | integer (format: int32, multipleOf: 2) | integer | No | This `integer` input has `multipleOf: 2` set on itself to control the increment/decrement value set. |
-| integer (format: uint32) | integer | No | No description |
-| integer (format: int64) | integer | No | No description |
-| integer (format: uint64) | integer | No | No description |
-| number (format: float) | number | No | No description |
-| number (format: double) | number | No | No description |
+| integer (format: uint32) | integer | No | - |
+| integer (format: int64) | integer | No | - |
+| integer (format: uint64) | integer | No | - |
+| number (format: float) | number | No | - |
+| number (format: double) | number | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling of a `requestBody` payload that's a single `type: integer`.
 
@@ -305,12 +269,6 @@ PATCH /anything/numbers
 **Content Type:** `application/json`
 
 integer
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Booleans
 
@@ -344,20 +302,14 @@ POST /anything/booleans
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | boolean | No | No description |
+| stock | boolean | No | - |
 | description (markdown) | boolean | No | This is a `boolean` with a **markdown** description: [link](ref:action-object) |
-| title | boolean | No | No description |
+| title | boolean | No | - |
 | required | boolean | Yes | This boolean should be required. |
 | default | boolean | No | This boolean has a `default` of `false`. |
 | default (required) | boolean | Yes | This boolean has a `default` of `false`. |
 | inferred from enum | unknown | No | Though this is missing a `type` declaration it should be treated as `boolean` because it contains an enum of `true` and `false`. |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling of a `requestBody` payload that's a single `type: boolean`.
 
@@ -384,12 +336,6 @@ PATCH /anything/booleans
 **Content Type:** `application/json`
 
 boolean
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Arrays
 
@@ -423,39 +369,33 @@ POST /anything/arrays
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| stock | unknown[] | No | No description |
+| stock | unknown[] | No | - |
 | with markdown description | unknown[] | No | This is an `array` with a **markdown** description: [link](ref:action-object) |
-| with title | unknown[] | No | No description |
-| array<any> | unknown[] | No | No description |
+| with title | unknown[] | No | - |
+| array<any> | unknown[] | No | - |
 | array<any> (but no `items` property) | array | No | Techncally this is a malformed schema, but we support it (for legacy reasons) and repair it to have `items: {}` when we generate JSON Schema for the form.
 
 Though its supported, not all OpenAPI validators allow it though so our support may regress at some point in the future. |
-| array<string> | string[] | No | No description |
-| array<string> (with overall `null` default) | string[] | No | No description |
-| array<string> (loaded via a $ref) | string[] | No | No description |
-| array<integer> | integer[] | No | No description |
-| array<number> | number[] | No | No description |
-| array<boolean> | boolean[] | No | No description |
-| array<object> | object[] | No | No description |
-| array<object> (additionalProperties) | object[] | No | No description |
-| array<array<object>> | array[] | No | No description |
+| array<string> | string[] | No | - |
+| array<string> (with overall `null` default) | string[] | No | - |
+| array<string> (loaded via a $ref) | string[] | No | - |
+| array<integer> | integer[] | No | - |
+| array<number> | number[] | No | - |
+| array<boolean> | boolean[] | No | - |
+| array<object> | object[] | No | - |
+| array<object> (additionalProperties) | object[] | No | - |
+| array<array<object>> | array[] | No | - |
 
 
 **array<object> 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| integer | integer | No | No description |
-| number | number | No | No description |
-| boolean | boolean | No | No description |
+| string | string | No | - |
+| integer | integer | No | - |
+| number | number | No | - |
+| boolean | boolean | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling of a `requestBody` payload that's a `type: array` composed of objects.
 
@@ -483,12 +423,6 @@ POST /anything/arrays/top-level-payloads
 
 Array, item type: object
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Handling of a `requestBody` payload that's a `type: array` composed of primitives.
 
 📚 OpenAPI specification references:
@@ -514,12 +448,6 @@ PATCH /anything/arrays/top-level-payloads
 **Content Type:** `application/json`
 
 Array, item type: string
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Objects
 
@@ -553,10 +481,10 @@ POST /anything/objects
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| object | object | No | No description |
-| object (with `title`) | object | No | No description |
+| object | object | No | - |
+| object (with `title`) | object | No | - |
 | object (without an explicit `type`) | unknown | No | Though this object is missing an explicit `type: object` property it should still be recognized as an object because it has `properties`. |
-| object (additionalProperties) | object | No | No description |
+| object (additionalProperties) | object | No | - |
 | object (without `properties`) | object | No | Because this object is missing a `properties` declaration we should treat it as if `additionalProperties: true` were present on it so the enduser can still use it with the form. |
 
 
@@ -564,51 +492,45 @@ POST /anything/objects
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| integer | integer | No | No description |
-| number | number | No | No description |
-| object | object | No | No description |
-| array | string[] | No | No description |
+| string | string | No | - |
+| integer | integer | No | - |
+| number | number | No | - |
+| object | object | No | - |
+| array | string[] | No | - |
 
 
 **object 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
+| string | string | No | - |
 
 
 **object (with `title`) 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| integer | integer | No | No description |
-| number | number | No | No description |
-| object | object | No | No description |
-| array | string[] | No | No description |
+| string | string | No | - |
+| integer | integer | No | - |
+| number | number | No | - |
+| object | object | No | - |
+| array | string[] | No | - |
 
 
 **object 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
+| string | string | No | - |
 
 
 **object (without an explicit `type`) 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| property1 | integer | No | No description |
-| property2 | integer | No | No description |
+| property1 | integer | No | - |
+| property2 | integer | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Circular references
 
@@ -642,86 +564,80 @@ POST /anything/circular
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| circular | object | No | No description |
+| circular | object | No | - |
 
 
 **circular 对象结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling of a top-level request body `$ref` that recursively references itself.
 
@@ -751,87 +667,81 @@ PATCH /anything/circular
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
 
 **children 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| string | string | No | No description |
-| children | object[] | No | No description |
+| string | string | No | - |
+| children | object[] | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## ReadMe-flavors
 
@@ -857,14 +767,8 @@ POST /anything/raw_body/top-level-payloads
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| RAW_BODY | string | No | No description |
+| RAW_BODY | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### This is a special value on ReadMe to denote a top level property. This can be done better using JSON Schema, but from ReadMe's dash, this is the only way to do it.
 
@@ -886,14 +790,8 @@ PATCH /anything/raw_body/top-level-payloads
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| RAW_BODY | string | No | No description |
+| RAW_BODY | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Quirks
 
@@ -928,7 +826,7 @@ POST /anything/quirks
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | missing type | unknown | No | Though this request body property is missing a `type` declaration we should stil render a `string` input box so that the user can interact with it. |
-| missing type (on completely empty schema) | unknown | No | No description |
+| missing type (on completely empty schema) | unknown | No | - |
 | implicit array | integer[] | No | This array property is missing an explicit `type: array` but since it has an `items` declaration we're implicitly treating it as an array. |
 | implicit object | unknown | No | This object property is missing an explicit `type: object` but since it has an `properties` declaration we're implicitly treating it as an object. |
 
@@ -937,14 +835,8 @@ POST /anything/quirks
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| name | string | No | No description |
+| name | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Handling cases for when a nested `allOf` cannot be merged together.
 
@@ -982,12 +874,6 @@ This is obviously less than ideal but it assures that the user can still interac
 | compatible | unknown | No | Unlike the `incompatible` property above this `allOf` consists of two objects that **can** be merged. |
 
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### When an `allOf` sits at the top of a request body schema and it cannot be merged, we're unable to render out anything for an input because there's no usable schema for us.
 
 📚 OpenAPI specification references:
@@ -1015,12 +901,6 @@ PUT /anything/quirks/polymorphism
 **Required:** Yes
 
 Unknown type
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### Like `quirks_entirelyIncompatibleAllOf`, when we're to merge an `allOf` together we eliminate it, however this schema here has additional properties (`description`) alongside that `allOf` so it's not a wholly empty schema and we can use it. Unfortunately since we don't have any of the real data for the request body to use we treat this as a string input with a `format` of `json` so that the user can input a raw JSON input to make their request with.
 
@@ -1053,9 +933,3 @@ PATCH /anything/quirks/polymorphism
 **Required:** Yes
 
 Unknown type
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

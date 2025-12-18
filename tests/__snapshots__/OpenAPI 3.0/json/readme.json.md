@@ -26,17 +26,13 @@ GET /api-registry/{uuid}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** Successfully retrieved API registry entry.
+**200** - Successfully retrieved API registry entry.
 
 **Content Type:** `application/json`
 
 object
 
-**Status Code:** 404
-
-**Description:** The registry entry couldn't be found.
+**404** - The registry entry couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -62,37 +58,25 @@ GET /api-specification
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** Successfully retrieved API specification metadata.
-
-**Status Code:** 400
-
-**Description:** No version was supplied.
+**400** - No version was supplied.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The version couldn't be found.
+**404** - The version couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -128,37 +112,25 @@ POST /api-specification
 
 #### Responses
 
-**Status Code:** 201
-
-**Description:** The API specification was successfully uploaded.
-
-**Status Code:** 400
-
-**Description:** There was a validation error during upload.
+**400** - There was a validation error during upload.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 408
-
-**Description:** The spec upload timed out.
+**408** - The spec upload timed out.
 
 **Content Type:** `application/json`
 
@@ -194,41 +166,25 @@ PUT /api-specification/{id}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The API specification was updated.
-
-**Status Code:** 400
-
-**Description:** There was a validation error during upload.
+**400** - There was a validation error during upload.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** There is no API specification with that ID.
-
-**Status Code:** 408
-
-**Description:** The spec upload timed out.
+**408** - The spec upload timed out.
 
 **Content Type:** `application/json`
 
@@ -250,37 +206,25 @@ DELETE /api-specification/{id}
 
 #### Responses
 
-**Status Code:** 204
-
-**Description:** The API specification was deleted.
-
-**Status Code:** 400
-
-**Description:** The spec ID isn't valid.
+**400** - The spec ID isn't valid.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The spec couldn't be found.
+**404** - The spec couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -310,21 +254,13 @@ POST /api-validation
 
 #### Responses
 
-**Status Code:** 201
-
-**Description:** The API specification is valid.
-
-**Status Code:** 400
-
-**Description:** The API specification is not valid.
+**400** - The API specification is not valid.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 408
-
-**Description:** The spec upload timed out.
+**408** - The spec upload timed out.
 
 **Content Type:** `application/json`
 
@@ -340,9 +276,7 @@ GET /schema
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** OpenAPI Definition data
+**200** - OpenAPI Definition data
 
 **Content Type:** `application/json`
 
@@ -360,9 +294,7 @@ GET /apply
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** All the roles that we're hiring for.
+**200** - All the roles that we're hiring for.
 
 **Content Type:** `application/json`
 
@@ -396,12 +328,6 @@ POST /apply
 | dontReallyApply | boolean | No | Want to play with the API but not actually apply? Set this to true. |
 
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** You did it!
-
 ## Categories
 
 ### Returns all the categories for a specified version.
@@ -419,12 +345,6 @@ GET /categories
 | x-readme-version | header | string | No | Version number of your docs project, for example, v3.0. By default the main project version is used. To see all valid versions for your docs project call https://docs.readme.com/main/reference/version#getversions. |
 | perPage | query | integer | No | Number of items to include in pagination (up to 100, defaults to 10). |
 | page | query | integer | No | Used to specify further pages (starts at 1). |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** The list of categories.
 
 ### Create a new category inside of this project.
 
@@ -450,13 +370,7 @@ Unknown type
 
 #### Responses
 
-**Status Code:** 201
-
-**Description:** The category has successfully been created.
-
-**Status Code:** 400
-
-**Description:** The category couldn't be saved.
+**400** - The category couldn't be saved.
 
 **Content Type:** `application/json`
 
@@ -479,13 +393,7 @@ GET /categories/{slug}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The category exists and has been returned.
-
-**Status Code:** 404
-
-**Description:** The category couldn't be found.
+**404** - The category couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -522,21 +430,13 @@ PUT /categories/{slug}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The category was successfully updated.
-
-**Status Code:** 400
-
-**Description:** The category couldn't be saved.
+**400** - The category couldn't be saved.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The category couldn't be found.
+**404** - The category couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -559,13 +459,7 @@ DELETE /categories/{slug}
 
 #### Responses
 
-**Status Code:** 204
-
-**Description:** The category was deleted.
-
-**Status Code:** 404
-
-**Description:** The category couldn't be found.
+**404** - The category couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -588,13 +482,7 @@ GET /categories/{slug}/docs
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The category exists and all of the docs have been returned.
-
-**Status Code:** 404
-
-**Description:** The category couldn't be found.
+**404** - The category couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -617,12 +505,6 @@ GET /changelogs
 | perPage | query | integer | No | Number of items to include in pagination (up to 100, defaults to 10). |
 | page | query | integer | No | Used to specify further pages (starts at 1). |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** The list of changelogs.
-
 ### Create a new changelog entry.
 
 Create a new changelog entry.
@@ -642,20 +524,10 @@ POST /changelogs
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | title | string | Yes | Title of the changelog. |
-| type | string | No | No description |
+| type | string | No | - |
 | body | string | Yes | Body content of the changelog. |
 | hidden | boolean | No | Visibility of the changelog. |
 
-
-#### Responses
-
-**Status Code:** 201
-
-**Description:** The changelog was successfully created.
-
-**Status Code:** 400
-
-**Description:** There was a validation error during creation.
 
 ### Returns the changelog with this slug.
 
@@ -670,16 +542,6 @@ GET /changelogs/{slug}
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
 | slug | path | string | Yes | A URL-safe representation of the changelog title. Slugs must be all lowercase, and replace spaces with hyphens. For example, for the changelog "Owlet Update", enter the slug "owlet-update". |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** The changelog exists and has been returned.
-
-**Status Code:** 404
-
-**Description:** There is no changelog with that slug.
 
 ### Update a changelog with this slug.
 
@@ -706,24 +568,10 @@ PUT /changelogs/{slug}
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
 | title | string | Yes | Title of the changelog. |
-| type | string | No | No description |
+| type | string | No | - |
 | body | string | Yes | Body content of the changelog. |
 | hidden | boolean | No | Visibility of the changelog. |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** The changelog was successfully updated.
-
-**Status Code:** 400
-
-**Description:** There was a validation error during update.
-
-**Status Code:** 404
-
-**Description:** There is no changelog with that slug.
 
 ### Delete the changelog with this slug.
 
@@ -738,16 +586,6 @@ DELETE /changelogs/{slug}
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
 | slug | path | string | Yes | A URL-safe representation of the changelog title. Slugs must be all lowercase, and replace spaces with hyphens. For example, for the changelog "Owlet Weekly Update", enter the slug "owlet-weekly-update". |
-
-#### Responses
-
-**Status Code:** 204
-
-**Description:** The changelog was successfully updated.
-
-**Status Code:** 404
-
-**Description:** There is no changelog with that slug.
 
 ## Custom Pages
 
@@ -768,21 +606,13 @@ GET /custompages
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The list of custom pages.
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
@@ -815,29 +645,19 @@ POST /custompages
 
 #### Responses
 
-**Status Code:** 201
-
-**Description:** The custom page was successfully created.
-
-**Status Code:** 400
-
-**Description:** The page couldn't be saved.
+**400** - The page couldn't be saved.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
@@ -859,29 +679,19 @@ GET /custompages/{slug}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The custom page exists and has been returned.
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The custom page couldn't be found.
+**404** - The custom page couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -920,37 +730,25 @@ PUT /custompages/{slug}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The custom page was successfully updated.
-
-**Status Code:** 400
-
-**Description:** The page couldn't be saved.
+**400** - The page couldn't be saved.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The custom page couldn't be found.
+**404** - The custom page couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -972,29 +770,19 @@ DELETE /custompages/{slug}
 
 #### Responses
 
-**Status Code:** 204
-
-**Description:** The custom page was successfully updated.
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The custom page couldn't be found.
+**404** - The custom page couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1050,9 +838,7 @@ POST /docs
 
 #### Responses
 
-**Status Code:** 201
-
-**Description:** The doc was successfully created.
+**201** - The doc was successfully created.
 
 **Content Type:** `application/json`
 
@@ -1080,25 +866,19 @@ POST /docs
 | code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
-**Status Code:** 400
-
-**Description:** The doc couldn't be saved.
+**400** - The doc couldn't be saved.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
@@ -1121,21 +901,13 @@ POST /docs/search
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The search was successful and results were returned.
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
@@ -1158,9 +930,7 @@ GET /docs/{slug}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The doc exists and has been returned.
+**200** - The doc exists and has been returned.
 
 **Content Type:** `application/json`
 
@@ -1188,25 +958,19 @@ GET /docs/{slug}
 | code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The doc couldn't be found.
+**404** - The doc couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1261,9 +1025,7 @@ PUT /docs/{slug}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The doc was successfully updated.
+**200** - The doc was successfully updated.
 
 **Content Type:** `application/json`
 
@@ -1291,33 +1053,25 @@ PUT /docs/{slug}
 | code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
-**Status Code:** 400
-
-**Description:** The doc couldn't be saved.
+**400** - The doc couldn't be saved.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The doc couldn't be found.
+**404** - The doc couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1340,29 +1094,19 @@ DELETE /docs/{slug}
 
 #### Responses
 
-**Status Code:** 204
-
-**Description:** The doc was successfully updated.
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The doc couldn't be found.
+**404** - The doc couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1385,9 +1129,7 @@ GET /docs/{slug}/production
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The doc exists and has been returned.
+**200** - The doc exists and has been returned.
 
 **Content Type:** `application/json`
 
@@ -1415,25 +1157,19 @@ GET /docs/{slug}/production
 | code | string | No | The error code for docs with the `error` type [DEPRECATED]. |
 
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The doc couldn't be found.
+**404** - The doc couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1459,9 +1195,7 @@ GET /outbound-ips
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** List of current IP addresses used for webhook and “Try It!” proxy requests.
+**200** - List of current IP addresses used for webhook and “Try It!” proxy requests.
 
 **Content Type:** `application/json`
 
@@ -1479,9 +1213,7 @@ GET /
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** Project data
+**200** - Project data
 
 **Content Type:** `application/json`
 
@@ -1489,24 +1221,20 @@ GET /
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| name | string | No | No description |
-| subdomain | string | No | No description |
-| jwtSecret | string | No | No description |
+| name | string | No | - |
+| subdomain | string | No | - |
+| jwtSecret | string | No | - |
 | baseUrl | string | No | The base URL for the project. If the project is not running under a custom domain, it will be `https://projectSubdomain.readme.io`, otherwise it can either be or `https://example.com` or, in the case of an enterprise child project `https://example.com/projectSubdomain`. |
-| plan | string | No | No description |
+| plan | string | No | - |
 
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
@@ -1524,21 +1252,13 @@ GET /version
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** A list of versions.
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
@@ -1566,7 +1286,7 @@ POST /version
 | codename | string | No | Dubbed name of version. |
 | from | string | Yes | Semantic Version to use as the base fork. |
 | is_stable | boolean | No | Should this be the **main** version? |
-| is_beta | boolean | No | No description |
+| is_beta | boolean | No | - |
 | is_hidden | boolean | No | Should this be publically accessible? |
 | is_deprecated | boolean | No | Should this be deprecated? Only allowed in PUT operations. |
 | pdfStatus | string | No | Status of pdf generations. |
@@ -1574,37 +1294,25 @@ POST /version
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The version was successfully created.
-
-**Status Code:** 400
-
-**Description:** There was a validation error during creation.
+**400** - There was a validation error during creation.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The version couldn't be found.
+**404** - The version couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1626,29 +1334,19 @@ GET /version/{versionId}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The version exists and has been returned.
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The version couldn't be found.
+**404** - The version couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1682,7 +1380,7 @@ PUT /version/{versionId}
 | codename | string | No | Dubbed name of version. |
 | from | string | Yes | Semantic Version to use as the base fork. |
 | is_stable | boolean | No | Should this be the **main** version? |
-| is_beta | boolean | No | No description |
+| is_beta | boolean | No | - |
 | is_hidden | boolean | No | Should this be publically accessible? |
 | is_deprecated | boolean | No | Should this be deprecated? Only allowed in PUT operations. |
 | pdfStatus | string | No | Status of pdf generations. |
@@ -1690,37 +1388,25 @@ PUT /version/{versionId}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The version was successfully updated.
-
-**Status Code:** 400
-
-**Description:** A stable version can't be demoted.
+**400** - A stable version can't be demoted.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The version couldn't be found.
+**404** - The version couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1742,37 +1428,25 @@ DELETE /version/{versionId}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The version was successfully deleted.
-
-**Status Code:** 400
-
-**Description:** A stable version can't be removed.
+**400** - A stable version can't be removed.
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 401
-
-**Description:** Unauthorized
+**401** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 403
-
-**Description:** Unauthorized
+**403** - Unauthorized
 
 **Content Type:** `application/json`
 
 Unknown type
 
-**Status Code:** 404
-
-**Description:** The version couldn't be found.
+**404** - The version couldn't be found.
 
 **Content Type:** `application/json`
 
@@ -1804,9 +1478,7 @@ POST /owlbot/ask
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** The answer to the question that was asked.
+**200** - The answer to the question that was asked.
 
 **Content Type:** `text/event-stream`
 
@@ -1816,8 +1488,8 @@ POST /owlbot/ask
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| answer | string | No | No description |
-| sources | object[] | No | No description |
+| answer | string | No | - |
+| sources | object[] | No | - |
 
 
 **sources 数组项结构:**

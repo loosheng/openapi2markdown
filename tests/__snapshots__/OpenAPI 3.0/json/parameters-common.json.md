@@ -18,12 +18,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#path-
 GET /anything/{id}
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### [post] Description
 
 [post] Description
@@ -38,12 +32,6 @@ POST /anything/{id}
 | ---- | -------- | ---- | -------- | ----------- |
 | limit | query | integer | No | The numbers of items to return. |
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### [get] Description
 
 [get] Description
@@ -52,12 +40,6 @@ POST /anything/{id}
 GET /anything/{id}/{action}
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### [get] Description
 
 [get] Description
@@ -65,12 +47,6 @@ GET /anything/{id}/{action}
 ```http
 GET /anything/{id}/{action}/{id}
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### 
 
@@ -83,9 +59,3 @@ GET /anything/{id}/override
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
 | id | path | string | Yes | A comma-separated list of IDs |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

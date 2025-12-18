@@ -12,8 +12,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#suppo
 
 ### Demo handling of formData
 
-Demo handling of formData
-
 ```http
 POST /anything
 ```
@@ -26,16 +24,14 @@ POST /anything
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| client_id | string | Yes | No description |
-| client_secret | string | Yes | No description |
-| scope | integer | No | No description |
+| client_id | string | Yes | - |
+| client_secret | string | Yes | - |
+| scope | integer | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** Valid Token
+**200** - Valid Token
 
 **Content Type:** `application/json`
 
@@ -45,11 +41,6 @@ POST /anything
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| access_token | integer | Yes | No description |
-| token_type | string | Yes | No description |
-| expires_in | integer | Yes | No description |
-
-
-**Status Code:** 401
-
-**Description:** Unauthorized
+| access_token | integer | Yes | - |
+| token_type | string | Yes | - |
+| expires_in | integer | Yes | - |

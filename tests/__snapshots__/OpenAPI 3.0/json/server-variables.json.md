@@ -34,12 +34,6 @@ Support and handling of servers and server variables.
 POST /global
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ## Operation
 
 ### Support and handling of servers and server variables set at the operation level.
@@ -61,12 +55,6 @@ Support and handling of servers and server variables set at the operation level.
 ```http
 POST /operation
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Path
 
@@ -90,12 +78,6 @@ Support and handling of servers and server variables set at the path level.
 PUT /path
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of servers and server variables set at the path **and** operation level.
 
 📚 OpenAPI specification references:
@@ -115,9 +97,3 @@ Support and handling of servers and server variables set at the path **and** ope
 ```http
 PUT /combo
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

@@ -20,11 +20,5 @@ POST /post
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| foo | cookie | string | No | No description |
-| bar | cookie | string | No | No description |
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
+| foo | cookie | string | No | - |
+| bar | cookie | string | No | - |

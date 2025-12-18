@@ -53,12 +53,6 @@ POST /anything/strings
 | enum (with empty option and empty default) | string | No | This enum has a an empty string (`""`) as its only available option, and that same value is set as its `default`. |
 
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of enums on `type: number` schemas.
 
 📚 OpenAPI specification references:
@@ -97,12 +91,6 @@ GET /anything/strings
 | enum (with duplicate options) | number | No | This enum has multiple duplicate options, they should get deduped in the UI |
 
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Support and handling of enums on `type: boolean` schemas.
 
 📚 OpenAPI specification references:
@@ -135,10 +123,3 @@ PUT /anything/strings
 | enum *required | boolean | Yes | A regular ol' enum |
 | enum (with default) | boolean | No | This enum has a `default` of `false`. |
 | enum (with default) *required | boolean | Yes | A required enum with a default (if a field is required it should probably always have a default, eh?) |
-
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

@@ -12,8 +12,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#param
 
 ### Utilizes all available parameter types.
 
-Utilizes all available parameter types.
-
 ```http
 POST /anything/all-param-types/{id}/{id2}
 ```
@@ -43,13 +41,6 @@ POST /anything/all-param-types/{id}/{id2}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 | status | string | No | An enum with available options |
-
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

@@ -18,12 +18,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#securit
 GET /anything/apiKey
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### `apiKey` auth will be supplied within an `api_key` cookie.
 
 `apiKey` auth will be supplied within an `api_key` cookie.
@@ -32,12 +26,6 @@ GET /anything/apiKey
 POST /anything/apiKey
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### `apiKey` auth will be supplied within an `X-API-KEY` header.
 
 `apiKey` auth will be supplied within an `X-API-KEY` header.
@@ -45,12 +33,6 @@ POST /anything/apiKey
 ```http
 PUT /anything/apiKey
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## HTTP
 
@@ -66,12 +48,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#basic-a
 POST /anything/basic
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### Authentication credentials will be supplied within a `Bearer` `Authorization` header.
 
 https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#basic-authentication-sample
@@ -84,12 +60,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#basic-a
 POST /anything/bearer
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ## Mutual TLS
 
 ### 🚧 This is not supported.
@@ -99,12 +69,6 @@ POST /anything/bearer
 ```http
 POST /anything/mutualTLS
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## OAuth 2
 
@@ -122,12 +86,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 POST /anything/oauth2
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
 
@@ -141,12 +99,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 ```http
 GET /anything/oauth2
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -162,12 +114,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 PUT /anything/oauth2
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
 
@@ -181,12 +127,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 ```http
 PATCH /anything/oauth2
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### > ℹ️
 > We currently do not handle OAuth 2 authentication flows so if an operation has an `oauth2` requirement we assume that the user, or the projects JWT, has a qualified `bearer` token and will use that.
@@ -202,12 +142,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#fixed-f
 DELETE /anything/oauth2
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ## OpenID Connect
 
 ### 🚧 This is not supported.
@@ -217,12 +151,6 @@ DELETE /anything/oauth2
 ```http
 POST /anything/openIdConnect
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Other
 
@@ -234,12 +162,6 @@ This operation does not have any authentication requirements.
 POST /anything/no-auth
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### This endpoint requires an authentication header but making any request to it will forcefully return a 401 status code for invalid auth.
 
 This endpoint requires an authentication header but making any request to it will forcefully return a 401 status code for invalid auth.
@@ -247,9 +169,3 @@ This endpoint requires an authentication header but making any request to it wil
 ```http
 POST /status/401
 ```
-
-#### Responses
-
-**Status Code:** 401
-
-**Description:** Unauthorized

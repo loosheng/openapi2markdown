@@ -17,9 +17,3 @@ This operation has a top-level `jsonSchemaDialect` set to abide by [JSON Schema 
 ```http
 GET /anything/numbers
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

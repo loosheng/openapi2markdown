@@ -34,23 +34,9 @@ POST /x-code-samples
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
-**Content Type:** `application/json`
-
-**Status Code:** 404
-
-**Description:** Not Found
-
-**Content Type:** `application/json`
 
 ### This is a demonstration of our handling of our `x-code-samples` extension.
 
@@ -67,12 +53,6 @@ https://docs.readme.com/docs/openapi-extensions#custom-code-samples
 ```http
 GET /x-code-samples
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Statically defined headers
 
@@ -94,12 +74,6 @@ https://docs.readme.com/docs/openapi-extensions#static-headers
 POST /x-headers
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### This is a demonstration of our handling of our `x-readme.headers` extension where when present, headers specified within it will be statically sent with API requests made in "Try It" and added into generated code snippets.
 
 In this case we have statically defined an `x-api-key` header with the value of `static-value`.
@@ -119,12 +93,6 @@ https://docs.readme.com/docs/openapi-extensions#static-headers
 ```http
 PATCH /x-headers
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Toggling interactivity
 
@@ -152,10 +120,10 @@ POST /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| photoUrls | string[] | Yes | No description |
-| tags | object[] | No | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| photoUrls | string[] | Yes | - |
+| tags | object[] | No | - |
 | status | string | No | pet status in the store |
 
 
@@ -163,15 +131,9 @@ POST /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ### When `x-explorer-enabled` is present on an operation and set to `false`, the reference guide will be non-interactive and though your users will still be able to fill out a form and receive an auto-generated code sample to use, they will not be able to make requests to your API with our "Try It" button.
 
@@ -203,10 +165,10 @@ PATCH /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | Yes | No description |
-| photoUrls | string[] | Yes | No description |
-| tags | object[] | No | No description |
+| id | integer | No | - |
+| name | string | Yes | - |
+| photoUrls | string[] | Yes | - |
+| tags | object[] | No | - |
 | status | string | No | pet status in the store |
 
 
@@ -214,15 +176,9 @@ PATCH /x-explorer-enabled
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Designate code sample languages
 
@@ -240,12 +196,6 @@ https://docs.readme.com/guides/docs/openapi-extensions#code-sample-languages
 GET /x-samples-languages
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### With an array of languages present in `x-samples-languages` code samples will be generated for only those languages. If not present, it will default to: `curl`, `node`, `ruby`, `javascript`, and `python`.
 
 > If this is present alongside `x-readme.samples-languages` then the `x-readme.samples-languages` extension will take precedence over this extension.
@@ -261,12 +211,6 @@ https://docs.readme.com/guides/docs/openapi-extensions#code-sample-languages
 ```http
 POST /x-samples-languages
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Toggling our CORS proxy
 
@@ -284,12 +228,6 @@ https://docs.readme.com/docs/openapi-extensions#cors-proxy-enabled
 POST /x-proxy-enabled
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### When `x-proxy-enabled` is set to `false` all requests from the interactive API Explorer will be funneled directly to the configured server URL, otherwise they will be piped through our proxy to allow [CORS-enabled](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests for you.
 
 > If this is present alongside `x-readme.proxy-enabled` then the `x-readme.proxy-enabled` extension will take precedence over this extension.
@@ -305,12 +243,6 @@ https://docs.readme.com/docs/openapi-extensions#cors-proxy-enabled
 ```http
 PATCH /x-proxy-enabled
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
 
 ## Toggling API Metrics
 
@@ -328,12 +260,6 @@ https://docs.readme.com/docs/openapi-extensions#disable-api-metrics
 POST /x-metrics-enabled
 ```
 
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK
-
 ### When `x-metrics-enabled` is set to `false` all requests from the interactive API Explorer will not be tracked for you within our [API Metrics product](https://readme.com/metrics) and you will not see any requests on that operations reference page that may have been logged to API Metrics through one of our many SDKs.
 
 https://docs.readme.com/docs/openapi-extensions#disable-api-metrics
@@ -345,9 +271,3 @@ https://docs.readme.com/docs/openapi-extensions#disable-api-metrics
 ```http
 PATCH /x-metrics-enabled
 ```
-
-#### Responses
-
-**Status Code:** 200
-
-**Description:** OK

@@ -12,8 +12,6 @@ https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#fixed-f
 
 ### This operation has a `requestBody` with a `readOnly` and a `writeOnly` property, as well as a response with the same. `writeOnly` properties should show up in the form and `readOnly` properties should show up in response examples.
 
-This operation has a `requestBody` with a `readOnly` and a `writeOnly` property, as well as a response with the same. `writeOnly` properties should show up in the form and `readOnly` properties should show up in response examples.
-
 ```http
 POST /
 ```
@@ -28,14 +26,14 @@ POST /
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| propWithReadOnly | string | No | No description |
-| propWithWriteOnly | string | No | No description |
+| id | string | No | - |
+| propWithReadOnly | string | No | - |
+| propWithWriteOnly | string | No | - |
 
 
 #### Responses
 
-**Status Code:** 200
+**200**
 
 **Content Type:** `application/json`
 
@@ -43,6 +41,6 @@ POST /
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | string | No | No description |
-| propWithReadOnly | string | No | No description |
-| propWithWriteOnly | string | No | No description |
+| id | string | No | - |
+| propWithReadOnly | string | No | - |
+| propWithWriteOnly | string | No | - |

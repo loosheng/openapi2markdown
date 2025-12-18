@@ -6,8 +6,6 @@
 
 ### subscribes a client to receive out-of-band data
 
-subscribes a client to receive out-of-band data
-
 ```http
 POST /streams
 ```
@@ -20,9 +18,7 @@ POST /streams
 
 #### Responses
 
-**Status Code:** 201
-
-**Description:** subscription successfully created
+**201** - subscription successfully created
 
 **Content Type:** `application/json`
 

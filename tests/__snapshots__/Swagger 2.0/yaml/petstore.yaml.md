@@ -10,51 +10,19 @@ Everything about your Pets
 
 ### Add a new pet to the store
 
-Add a new pet to the store
-
 ```http
 POST /pet
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| body | body | object | Yes | Pet object that needs to be added to the store |
-
-#### Responses
-
-**Status Code:** 405
-
-**Description:** Invalid input
+**Request Body:** Pet object that needs to be added to the store
 
 ### Update an existing pet
-
-Update an existing pet
 
 ```http
 PUT /pet
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| body | body | object | Yes | Pet object that needs to be added to the store |
-
-#### Responses
-
-**Status Code:** 400
-
-**Description:** Invalid ID supplied
-
-**Status Code:** 404
-
-**Description:** Pet not found
-
-**Status Code:** 405
-
-**Description:** Validation exception
+**Request Body:** Pet object that needs to be added to the store
 
 ### Multiple status values can be provided with comma separated strings
 
@@ -72,15 +40,9 @@ GET /pet/findByStatus
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 Array, item type: object
-
-**Status Code:** 400
-
-**Description:** Invalid status value
 
 ### Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
 
@@ -98,15 +60,9 @@ GET /pet/findByTags
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 Array, item type: object
-
-**Status Code:** 400
-
-**Description:** Invalid tag value
 
 ### Returns a single pet
 
@@ -124,19 +80,17 @@ GET /pet/{petId}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| category | object | No | No description |
-| name | string | Yes | No description |
-| photoUrls | string[] | Yes | No description |
-| tags | object[] | No | No description |
+| id | integer | No | - |
+| category | object | No | - |
+| name | string | Yes | - |
+| photoUrls | string[] | Yes | - |
+| tags | object[] | No | - |
 | status | string | No | pet status in the store |
 
 
@@ -144,29 +98,19 @@ GET /pet/{petId}
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
 
 **tags 数组项结构:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| name | string | No | No description |
+| id | integer | No | - |
+| name | string | No | - |
 
-
-**Status Code:** 400
-
-**Description:** Invalid ID supplied
-
-**Status Code:** 404
-
-**Description:** Pet not found
 
 ### Updates a pet in the store with form data
-
-Updates a pet in the store with form data
 
 ```http
 POST /pet/{petId}
@@ -180,15 +124,7 @@ POST /pet/{petId}
 | name | formData | string | No | Updated name of the pet |
 | status | formData | string | No | Updated status of the pet |
 
-#### Responses
-
-**Status Code:** 405
-
-**Description:** Invalid input
-
 ### Deletes a pet
-
-Deletes a pet
 
 ```http
 DELETE /pet/{petId}
@@ -198,22 +134,10 @@ DELETE /pet/{petId}
 
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
-| api_key | header | string | No | No description |
+| api_key | header | string | No | - |
 | petId | path | integer | Yes | Pet id to delete |
 
-#### Responses
-
-**Status Code:** 400
-
-**Description:** Invalid ID supplied
-
-**Status Code:** 404
-
-**Description:** Pet not found
-
 ### uploads an image
-
-uploads an image
 
 ```http
 POST /pet/{petId}/uploadImage
@@ -229,17 +153,15 @@ POST /pet/{petId}/uploadImage
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| code | integer | No | No description |
-| type | string | No | No description |
-| message | string | No | No description |
+| code | integer | No | - |
+| type | string | No | - |
+| message | string | No | - |
 
 
 ## store
@@ -256,47 +178,33 @@ GET /store/inventory
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 object
 
 ### Place an order for a pet
 
-Place an order for a pet
-
 ```http
 POST /store/order
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| body | body | object | Yes | order placed for purchasing the pet |
+**Request Body:** order placed for purchasing the pet
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| petId | integer | No | No description |
-| quantity | integer | No | No description |
-| shipDate | string | No | No description |
+| id | integer | No | - |
+| petId | integer | No | - |
+| quantity | integer | No | - |
+| shipDate | string | No | - |
 | status | string | No | Order Status |
-| complete | boolean | No | No description |
+| complete | boolean | No | - |
 
-
-**Status Code:** 400
-
-**Description:** Invalid Order
 
 ### For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
 
@@ -314,29 +222,19 @@ GET /store/order/{orderId}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| petId | integer | No | No description |
-| quantity | integer | No | No description |
-| shipDate | string | No | No description |
+| id | integer | No | - |
+| petId | integer | No | - |
+| quantity | integer | No | - |
+| shipDate | string | No | - |
 | status | string | No | Order Status |
-| complete | boolean | No | No description |
+| complete | boolean | No | - |
 
-
-**Status Code:** 400
-
-**Description:** Invalid ID supplied
-
-**Status Code:** 404
-
-**Description:** Order not found
 
 ### For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
 
@@ -352,16 +250,6 @@ DELETE /store/order/{orderId}
 | ---- | -------- | ---- | -------- | ----------- |
 | orderId | path | integer | Yes | ID of the order that needs to be deleted |
 
-#### Responses
-
-**Status Code:** 400
-
-**Description:** Invalid ID supplied
-
-**Status Code:** 404
-
-**Description:** Order not found
-
 ## user
 
 Operations about user
@@ -374,61 +262,25 @@ This can only be done by the logged in user.
 POST /user
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| body | body | object | Yes | Created user object |
-
-#### Responses
-
-**Status Code:** default
-
-**Description:** successful operation
+**Request Body:** Created user object
 
 ### Creates list of users with given input array
-
-Creates list of users with given input array
 
 ```http
 POST /user/createWithArray
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| body | body | object[] | Yes | List of user object |
-
-#### Responses
-
-**Status Code:** default
-
-**Description:** successful operation
+**Request Body:** List of user object
 
 ### Creates list of users with given input array
-
-Creates list of users with given input array
 
 ```http
 POST /user/createWithList
 ```
 
-#### Parameters
-
-| Name | Location | Type | Required | Description |
-| ---- | -------- | ---- | -------- | ----------- |
-| body | body | object[] | Yes | List of user object |
-
-#### Responses
-
-**Status Code:** default
-
-**Description:** successful operation
+**Request Body:** List of user object
 
 ### Logs user into the system
-
-Logs user into the system
 
 ```http
 GET /user/login
@@ -443,33 +295,17 @@ GET /user/login
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 string
 
-**Status Code:** 400
-
-**Description:** Invalid username/password supplied
-
 ### Logs out current logged in user session
-
-Logs out current logged in user session
 
 ```http
 GET /user/logout
 ```
 
-#### Responses
-
-**Status Code:** default
-
-**Description:** successful operation
-
 ### Get user by user name
-
-Get user by user name
 
 ```http
 GET /user/{username}
@@ -483,31 +319,21 @@ GET /user/{username}
 
 #### Responses
 
-**Status Code:** 200
-
-**Description:** successful operation
+**200** - successful operation
 
 **Properties:**
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| id | integer | No | No description |
-| username | string | No | No description |
-| firstName | string | No | No description |
-| lastName | string | No | No description |
-| email | string | No | No description |
-| password | string | No | No description |
-| phone | string | No | No description |
+| id | integer | No | - |
+| username | string | No | - |
+| firstName | string | No | - |
+| lastName | string | No | - |
+| email | string | No | - |
+| password | string | No | - |
+| phone | string | No | - |
 | userStatus | integer | No | User Status |
 
-
-**Status Code:** 400
-
-**Description:** Invalid username supplied
-
-**Status Code:** 404
-
-**Description:** User not found
 
 ### This can only be done by the logged in user.
 
@@ -524,16 +350,6 @@ PUT /user/{username}
 | username | path | string | Yes | name that need to be updated |
 | body | body | object | Yes | Updated user object |
 
-#### Responses
-
-**Status Code:** 400
-
-**Description:** Invalid user supplied
-
-**Status Code:** 404
-
-**Description:** User not found
-
 ### This can only be done by the logged in user.
 
 This can only be done by the logged in user.
@@ -547,13 +363,3 @@ DELETE /user/{username}
 | Name | Location | Type | Required | Description |
 | ---- | -------- | ---- | -------- | ----------- |
 | username | path | string | Yes | The name that needs to be deleted |
-
-#### Responses
-
-**Status Code:** 400
-
-**Description:** Invalid username supplied
-
-**Status Code:** 404
-
-**Description:** User not found

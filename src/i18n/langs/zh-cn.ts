@@ -20,7 +20,7 @@ export const zhCN = {
   // Values
   yes: '是',
   no: '否',
-  noDescription: '无描述',
+  noDescription: '-',
   noProperties: '无属性',
   contentType: '内容类型',
   schema: '模式',
